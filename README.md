@@ -47,10 +47,10 @@ Simply copy the **Mods** folder into your C:\Username\Saved Games\DCS folder, or
 - Added support of [Skynet-IADS](https://github.com/walder/Skynet-IADS) (see [Skynet IADS integration](#🤖-skynet-iads-integration))
 
 ## 🤖 Skynet IADS integration
-In order for the Skynet to correctly identify the SAM Site, the group leader **must be** Big Bird SR for S-300PT/PS/PMU1/PMU2, S-400 and Bill Board SR for S-300V/VM/V4. Otherwise IADS integration is not guaranteed
+1.In order for the Skynet to correctly identify the SAM Site, the group leader **must be** Big Bird SR for S-300PT/PS/PMU1/PMU2, S-400 and Bill Board SR for S-300V/VM/V4. Otherwise IADS integration is not guaranteed
 > Your SAM Site with wrong group leader might be seen as "RADDEST" in Skynet debug menu
 
-Also see my fork of Skynet IADS with [CurrentHill](https://www.currenthill.com/currenthill-milsim) SAM sites support: [click](https://github.com/HFXLegion/Skynet-IADS)
+2.Use my fork of Skynet IADS with [CurrentHill](https://www.currenthill.com/currenthill-milsim) and HighDigitSAMs SAM sites support: [click](https://github.com/HFXLegion/Skynet-IADS)
 
 ## 🪲 Known issues
 - 9S32 "Grill Pan" ("Imbir") SA-12 (S-300V) TR has 90 deg rotated model
