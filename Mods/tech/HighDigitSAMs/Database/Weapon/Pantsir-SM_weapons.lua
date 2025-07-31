@@ -1,0 +1,251 @@
+-- FUNCTIONS --
+
+local function calcPiercingMass(warhead)
+	warhead.piercing_mass  = warhead.mass;
+	if (warhead.expl_mass/warhead.mass > 0.1) then
+		warhead.piercing_mass  = warhead.mass/5.0;
+	end
+end
+
+local function simple_aa_warhead(power, caliber)
+    local res = {};
+
+	res.caliber 			 = caliber
+	res.mass 				 = power;
+    res.expl_mass 			 = power;
+    res.other_factors 		 = {1, 1, 1};
+    res.obj_factors 		 = {1, 1};
+    res.concrete_factors 	 = {1, 1, 1};
+    res.cumulative_factor 	 = 0;
+    res.concrete_obj_factor  = 0.0;
+    res.cumulative_thickness = 0.0;
+    
+	calcPiercingMass(res)
+    return res;
+end
+
+
+
+-- 30MM SHELLS --
+
+local AA30AP 			= {
+	category 			= CAT_SHELLS,
+	user_name 			= _("2A38M 30mm AP"),
+	model_name  		= "tracer_bullet_red",
+	v0    				= 1000.0,
+	Dv0   				= 0.0081,
+	Da0    				= 0.0005,
+	Da1     			= 0.0,
+	mass     			= 0.39,
+	explosive			= 0.0000,
+	life_time			= 10.0,
+	caliber				= 30.0,
+	subcalibre			= true,
+	AP_cap_caliber		= 30.0,
+	s         			= 0.0,
+	j         			= 0.0,
+	l         			= 0.0,
+	charTime 			= 0,
+	cx 		  			= { 0.7, 0.7, 0.25, 0.236, 2.31 },
+	k1       			= 5.7e-09,
+	tracer_off    		= 10,
+	scale_tracer  		= 0.1,
+	round_mass 	  		= 0.39,
+	piercing_mass 		= 0.39,
+	rebound_concrete	= {
+		angle0				 = 50,
+		angle100		 	 = 75,
+		cx_factor			 = 5,
+		deviation_angle 	 = 30,
+		velocity_loss_factor = 0.5
+	},
+	rebound_ground 		= {
+		angle0 				 = 55,
+		angle100 			 = 73,
+		cx_factor 			 = 5,
+		deviation_angle 	 = 30,
+		velocity_loss_factor = 0.5
+	},
+	name 	  			= "2A38M 30mm AP",
+	cartridge 			= 0,
+	};
+declare_weapon(AA30AP);
+
+local AA30HE 			= {
+	category 			= CAT_SHELLS,
+	user_name 			= _("2A38M 30mm HE"),
+	model_name  		= "tracer_bullet_white",
+	v0    				= 980.0,
+	Dv0   				= 0.0081,
+	Da0    				= 0.0005,
+	Da1     			= 0.0,
+	mass     			= 0.39,
+	explosive   		= 0.30,
+	life_time   		= 10.0,
+	caliber     		= 30.0,
+	subcalibre  		= true,
+	AP_cap_caliber 		= 30.0,
+	s         			= 0.0,
+	j         			= 0.0,
+	l         			= 0.0,
+	charTime  			= 0,
+	cx 		  			= { 0.7, 0.7, 0.25, 0.236, 2.31 },
+	k1        			= 5.7e-09,
+	tracer_off    		= 10,
+	scale_tracer  		= 0.1,
+	round_mass 	  		= 0.39,
+	piercing_mass 		= 0.09,
+	rebound_concrete 	= {
+		angle0				 = 50,
+		angle100		 	 = 75,
+		cx_factor			 = 5,
+		deviation_angle 	 = 30,
+		velocity_loss_factor = 0.5
+	},
+	rebound_ground = {
+		angle0 				 = 55,
+		angle100 			 = 73,
+		cx_factor 			 = 5,
+		deviation_angle 	 = 30,
+		velocity_loss_factor = 0.5
+	},
+	name 	  			= "2A38M 30mm HE",
+	cartridge 			= 0,
+	};
+declare_weapon(AA30HE);
+
+
+
+-- GUN --
+
+GT_t.LN_t.automatic_gun_2A38M 										= {name = "2A38M", display_name = _("2A38M")};
+GT_t.LN_t.automatic_gun_2A38M										= {} 
+GT_t.LN_t.automatic_gun_2A38M.type		  	  						= 3
+GT_t.LN_t.automatic_gun_2A38M.xc			  	  					= 0.585
+GT_t.LN_t.automatic_gun_2A38M.distanceMin  	  						= 200
+GT_t.LN_t.automatic_gun_2A38M.distanceMax  	 	 					= 4000
+GT_t.LN_t.automatic_gun_2A38M.max_trg_alt  	  						= 3000
+GT_t.LN_t.automatic_gun_2A38M.reactionTime 	  						= 1.0;
+GT_t.LN_t.automatic_gun_2A38M.maxTrackingSpeed						= 0.0;
+GT_t.LN_t.automatic_gun_2A38M.maxShootingSpeed 						= 0.0;
+GT_t.LN_t.automatic_gun_2A38M.reflection_limit 						= 0.03;
+GT_t.LN_t.automatic_gun_2A38M.beamWidth 		 					= math.rad(90);
+GT_t.LN_t.automatic_gun_2A38M.inclination_correction_upper_limit	= math.rad(20);
+GT_t.LN_t.automatic_gun_2A38M.inclination_correction_bias 			= math.rad(0.1);
+GT_t.LN_t.automatic_gun_2A38M.sensor = {}
+set_recursive_metatable(GT_t.LN_t.automatic_gun_2A38M.sensor, GT_t.WSN_t[0])
+GT_t.LN_t.automatic_gun_2A38M.PL									= {}
+GT_t.LN_t.automatic_gun_2A38M.PL[1]									= {}
+GT_t.LN_t.automatic_gun_2A38M.PL[1].shot_delay						= 60/2400 -- per single gun
+GT_t.LN_t.automatic_gun_2A38M.PL[1].ammo_capacity					= 1400 -- for the two-gun system
+GT_t.LN_t.automatic_gun_2A38M.PL[1].reload_time						= 180;
+GT_t.LN_t.automatic_gun_2A38M.PL[1].shell_name						= {"2A38M 30mm AP", "2A38M 30mm HE", "2A38M 30mm HE", "2A38M 30mm HE", "2A38M 30mm HE"};
+GT_t.LN_t.automatic_gun_2A38M.PL[1].shell_display_name 				= "2A38M 30mm AP+HE";
+GT_t.LN_t.automatic_gun_2A38M.BR									= { {pos = {1.2, 0, 0} } }
+
+
+
+-- MISSILE --
+
+local SA57E6ME			= {
+	Name				= SA57E6ME,
+	display_name		= _('57E6ME SA-22'),
+	name				= "SA57E6ME",
+	Escort				= 3,
+	Head_Type			= 4,
+	sigma				= {10, 10, 10},
+	M					= 42.0,
+	H_max				= 14000.0,
+	H_min				= 1.0,
+	Diam				= 100.0,
+	Cx_pil				= 6,
+	D_max				= 14000.0,
+	D_min				= 1500.0,
+	Head_Form			= 1,
+	Life_Time			= 30.0,
+	Nr_max				= 25,
+	v_min				= 200.0,
+	v_mid				= 770.0,
+	Mach_max			= 4.5,
+	t_b					= 0.0,
+	t_acc				= 3.0,
+	t_marsh				= 0.0,
+	Range_max			= 25000.0,
+	H_min_t				= 1.0,
+	Fi_start			= 3.14152,
+	Fi_rak				= 3.14152,
+	Fi_excort			= 2.0,
+	Fi_search			= 99.9,
+	OmViz_max			= 99.9,
+	warhead				= simple_aa_warhead(25.0, 100),
+	exhaust1			= { 0.7, 0.7, 0.7, 0.4 },
+	tail_scale			= 0.6,
+	effect_max_length	= 2000.0,
+	X_back				= 0.0,
+	Y_back				= 0.0,
+	Z_back				= 0.0,
+	X_back_acc			= -1.7,
+	Reflection			= 0.03,
+	KillDistance		= 7.0,
+	ccm_k0				= 0.5,
+	category			= CAT_MISSILES,
+	wsTypeOfWeapon		= {wsType_Weapon,wsType_Missile,wsType_SA_Missile,WSTYPE_PLACEHOLDER};
+	shape_table_data	= 
+	{
+		{
+			name		= "ERO_57E6ME";
+			file		= "ERO_57E6ME";
+			life		= 1;
+			fire		= { 0, 1};
+			username	= "57E6ME";
+			index		= WSTYPE_PLACEHOLDER;
+		},
+	}
+};
+declare_weapon(SA57E6ME)
+
+
+
+-- MISSILE WS --
+
+GT_t.LN_t._96K6									= {}
+GT_t.LN_t._96K6.max_number_of_missiles_channels = 1;
+GT_t.LN_t._96K6.type 							= 4;
+GT_t.LN_t._96K6.xc 								= -1.072;
+GT_t.LN_t._96K6.distanceMin 					= 1500;
+GT_t.LN_t._96K6.distanceMax 					= 25000;
+GT_t.LN_t._96K6.reactionTime 					= 1.5;
+GT_t.LN_t._96K6.radialDisperse 					= 0.0;
+GT_t.LN_t._96K6.dispertionReductionFactor 		= 0.0;
+GT_t.LN_t._96K6.missileControlInterval 			= 0.01;
+GT_t.LN_t._96K6.reflection_limit 				= 0.05
+GT_t.LN_t._96K6.launch_delay 					= 1;
+GT_t.LN_t._96K6.maxTrackingSpeed = 0.0;
+GT_t.LN_t._96K6.maxShootingSpeed = 0.0;
+GT_t.LN_t._96K6.beamWidth = math.rad(90);
+GT_t.LN_t._96K6.show_external_missile 			= false;
+GT_t.LN_t._96K6.sensor = {};
+set_recursive_metatable(GT_t.LN_t._96K6.sensor, GT_t.WSN_t[0]);
+GT_t.LN_t._96K6.ECM_K 							= -1
+GT_t.LN_t._96K6.barrels_reload_type 			= 3
+GT_t.LN_t._96K6.PL = {};
+GT_t.LN_t._96K6.PL[1] = {};
+GT_t.LN_t._96K6.PL[1].ammo_capacity 			= 12;
+GT_t.LN_t._96K6.PL[1].type_ammunition 			= SA57E6ME.wsTypeOfWeapon;
+GT_t.LN_t._96K6.PL[1].missile_name 				= {"SA57E6ME"};
+GT_t.LN_t._96K6.PL[1].shot_delay 				= 0.1;
+GT_t.LN_t._96K6.PL[1].reload_time 				= 600;
+GT_t.LN_t._96K6.BR = {
+                    {connector_name = 'POINT_Rocket_1',drawArgument = 188},
+					{connector_name = 'POINT_Rocket_8',drawArgument = 191},
+					{connector_name = 'POINT_Rocket_2',drawArgument = 189},
+					{connector_name = 'POINT_Rocket_7',drawArgument = 190},
+					{connector_name = 'POINT_Rocket_3',drawArgument = 192},
+					{connector_name = 'POINT_Rocket_10',drawArgument = 195},
+					{connector_name = 'POINT_Rocket_4',drawArgument = 193},
+					{connector_name = 'POINT_Rocket_9',drawArgument = 194},
+					{connector_name = 'POINT_Rocket_5',drawArgument = 196},
+					{connector_name = 'POINT_Rocket_12',drawArgument = 199},
+					{connector_name = 'POINT_Rocket_6',drawArgument = 197},
+					{connector_name = 'POINT_Rocket_11',drawArgument = 198},
+                };

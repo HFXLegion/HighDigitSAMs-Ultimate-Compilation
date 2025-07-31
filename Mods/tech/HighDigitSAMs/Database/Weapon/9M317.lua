@@ -28,8 +28,11 @@ local SA9M317 = {
 	display_name = _('9M317 Buk-M2 (SA-17 Grizzly)'),
 	display_name_short = _('9M317 Buk-M2 (SA-17 Grizzly)'),
 	name = "SA9M317",
-	Escort = 3,
-	Head_Type = 6,
+	-- To emulate radio-command guidance on most of missile traectory Head_Type set to 2 (ARH), but active_radar_lock_dist is 0 (so missile wouldn't ever lock a target by itself)
+	-- In result target gets missile warning on 12 km of missile trajectory (~10 last seconds of missile flight, as it works in real)
+	Escort = 0, -- Escort(Requires tracking?): 0 - no, 1 - launch aircraft, 2 - another aircraft, 3 - from the ground
+	Head_Type = 2, -- Seeker type code, in our case 2 is for Active Radar Homing. 1 = Passive IR homing, 2 = Active Radar Homing
+	active_radar_lock_dist = 0, -- Disable missile's ability to lock the target by its own
 	sigma = {25, 25, 25},
 	M = 715,
 	H_max = 50000.0,
@@ -71,7 +74,7 @@ local SA9M317 = {
     	25000.0, 0.3
     }; -- Between 25 and 10 km  to target, Pn smoothly changes from 0.3 to 0.5. Longer then 25 km Pn = 0.3.
 	category = CAT_MISSILES,
-	wsTypeOfWeapon  = {wsType_Weapon,wsType_Missile,wsType_SA_Missile,WSTYPE_PLACEHOLDER};
+	wsTypeOfWeapon  = {wsType_Missile, wsType_Missile, wsType_SA_Missile};
 	shape_table_data = 
 	{
 		{

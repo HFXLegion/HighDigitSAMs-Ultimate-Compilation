@@ -2,7 +2,7 @@
 
 GT = {};
 GT_t.ws = 0;
-set_recursive_metatable(GT, GT_t.generic_stationary);
+set_recursive_metatable(GT, GT_t.generic_wheel_vehicle);
 set_recursive_metatable(GT.chassis, GT_t.CH_t.MAZ543M);
 GT.chassis.life = 4;
 
@@ -13,7 +13,7 @@ GT.visual.fire_pos[2] = 1;
 --chassis
 GT.animation_arguments.locator_rotation = 0;
 GT.radar_rotation_period = 12.0;
-GT.snd.radarRotation = "RadarRotation";
+GT.snd.radarRotation = "GndTech/RadarRotation";
 
 GT.sensor = {};
 GT.sensor.max_range_finding_target = 330000;
@@ -39,7 +39,7 @@ local ws = 0;
 for i = 1,24 do 
     ws = GT_t.inc_ws();
 	GT.WS[ws] = {}
-    GT.WS[ws].pos = {0,5,0}
+    GT.WS[ws].pos = {0,7.6,0}
 	GT.WS[ws].angles = {
 					{math.rad(180), math.rad(-180), math.rad(-15), math.rad(50)},
 					};

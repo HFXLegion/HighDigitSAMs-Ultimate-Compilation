@@ -32,7 +32,7 @@ CHAIR_BACK =
             scan_volume =
             {
                 azimuth = {-180.0, 180.0},
-                elevation = {-15.0, 60.0}
+                elevation = {-15.0, 90.0}
             },
             max_measuring_distance = 120000.0,
             detection_distance =
@@ -53,7 +53,7 @@ CHAIR_BACK =
             {
                 radial_velocity_min = 10,
             },
-            scan_period = 1.0,
+            scan_period = 0.2,
 		}
 		
 declare_sensor(CHAIR_BACK)
@@ -69,7 +69,7 @@ GRILL_PAN =
              scan_volume = 
 		    {
 			    azimuth = {-180.0, 180.0},
-                elevation = {-15.0, 80.0}
+                elevation = {-15.0, 90.0}
 		    },
 		    max_measuring_distance = 240000,
 		    detection_distance = 
@@ -91,7 +91,7 @@ GRILL_PAN =
             {
                 radial_velocity_min = 10.0,
             },
-            scan_period = 1.0,
+            scan_period = 0.2,
         }
 
 declare_sensor(GRILL_PAN)
@@ -104,7 +104,7 @@ HIGH_SCREEN =
             scan_volume =
             {
                 azimuth = {-180.0, 180.0},
-                elevation = {-15.0, 70.0}
+                elevation = {10.0, 89.0}
             },
             max_measuring_distance = 280000.0,
             detection_distance =
@@ -177,7 +177,7 @@ GRILL_PAN_M =
              scan_volume = 
 		    {
 			    azimuth = {-180.0, 180.0},
-                elevation = {-15.0, 80.0}
+                elevation = {-15.0, 90.0}
 		    },
 		    max_measuring_distance = 370000,
 		    detection_distance = 
@@ -199,7 +199,7 @@ GRILL_PAN_M =
             {
                 radial_velocity_min = 10.0,
             },
-            scan_period = 1.0,
+            scan_period = 0.2,
         }
 
 declare_sensor(GRILL_PAN_M)
@@ -212,7 +212,7 @@ HIGH_SCREEN_M =
             scan_volume =
             {
                 azimuth = {-180.0, 180.0},
-                elevation = {-15.0, 70.0}
+                elevation = {10.0, 89.0}
             },
             max_measuring_distance = 500000.0,
             detection_distance =
@@ -355,7 +355,7 @@ FLAP_LID =
             scan_volume =
             {
                 azimuth = {-180.0, 180.0},
-                elevation = {-15.0, 60.0}
+                elevation = {-15.0, 90.0}
             },
             max_measuring_distance = 260000.0,
             detection_distance =
@@ -377,7 +377,7 @@ FLAP_LID =
             {
                 radial_velocity_min = 10.0,
             },
-            scan_period = 1.0,
+            scan_period = 0.2,
         }
 
 declare_sensor(FLAP_LID)
@@ -390,7 +390,7 @@ FLAP_LID_TRUCK =
             scan_volume =
             {
                 azimuth = {-180.0, 180.0},
-                elevation = {-15.0, 60.0}
+                elevation = {-15.0, 90.0}
             },
             max_measuring_distance = 260000.0,
             detection_distance =
@@ -412,7 +412,7 @@ FLAP_LID_TRUCK =
             {
                 radial_velocity_min = 10.0,
             },
-            scan_period = 1.0,
+            scan_period = 0.2,
         }
 
 declare_sensor(FLAP_LID_TRUCK)
@@ -463,9 +463,9 @@ GRAVE_STONE =
             scan_volume =
             {
                 azimuth = {-180.0, 180.0},
-                elevation = {-15.0, 60.0}
+                elevation = {-15.0, 90.0}
             },
-            max_measuring_distance = 270000.0,
+            max_measuring_distance = 400000.0,
             detection_distance =
             {
                 [HEMISPHERE_UPPER] =
@@ -485,7 +485,7 @@ GRAVE_STONE =
             {
                 radial_velocity_min = 10.0,
             },
-            scan_period = 1.0,
+            scan_period = 0.2,
         }
 
 declare_sensor(GRAVE_STONE)
@@ -599,4 +599,391 @@ GAZETCHIK_DECOY =
         }
 
 declare_sensor(GAZETCHIK_DECOY)
+
+BIG_BIRD_M =
+        {
+			Name = "S-400 91N6E sr",
+			category = SENSOR_RADAR,
+            type = RADAR_AS,
+            scan_volume =
+            {
+                azimuth = {-180.0, 180.0},
+                elevation = {-15.0, 60.0}
+            },
+            max_measuring_distance = 650000.0,
+            detection_distance =
+            {
+                [HEMISPHERE_UPPER] =
+                {
+                    [ASPECT_HEAD_ON] = 500000.0,
+                    [ASPECT_TAIL_ON] = 500000.0
+                },
+                [HEMISPHERE_LOWER] =
+                {
+                    [ASPECT_HEAD_ON] = 500000.0,
+                    [ASPECT_TAIL_ON] = 500000.0
+                }
+            },
+            lock_on_distance_coeff = 0.75,
+			multiple_targets_tracking = true,
+            velocity_limits =
+            {
+                radial_velocity_min = 15.0,
+            },
+            scan_period = 1.0,
+        }
+
+declare_sensor(BIG_BIRD_M)
+
+CHEESE_BOARD =
+        {
+			Name = "S-400 96L6E sr",
+			category = SENSOR_RADAR,
+            type = RADAR_AS,
+            scan_volume =
+            {
+                azimuth = {-180.0, 180.0},
+                elevation = {-15.0, 60.0}
+            },
+            max_measuring_distance = 650000.0,
+            detection_distance =
+            {
+                [HEMISPHERE_UPPER] =
+                {
+                    [ASPECT_HEAD_ON] = 300000.0,
+                    [ASPECT_TAIL_ON] = 300000.0
+                },
+                [HEMISPHERE_LOWER] =
+                {
+                    [ASPECT_HEAD_ON] = 300000.0,
+                    [ASPECT_TAIL_ON] = 300000.0
+                }
+            },
+            lock_on_distance_coeff = 0.9,
+			multiple_targets_tracking = true,
+            velocity_limits =
+            {
+                radial_velocity_min = 15.0,
+            },
+            scan_period = 1.0,
+        }
+
+declare_sensor(CHEESE_BOARD)
+
+GRAVE_STONE_M =
+        {
+            Name = "S-400 92N6E tr",
+            category = SENSOR_RADAR,
+            type = RADAR_AS,
+            scan_volume =
+            {
+                azimuth = {-180.0, 180.0},
+                elevation = {-15.0, 90.0}
+            },
+            max_measuring_distance = 500000.0,
+            detection_distance =
+            {
+                [HEMISPHERE_UPPER] =
+                {
+                    [ASPECT_HEAD_ON] = 500000.0,
+                    [ASPECT_TAIL_ON] = 500000.0
+                },
+                [HEMISPHERE_LOWER] =
+                {
+                    [ASPECT_HEAD_ON] = 500000.0,
+                    [ASPECT_TAIL_ON] = 500000.0
+                }
+            },
+            lock_on_distance_coeff = 0.85,
+            multiple_targets_tracking = true,
+            velocity_limits =
+            {
+                radial_velocity_min = 10.0,
+            },
+            scan_period = 0.2,
+        }
+
+declare_sensor(GRAVE_STONE_M)
+
+TOMB_STONE_M =
+        {
+            Name = "S-300PMU2 30N6E2 tr",
+            category = SENSOR_RADAR,
+            type = RADAR_AS,
+            scan_volume =
+            {
+                azimuth = {-180.0, 180.0},
+                elevation = {-15.0, 90.0}
+            },
+            max_measuring_distance = 270000.0,
+            detection_distance =
+            {
+                [HEMISPHERE_UPPER] =
+                {
+                    [ASPECT_HEAD_ON] = 270000.0,
+                    [ASPECT_TAIL_ON] = 270000.0
+                },
+                [HEMISPHERE_LOWER] =
+                {
+                    [ASPECT_HEAD_ON] = 270000.0,
+                    [ASPECT_TAIL_ON] = 270000.0
+                }
+            },
+            lock_on_distance_coeff = 0.85,
+            multiple_targets_tracking = true,
+            velocity_limits =
+            {
+                radial_velocity_min = 10.0,
+            },
+            scan_period = 0.2,
+        }
+
+declare_sensor(TOMB_STONE_M)
+
+BIG_BIRD_2 =
+        {
+			Name = "S-300PS 64N6E MOD sr",
+			category = SENSOR_RADAR,
+            type = RADAR_AS,
+            scan_volume =
+            {
+                azimuth = {-180.0, 180.0},
+                elevation = {-15.0, 60.0}
+            },
+            max_measuring_distance = 200000.0,
+            detection_distance =
+            {
+                [HEMISPHERE_UPPER] =
+                {
+                    [ASPECT_HEAD_ON] = 200000.0,
+                    [ASPECT_TAIL_ON] = 200000.0
+                },
+                [HEMISPHERE_LOWER] =
+                {
+                    [ASPECT_HEAD_ON] = 200000.0,
+                    [ASPECT_TAIL_ON] = 200000.0
+                }
+            },
+            lock_on_distance_coeff = 0.85,
+			multiple_targets_tracking = true,
+            velocity_limits =
+            {
+                radial_velocity_min = 15.0,
+            },
+            scan_period = 1.0,
+        }
+
+declare_sensor(BIG_BIRD_2)
+
+CLAM_SHELL_M2 =
+        {
+			Name = "S-300PS SA-10B 76N6E sr",
+			category = SENSOR_RADAR,
+            type = RADAR_AS,
+            scan_volume =
+            {
+                azimuth = {-180.0, 180.0},
+                elevation = {-15.0, 60.0}
+            },
+            max_measuring_distance = 260000.0,
+            detection_distance =
+            {
+                [HEMISPHERE_UPPER] =
+                {
+                    [ASPECT_HEAD_ON] = 120000.0,
+                    [ASPECT_TAIL_ON] = 120000.0
+                },
+                [HEMISPHERE_LOWER] =
+                {
+                    [ASPECT_HEAD_ON] = 120000.0,
+                    [ASPECT_TAIL_ON] = 120000.0
+                }
+            },
+            lock_on_distance_coeff = 0.85,
+			multiple_targets_tracking = true,
+            velocity_limits =
+            {
+                radial_velocity_min = 15.0,
+            },
+            scan_period = 1.0,
+        }
+
+declare_sensor(CLAM_SHELL_M2)
+ 
+FLAP_LID_M2 =
+        {
+            Name = "S-300PS 30N6 tr",
+            category = SENSOR_RADAR,
+            type = RADAR_AS,
+            scan_volume =
+            {
+                azimuth = {-180.0, 180.0},
+                elevation = {-15.0, 90.0}
+            },
+            max_measuring_distance = 260000.0,
+            detection_distance =
+            {
+                [HEMISPHERE_UPPER] =
+                {
+                    [ASPECT_HEAD_ON] = 160000.0,
+                    [ASPECT_TAIL_ON] = 160000.0
+                },
+                [HEMISPHERE_LOWER] =
+                {
+                    [ASPECT_HEAD_ON] = 160000.0,
+                    [ASPECT_TAIL_ON] = 160000.0
+                }
+            },
+            lock_on_distance_coeff = 0.85,
+            multiple_targets_tracking = true,
+            velocity_limits =
+            {
+                radial_velocity_min = 10.0,
+            },
+            scan_period = 0.2,
+        }
+
+declare_sensor(FLAP_LID_M2)
+ 
+-- S-300V4 SENSORS
+
+GRILL_PAN_M2 =
+        {
+			Name = "S-300V4 9S32M-1E tr",
+			category = SENSOR_RADAR,
+            type = RADAR_AS,
+             scan_volume = 
+		    {
+			    azimuth = {-180.0, 180.0},
+                elevation = {-15.0, 90.0}
+		    },
+		    max_measuring_distance = 500000.0,
+		    detection_distance = 
+		    {
+			    [HEMISPHERE_UPPER] =
+			    {
+			    	[ASPECT_HEAD_ON] = 400000.0,
+			    	[ASPECT_TAIL_ON] = 400000.0
+			    },
+			    [HEMISPHERE_LOWER] =
+			    {
+			    	[ASPECT_HEAD_ON] = 400000.0,
+			    	[ASPECT_TAIL_ON] = 400000.0
+			    }
+		    },
+		    lock_on_distance_coeff =0.95,
+			multiple_targets_tracking = true,
+            velocity_limits =
+            {
+                radial_velocity_min = 10.0,
+            },
+            scan_period = 0.2,
+        }
+
+declare_sensor(GRILL_PAN_M2)
+
+HIGH_SCREEN_M2 =
+        {
+			Name = "S-300V4 9S19M-1E sr",
+			category = SENSOR_RADAR,
+            type = RADAR_AS,
+            scan_volume =
+            {
+                azimuth = {-180.0, 180.0},
+                elevation = {-15.0, 70.0}
+            },
+            max_measuring_distance = 500000.0,
+            detection_distance =
+            {
+                [HEMISPHERE_UPPER] =
+                {
+                    [ASPECT_HEAD_ON] = 450000.0,
+                    [ASPECT_TAIL_ON] = 450000.0
+                },
+                [HEMISPHERE_LOWER] =
+                {
+                    [ASPECT_HEAD_ON] = 450000.0,
+                    [ASPECT_TAIL_ON] = 450000.0
+                }
+            },
+            lock_on_distance_coeff = 0.9,
+			multiple_targets_tracking = true,
+            velocity_limits =
+            {
+                radial_velocity_min = 10.0,
+            },
+            scan_period = 1.0,
+        }
+
+declare_sensor(HIGH_SCREEN_M2)
+
+BILL_BOARD_M2 =
+        {
+			Name = "S-300V4 9S15MDE sr",
+			category = SENSOR_RADAR,
+            type = RADAR_AS,
+            scan_volume =
+            {
+                azimuth = {-180.0, 180.0},
+                elevation = {-15.0, 75.0}
+            },
+            max_measuring_distance = 515000.0,
+            detection_distance =
+            {
+                [HEMISPHERE_UPPER] =
+                {
+                    [ASPECT_HEAD_ON] = 500000.0,
+                    [ASPECT_TAIL_ON] = 500000.0
+                },
+                [HEMISPHERE_LOWER] =
+                {
+                    [ASPECT_HEAD_ON] = 500000.0,
+                    [ASPECT_TAIL_ON] = 500000.0
+                }
+            },
+            lock_on_distance_coeff = 0.9,
+			multiple_targets_tracking = true,
+            velocity_limits =
+            {
+                radial_velocity_min = 10.0,
+            },
+            scan_period = 1.0,
+        }
+
+declare_sensor(BILL_BOARD_M2)
+
+PANTSIR_AESA =
+      {
+			Name = "Pantsir_SM",
+			category = SENSOR_RADAR,
+            type = RADAR_AS,
+            scan_volume =
+            {
+                azimuth = {-180.0, 180.0},
+                elevation = {-15.0, 75.0}
+            },
+            max_measuring_distance = 75000.0,
+            detection_distance =
+            {
+                [HEMISPHERE_UPPER] =
+                {
+                    [ASPECT_HEAD_ON] = 50000.0,
+                    [ASPECT_TAIL_ON] = 50000.0
+                },
+                [HEMISPHERE_LOWER] =
+                {
+                    [ASPECT_HEAD_ON] = 50000.0,
+                    [ASPECT_TAIL_ON] = 50000.0
+                }
+            },
+            lock_on_distance_coeff = 0.9,
+			multiple_targets_tracking = true,
+            velocity_limits =
+            {
+                radial_velocity_min = 1.0,
+            },
+            scan_period = 1.0,
+        }
+
+declare_sensor(PANTSIR_AESA)
 

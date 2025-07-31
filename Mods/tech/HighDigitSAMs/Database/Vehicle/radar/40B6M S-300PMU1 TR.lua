@@ -10,7 +10,7 @@ GT.visual.shape = "40b6m_mast";
 GT.visual.shape_dstr = "40b6m_mast_d";
 GT.visual.fire_pos[2] = 1;
 
-GT.snd.radarRotation = "RadarRotation"; -- íå ïîâîðîò, íî çâóê ðàáîòû
+GT.snd.radarRotation = "GndTech/RadarRotation";
 
 GT.sensor = {};
 GT.sensor.max_range_finding_target = 160000;
@@ -67,7 +67,7 @@ GT.WS[ws].LN[1].reflection_limit = 0.02;
 GT.WS[ws].LN[1].ECM_K = 0.4;
 GT.WS[ws].LN[1].min_trg_alt = 25;
 GT.WS[ws].LN[1].max_trg_alt = 90000;
-GT.WS[ws].LN[1].beamWidth = math.rad(90);
+GT.WS[ws].LN[1].beamWidth = math.rad(0.5);
 
 for i = 1,5 do -- 5 tracker's
     ws = GT_t.inc_ws();
@@ -82,8 +82,6 @@ for i = 1,5 do -- 5 tracker's
     GT.WS[ws].LN = {}
     GT.WS[ws].LN[1] = {}
 	set_recursive_metatable(GT.WS[ws].LN[1], GT.WS[1].LN[1])
-	GT.WS[ws].LN[1].distanceMax = 160000;
-	GT.WS[ws].LN[1].beamWidth = math.rad(0);
 end --for
 
 GT.Name = "S-300PMU1 40B6M tr";

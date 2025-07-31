@@ -1,16 +1,35 @@
 declare_plugin("HighDigitSAMs",
 {
 installed 	 	  = true,
-displayName   = _("High Digit SAMs"),
+displayName   = _("High Digit SAMs (HFX's compilation)"),
 shortName	  =   "HighDigitSAMs",
 state		 	  = "installed",
-developerName	  = "E. 'Wiki' Crouch",
+developerName	  = "E. 'Wiki' Crouch, ERO, Fox, BlackFalco, HFX and others",
 version		 	  = "2.1.0",	
 info		  =    _("Adds various modern and historical air defense units to DCS world."),	 
 encyclopedia_path = current_mod_path .. '/Encyclopedia',
 })
 
--- mount_vfs_liveries_path (current_mod_path ..  "/Liveries")
+-- Initialisation ultra-sécurisée sans dépendances
+local function safe_setmetatable(t, meta)
+    if _G.setmetatable then
+        return setmetatable(t, meta)
+    end
+    return t
+end
+
+-- Initialisation GT_t simplifiée et robuste
+GT_t = GT_t or {}
+GT_t.LN_t = GT_t.LN_t or {}
+GT_t.WSN_t = GT_t.WSN_t or {}
+GT_t.WSN_t[0] = GT_t.WSN_t[0] or {
+    type = 0,
+    delta_distance = 0.0,
+    delta_azimuth = 0.0,
+    delta_elevation = 0.0
+}
+
+mount_vfs_liveries_path (current_mod_path ..  "/Liveries")
 mount_vfs_model_path    (current_mod_path ..  "/Shapes")
 mount_vfs_texture_path	(current_mod_path ..  "/Textures")
 
@@ -50,8 +69,10 @@ local function weapon_file(f)
 	end
 end
 
---Russia
+-- Sensors
 dofile(current_mod_path.."/Database/Sensors/sensors.lua")
+
+-- SAMP-T (WIP)
 dofile(current_mod_path..'/Database/Weapon/ASTER-30-1.lua')
 dofile(current_mod_path..'/Database/Weapon/ASTER-30-1NT.lua')
 dofile(current_mod_path..'/Database/Weapon/ASTER-30-2.lua')
@@ -67,8 +88,13 @@ dofile(current_mod_path..'/Database/Vehicle/SAMPT_MGE.lua')
 
 -- Weapon files
 
+weapon_file("/Database/Weapon/40N6E.lua")
 weapon_file("/Database/Weapon/48N6.lua")
 weapon_file("/Database/Weapon/48N6E2.lua")
+weapon_file("/Database/Weapon/48N6DM.lua")
+weapon_file("/Database/Weapon/5V55K.lua")
+weapon_file("/Database/Weapon/5V55R.lua")
+weapon_file("/Database/Weapon/5V55RUD.lua")
 weapon_file("/Database/Weapon/9M317.lua")
 weapon_file("/Database/Weapon/5V23.lua")
 weapon_file("/Database/Weapon/5V27.lua")
@@ -81,6 +107,31 @@ weapon_file("/Database/Weapon/9M342.lua")
 weapon_file("/Database/Weapon/9M36.lua")
 weapon_file("/Database/Weapon/9M32.lua")
 weapon_file("/Database/Weapon/9M32M.lua")
+weapon_file("/Database/Weapon/9M83ME.lua")
+weapon_file("/Database/Weapon/9M82MDE.lua")
+weapon_file("/Database/Weapon/9M96E2.lua")
+weapon_file("/Database/Weapon/Pantsir-SM_weapons.lua")
+
+-- S-300PT/PS
+
+vehicle_file("/Database/Vehicle/S-300PS_5P85_1_LN.lua")
+vehicle_file("/Database/Vehicle/S-300PS_5P85DE_LN.lua")
+vehicle_file("/Database/Vehicle/S-300PS_5P85SE_LN.lua")
+vehicle_file("/Database/Vehicle/S-300PS_5P85SU_LN.lua")
+vehicle_file("/Database/Vehicle/S-300PS_54K6_CP.lua")
+vehicle_file("/Database/Vehicle/radar/S-300PS_30N6_TR_Mast.lua")
+vehicle_file("/Database/Vehicle/radar/S-300PS_30N6_TR_Truck.lua")
+vehicle_file("/Database/Vehicle/radar/S-300PS_64N6E_SR_Truck.lua")
+vehicle_file("/Database/Vehicle/radar/S-300PS_76N6_SR.lua")
+
+--S-300V
+
+vehicle_file("/Database/Vehicle/S-300V CP 9S457.lua")
+vehicle_file("/Database/Vehicle/9A82 S-300V LN.lua")
+vehicle_file("/Database/Vehicle/9A83 S-300V LN.lua")
+vehicle_file("/Database/Vehicle/radar/9S15 S-300V SR.lua")
+vehicle_file("/Database/Vehicle/radar/9S19 S-300V SR.lua")
+vehicle_file("/Database/Vehicle/radar/9S32 S-300V TR.lua")
 
 --S-300PMU1
 
@@ -95,18 +146,11 @@ vehicle_file("/Database/Vehicle/5P85DE S-300PMU1 LN.lua")
 --S-300PMU2
 
 vehicle_file("/Database/Vehicle/S-300PMU2 CP 54K6E2.lua")
+vehicle_file("/Database/Vehicle/radar/40B6M S-300PMU2 TR.lua")
 vehicle_file("/Database/Vehicle/radar/92H6E S-300PMU2 TR.lua")
 vehicle_file("/Database/Vehicle/radar/64H6E2 S-300PMU2 SR.lua")
 vehicle_file("/Database/Vehicle/5P85SE2 S-300PMU2 LN.lua")
 
---S-300V
-
-vehicle_file("/Database/Vehicle/S-300V CP 9S457.lua")
-vehicle_file("/Database/Vehicle/9A82 S-300V LN.lua")
-vehicle_file("/Database/Vehicle/9A83 S-300V LN.lua")
-vehicle_file("/Database/Vehicle/radar/9S15 S-300V SR.lua")
-vehicle_file("/Database/Vehicle/radar/9S19 S-300V SR.lua")
-vehicle_file("/Database/Vehicle/radar/9S32 S-300V TR.lua")
 
 --S-300VM
 
@@ -116,6 +160,33 @@ vehicle_file("/Database/Vehicle/radar/9S19M2 S-300VM SR.lua")
 vehicle_file("/Database/Vehicle/radar/9S32ME S-300VM TR.lua")
 vehicle_file("/Database/Vehicle/9A83ME S-300VM LN.lua")
 vehicle_file("/Database/Vehicle/9A82ME S-300VM LN.lua")
+
+
+-- S-400
+
+vehicle_file("/Database/Vehicle/S-400_51P6A_LN.lua")
+vehicle_file("/Database/Vehicle/S-400_51P6A_V2_LN.lua")
+vehicle_file("/Database/Vehicle/S-400_51P6A_40N6E_LN.lua")
+vehicle_file("/Database/Vehicle/S-400_55K6_CP.lua")
+vehicle_file("/Database/Vehicle/radar/S-400_96L6E_SR.lua")
+vehicle_file("/Database/Vehicle/radar/S-400_96L6E_Mast_SR.lua")
+vehicle_file("/Database/Vehicle/radar/S-400_92H6E_TR.lua")
+vehicle_file("/Database/Vehicle/radar/S-400_91N6E_SR.lua")
+vehicle_file("/Database/Vehicle/radar/S-400_92H6E_Mast_TR.lua")
+
+-- S-300V4
+
+vehicle_file("/Database/Vehicle/radar/S-300V4_9S32M-1E_TR.lua")
+vehicle_file("/Database/Vehicle/radar/S-300V4_9S19M-1E_SR.lua")
+vehicle_file("/Database/Vehicle/radar/S-300V4_9S15MDE_SR.lua")
+vehicle_file("/Database/Vehicle/S-300V4_9A82M-2E_LN.lua")
+vehicle_file("/Database/Vehicle/S-300V4_9A83M-2E_LN.lua")
+vehicle_file("/Database/Vehicle/S-300V4_9A84M-2E_LN.lua")
+vehicle_file("/Database/Vehicle/S-300V4_9S457-2E_CP.lua")
+
+-- Pantsir-SM
+
+vehicle_file("/Database/Vehicle/PANTSIR-SM.lua")
 
 --Buk
 
@@ -138,5 +209,21 @@ vehicle_file("/Database/Vehicle/Strela-2M.lua")
 
 vehicle_file("/Database/Vehicle/Polyana-D4M1.lua")
 vehicle_file("/Database/Vehicle/radar/34Ya6E Gazetchik E decoy.lua")
+
+plugin_done()
+
+
+-- LEGACY SUPPORT
+
+declare_plugin("SAM Pack",
+{
+installed 	 	  = true,
+displayName   = _("SAM Pack DEV"),
+shortName	  =   "SAM Pack DEV",
+state		 	  = "installed",
+developerName	  = "ERO & Fox",
+version		 	  = "0.4",	
+info		  =    _("Legacy support for SAM Pack enjoyers"),
+})
 
 plugin_done()

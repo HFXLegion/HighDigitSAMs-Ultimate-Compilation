@@ -1,0 +1,65 @@
+{
+ "9A331_Tor_Trak": {
+  "reflMult": 1.0,
+  "reflAdd": 0.0,
+  "specMult": -1.2999999523162841797,
+  "specAdd": 1.0,
+  "specSelect": 1,
+  "albedoLevel": 0.0,
+  "albedoContrast": 1.0
+ },
+ "9A331_Tor_Metall": {
+  "reflMult": 1.0,
+  "reflAdd": 0.0,
+  "specMult": -0.5,
+  "specAdd": 1.0,
+  "specSelect": 0,
+  "albedoLevel": 0.0,
+  "albedoContrast": 1.0
+ },
+ "9A331_Tor_Glass": {
+  "reflMult": 1.0,
+  "reflAdd": 0.0,
+  "specMult": -0.5,
+  "specAdd": 1.0,
+  "specSelect": 0,
+  "albedoLevel": 0.0,
+  "albedoContrast": 1.0
+ },
+ "9A331_Tor_Rubber": {
+  "reflMult": 1.0,
+  "reflAdd": 0.0,
+  "specMult": -0.5,
+  "specAdd": 1.0,
+  "specSelect": 0,
+  "albedoLevel": 0.0,
+  "albedoContrast": 1.0
+ },
+ "9A331_Tor_Alpha_Metall": {
+  "reflMult": 1.0,
+  "reflAdd": 0.0,
+  "specMult": -1.2999999523162841797,
+  "specAdd": 1.0,
+  "specSelect": 1,
+  "albedoLevel": 0.0,
+  "albedoContrast": 1.0
+ },
+ "9A331_Tor_Crew": {
+  "reflMult": 1.0,
+  "reflAdd": 0.0,
+  "specMult": -0.5,
+  "specAdd": 1.0,
+  "specSelect": 0,
+  "albedoLevel": 0.0,
+  "albedoContrast": 1.0
+ },
+ "9A331_Tor_Alpha_Glass": {
+  "reflMult": 1.0,
+  "reflAdd": 0.0,
+  "specMult": -0.4120000004768371582,
+  "specAdd": 0.84799998998641967773,
+  "specSelect": 0,
+  "albedoLevel": 0.0,
+  "albedoContrast": 0.85399997234344482422
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "9M330": {
+  "reflMult": -1.0,
+  "reflAdd": 0.44800001382827758789,
+  "specMult": -1.7960000038146972656,
+  "specAdd": 0.89999997615814208984,
+  "specSelect": 0,
+  "albedoLevel": 0.0,
+  "albedoContrast": 1.0
+ },
+ "tor1": {
+  "reflMult": 1.0,
+  "reflAdd": 0.57800000905990600586,
+  "specMult": -1.2999999523162841797,
+  "specAdd": 0.89999997615814208984,
+  "specSelect": 0,
+  "albedoLevel": 0.0,
+  "albedoContrast": 1.0
+ }
+}

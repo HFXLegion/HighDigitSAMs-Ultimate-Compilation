@@ -29,7 +29,6 @@ local SA48N6E2 = {
 	D_min = 6000, -- minimum range in meters
 	Damage = 357.5,
 	Diam = 519, -- Missile diameter in mm
-	Escort = 3, -- Escort(Requires tracking?): 0 - no, 1 - launch aircraft, 2 - another aircraft, 3 - from the ground
 	Fi_excort = 2, -- tracking angle (sighting) of the target by the missile.
 	Fi_rak = 3.14152, -- allowable angle of view of the target, in radians
 	Fi_search = 99.9, -- limit angle of free search
@@ -38,17 +37,27 @@ local SA48N6E2 = {
 	H_min = 10, -- minimum target altitude
 	H_min_t = 10, -- minimum target height above the terrain, m.
 	Head_Form = 1, -- determines shape of the missile head for drag modeling; 0 for hemispherical, 1 for conical
-	Head_Type = 8, -- Seeker type code, in our case 6 is for Semi-active radar homing. 1 = Passive IR homing, 2 = Active Radar Homing
+	Escort = 3, -- Escort(Requires tracking?): 0 - no, 1 - launch aircraft, 2 - another aircraft, 3 - from the ground
+	Head_Type = 6, -- Seeker type code, in our case 8 is for TVM (Track via missile). 1 = Passive IR homing, 2 = Active Radar Homing
 	KillDistance = 25,
 	Life_Time = 200, -- Battery life
-	M = 1780, -- Mass of the missile at launch
+	M = 1840, -- Mass of the missile at launch
 	Mach_max = 8.6, -- maximum Mach of the missile. 
+	PN_gain = 7.1,
+	PN_coeffs = {7,
+				1000.0 ,1.0,
+				5000.0, 0.80,
+				15000.0, 0.60,
+				20000.0, 0.40,
+				25000.0, 0.30,
+				30000.0, 0.10,
+				40000.0, 0};
 	ModelData = { 
 		58, -- model params count
-		2.1, -- characteristic square
+		2, -- characteristic square
 		
 		-- Cx dependent parameters
-		0.047, -- Cx_k0 bar Cx0 on subsonic (M << 1)
+		0.05, -- Cx_k0 bar Cx0 on subsonic (M << 1)
 		0.092,  -- Cx_k1 height of the peak of the wave crisis 
 		0.014,  -- Cx_k2 steepness of the front on the approach to the wave crisis
 		-0.015, -- Cx_k3 bar Cx0 at supersonic (M >> 1)
@@ -56,31 +65,31 @@ local SA48N6E2 = {
 		1.13, -- coefficient of dumping of a polar
 
 		-- Cy dependent parameters
-		0.8, --Cy_k0 bar Сy0 at subsonic (M << 1)
+		0.87, --Cy_k0 bar Сy0 at subsonic (M << 1)
 		0.01, -- Cy_k1 bar Cy0 at supersonic (M >> 1)
 		0.21, -- Cy_k2 steepness of the decline (front) behind the wave crisis
 
-		0.35, -- 7 Alfa_max maximum balancing angle, radians
-		4, -- angular velocity created by the moment of gas rudders
+		0.3, -- 7 Alfa_max maximum balancing angle, radians
+		1, -- angular velocity created by the moment of gas rudders
 		
 		--t_statr 	t_b 	t_accel 	t_march 	t_inertial 	t_break 	t_end
-		0.9, 		0, 		12.2, 		0, 			0, 			0, 			1000000000, -- time of stage, sec
-		0, 			0, 		93.75, 		0, 			0, 			0, 			0, 			-- fuel flow rate, kg/sec
-		0, 			0, 		215000, 	0, 			0, 			0, 			0, 			-- thrust, newtons
+		0.9, 		0, 		12.0, 		0, 			0, 			0, 			1000000000, -- time of stage, sec
+		0, 			0, 		116.6, 		0, 			0, 			0, 			0, 			-- fuel flow rate, kg/sec
+		0, 			0, 		240000, 	0, 			0, 			0, 			0, 			-- thrust, newtons
 		
 		1000000000, --self destruct by timer
 		200, --onboard power system operation time, sec
 		0, -- absolute self-destruction altitude. Altitude of the radio fuse triggering self destruct. 
-		0.9, -- control switch-on delay after launch, sec 
+		1, -- control switch-on delay after launch, sec 
 
-		185200, -- 10nmi. Range to the target at the moment of launch, above which the missile will boost to climb.
-		185200, -- 15nmi. The range to the target at any given moment, below which the missile will end the boost phase and switch to pronav
+		20000, -- Range to the target at the moment of launch, above which the missile will boost to climb.
+		20000, -- The range to the target at any given moment, below which the missile will end the boost phase and switch to pronav
 		0, -- sine of the elevation angle of the trajectory of the slide. 
 		650, -- longitude acceleration of the fuse cocking
 		25, -- speed module reported by the ejection device, expelling charge, etc.
-		1.19, -- characteristic of the ACS-RAKETA system, the coefficient of the second order filter K0
-		1,  -- characteristic of the SAU-RAKETA system, second-order filter coefficient K1
-		2, -- characteristic of the SAU-RAKETA system, bandwidth of the control loop
+		4, -- characteristic of the ACS-RAKETA system, the coefficient of the second order filter K0
+		8,  -- characteristic of the SAU-RAKETA system, second-order filter coefficient K1
+		1, -- characteristic of the SAU-RAKETA system, bandwidth of the control loop
 		
 		-- DLZ. Data for calculating launch ranges (indication on the sight), also used by AI
 		0, 
@@ -100,7 +109,6 @@ local SA48N6E2 = {
 	Name = SA48N6E2, --48N6
 	Nr_max = 25, -- Maximum g when turning
 	OmViz_max = 99.9, -- line-of-sight speed limit
-	PN_gain = 9,
 	Range_max = 200000, -- Max range in meters
 	Reflection = 0.2,
 	X_back = -5.681,
@@ -116,13 +124,13 @@ local SA48N6E2 = {
 	nozzle_exit_area = 0.148,
 	sigma = { 25, 25, 25 },
 	supersonic_A_coef_skew = 0.17,
-	t_acc = 12.2, -- motor burn time
+	t_acc = 12.0, -- motor burn time
 	t_b = 0.9, -- Motor start delay
 	t_marsh = 0, -- cruise time, 0.0 if not applicable
 	v_mid = 1000,
 	v_min = 170,
 	warhead = simple_aa_warhead(180.0),
-	wsTypeOfWeapon  = {wsType_Weapon,wsType_Missile,wsType_SA_Missile,WSTYPE_PLACEHOLDER};
+	wsTypeOfWeapon  = {wsType_Missile, wsType_Missile, wsType_SA_Missile};
 	shape_table_data = 
 	{
 		{

@@ -1,25 +1,92 @@
-# HighDigitSAMs
-A simple, IC-compliant mod for DCS to add more SAM systems to the game, both modern and historical.  
+# HighDigitSAMs Ultimate Compilation
+![logo](/images/logo.jpg)
+A fork of [HighDigitSAMs](https://github.com/Auranis/HighDigitSAMs) mod for DCS with lots of improvements
 
-## How to Install
-Simply copy the Mods folder into your C:\Username\Saved Games\DCS folder, or use OVGME to install the files there.  
+## Table of Contents
+- [About](#📢-about)
+- [Contributors and legal](#🧑‍🤝‍🧑-contributors-and-legal-information)
+- [How to Install](#💻-how-to-install)
+- [Improvements over origin](#🚀-improvements-over-origin)
+- [SkynetIADS integration](#🤖-skynet-iads-integration)
+- [Known issues](#🪲-known-issues)
+- [Content](#📚-content)
+- [FAQ](#💬-faq)
 
-## Current features  
+## 📢 About
+
+**HighDigitSAMs Ultimate Compilation** is a project based on the two mods ([HighDigitSAMs](https://github.com/Auranis/HighDigitSAMs) and [SAM Pack](https://forum.dcs.world/topic/275571-sam-sites-asset-pack-a-3d-assets-mod-to-populate-you-sam-sites-farp-and-other-bases)) and incorporating the work of many people from the DCS forum. This mod has **backward compatibility** with any version of these two mods.
+
+## 🧑‍🤝‍🧑 Contributors and legal information
+This mod is a modified version of [HighDigitSAMs](https://github.com/Auranis/HighDigitSAMs) mod by [Auranis](https://github.com/Auranis), Copyright (c) 2020 Auranis.  
+United with [SAM Sites Asset Pack](https://forum.dcs.world/topic/275571-sam-sites-asset-pack-a-3d-assets-mod-to-populate-you-sam-sites-farp-and-other-bases) mod by [LetMePickThat](https://github.com/LetMePickThat).  
+**3D models** by ERO.   
+**Liveries** by [flag02004](https://forum.dcs.world/profile/39074-flag02004).    
+This product is distributed under a **MIT license**. You can review the original license agreement [here](https://github.com/Auranis/HighDigitSAMs/blob/main/LICENSE).
+
+## 💻 How to Install
+### ⚠️ Remove/disable other instances of HighDigitSAMs and SAM Pack mods before installation
+Simply copy the **Mods** folder into your C:\Username\Saved Games\DCS folder, or use OVGME to install the files there.  
+
+## 🚀 Improvements over origin
+- Fixed bug with maximum shooting range of SAM Sites
+- Fixed bug with disappearance of SA-10B (S-300PS) 30N6 TR when destroyed
+- Fixed bug SA-21 (S-400) complex not working with 92N6E mast track radar
+- Added liveries for some SAMs
+- Added launch sounds for all missiles (actually TELs, to be more precise)
+- Added engine sound for all vehicles (exclude masts)
+- Added radar sounds for all SR
+- Added SA-20B (S-300PMU-2) mast TR
+- Added SA-10A (S-300PT) launcher with 5V55K missile (47 km range)
+- Added 40N6E missile for SA-21 (S-400) complex (experimental)
+  > Detailed information about this missile is classified. Missile might me too overpowered
+- Improved flight model and trajectory of all missiles:
+  - No instant turning after launch
+  - No crazy missiles turns at low speeds
+  - Realistic missiles energy loss
+     > Bad interception abilities at maximum ranges
+- Added support of [Skynet-IADS](https://github.com/walder/Skynet-IADS) (see [Skynet IADS integration](#🤖-skynet-iads-integration))
+
+## 🤖 Skynet IADS integration
+In order for the Skynet to correctly identify the SAM Site, the group leader **must be** Big Bird SR for S-300PT/PS/PMU1/PMU2, S-400 and Bill Board SR for S-300V/VM/V4. Otherwise IADS integration is not guaranteed
+> Your SAM Site with wrong group leader might be seen as "RADDEST" in Skynet debug menu
+
+Also see my fork of Skynet IADS with [CurrentHill](https://www.currenthill.com/currenthill-milsim) SAM sites support: [click](https://github.com/HFXLegion/Skynet-IADS)
+
+## 🪲 Known issues
+- 9S32 "Grill Pan" ("Imbir") SA-12 (S-300V) TR has 90 deg rotated model
+    > Temporary fixed with replacement by 9S32M model
+- Missiles have no radio command guidance
+    > Combined guidance does not exist in DCS
+
+
+## 📚 Content
 
 ### SAMP/T Complex
 This is the ground version of the Aster series of missiles. These also exist on ships like on the British Type 45 destroyer.
 For a battery you need the MGE, ME, one of the radars and of course at least one launcher. The MC is optional but does not add any functionality in DCS.
 IRL the MC adds a datalink functionality, akin to the ICC for the MIM-104 Patriot.
 One battery can have up to 6 launchers IRL.
+
 #### Radars
 There is the ARABEL radar which is most common but has lacking performance for ballistic intercepts
 There is also the Ground Fire 300 radar which has greatly increased performance and just much better
+
 #### Missiles
 Modeled right now are the Aster 30 Block 1, Block 1NT and Block 2
 Block 1 is good up to 20km in altitude and 120km in range
 Block 1NT gives it a better seeker and possibly a better booster increasing the altitude coverage to 25km and the range to 150km
 Block 2 is completely different and more akin to the US' THAAD. It can intercept targets up to 200km away and up to 70km in altitude
 Keep in mind that this has to be modeled within DCS' restrictions so its not entirely accurate to what it could do IRL
+
+### Polyana-D4M1 C2 Vehicle
+This wheeled command vehicle is perfect for Skynet users to use as a node for their IADS.  
+3D model by ERO.  
+
+### S-300PT/PS (SA-10A/B)
+The S-300PT was first SAM in S-300 series, armed with 5V55K missile with maximum range of 47 km (25.38 nm). S-300PS is more common and already implemented in DCS. This variant of SA-10B Grumble provides a bit less powerful missile 5V55R and 5V55RUD with 75 km (40 nm) and 90 km (48.6 nm).
+
+### S-300V (SA-12 Gladiator/Giant) Complex (contributed by LetMePickThat)
+The S-300V was a tracked, mobile area defense SAM with a particular focus on countering ballistic missiles. It features SARH guidance for the 9M82 anti-ballstic missile, and the 9M83 anti-aircraft.
 
 ### S-300PMU-1 (SA-20A Gargoyle) Complex  
 This upgraded version of the S-300 added ABM capability and the long range 48N6 missile to the advanced S-300 complex.  
@@ -29,16 +96,19 @@ Now includes a truck-mounted 30N6 radar, 3D model by ERO.
 ### S-300PMU-2 (SA-20B Gargoyle) Complex  
 This incremental upgrade from the S-300PMU-1 features improved ABM capability and increased range.  
 All components labelled as SA-20B in the mission editor. 3D models by ERO.  
-
-### Polyana-D4M1 C2 Vehicle
-This wheeled command vehicle is perfect for Skynet users to use as a node for their IADS.  
-3D model by ERO.  
-
-### S-300V (SA-12 Gladiator/Giant) Complex (contributed by LetMePickThat)
-The S-300V was a tracked, mobile area defense SAM with a particular focus on countering ballistic missiles. It features SARH guidance for the 9M82 anti-ballstic missile, and the 9M83 anti-aircraft.
   
 ### S-300VM (SA-23 Gladiator/Giant) Complex (contributed by LetMePickThat)
 This upgraded variant of the S-300V features Track-Via-Missile guidance and the extremely capable 9M82M anti-ballstic missile, in addition to the 9M83M missile, all on a tracked chassis.    
+All components labelled as SA-23 in the mission editor, complete with custom 3D models created by ERO.  
+
+### S-400 (SA-21 Growler) Complex (contributed by LetMePickThat)
+Lots of information about this complex is classified.  
+This upgraded variant of the S-300V features Track-Via-Missile guidance and the extremely capable 9M82M anti-ballstic missile, in addition to the 9M83M missile, all on a tracked chassis.    
+All components labelled as SA-23 in the mission editor, complete with custom 3D models created by ERO.  
+
+### S-300V4 (SA-23 Gladiator/Giant) Complex (contributed by LetMePickThat)
+Lots of information about this complex is classified.  
+This upgraded variant of the S-300VM features the extremely capable 9M82MV anti-ballstic missile, in addition to the 9M83MV missile, all on a tracked chassis.   
 All components labelled as SA-23 in the mission editor, complete with custom 3D models created by ERO.  
 
 ### 9K317 Buk-M1-2 (SA-17 Grizzly) Transporter/Erector/Launcher and Radar, 9A310M1-2  
@@ -74,40 +144,15 @@ The 9K32 system was the first man-portable SAM system to enter serial production
 Both versions are rear-aspect only, with the SA-7B featuring an improved seeker, warhead, and rocket motor.  
 For mission makers: use Average skill level and face the units away from the expected threat axis, so that they will have the best shot parameters.  
 
-# Version history
+## 💬 FAQ
+#### Do you plan to continue supporting this fork?
+I can't give you an exact answer, but I'll definitely be updating it in a couple of months.
 
-#### V 2.1.0 2024-07-15 -  
-Added SAMP/T Block 1, 1NT and 2 with the necessary vehicles (3D models by ERO and zahnatom, Lua by zahnatom)
-Added SA-7 and SA-7B by Des-mundo
-Incorporated 48N6 guidance improvements by YoloWingPixy - 48N6 variants should guide more like the vanilla 5V55, with a more parabolic arc
-Added "12" HARM code for the S-300VM (SA-23) TR - Thanks to YoloWingPixy
+#### Can you fix 9S32 "Grill Pan" ("Imbir") S-300 TR?
+No, unless i get origin models by Auranis or ERO
 
-#### V 2.0.0 2023-11-04 -  
-Removed KS-19, Fire Can, S-300PS as they have become obsolete with recent DCS changes  
-Fixed IC-compliance issue with DCS 2.9  
-Updated SA-20 variants to use ED's updated flight model for the 48N6  
-Added support for masted & trailer-mounted 19J6 search radar to SA-20 variants  
-Minor changes to S-300V flight models  
-#### V 1.4.2 2021-04-27 -  
-Added PDF guide, added 51P6a and 92N6 models  
-fixed bug with S-300VM guidance  
-updated display names and added short display names for all units   increased maximum targets for 92N6 engagement radar (SA-20B) to 36   increased maximum targets for 9S32 engagement radar (SA-23) to 24  updated all S-300P variants to give lock-only warning  
-#### V 1.4.1 2021-01-30 -  
-Hotfix for model conflict  
-#### V 1.4.0 2021-01-27 -  
-Added S-300PMU-2, S-300V, Gazetchik Decoy by LetMePickThat, including new 3D models by ERO  
-Reduced top speed and accuracy of V-759, tweaked PN coefficients.
-Includes RWR symbology for SA-12 and now the SA-23 search radars.
-Changed SON-9 to use the silkworm 3D model.  
-#### V 1.3.0 2020-12-13 -  
-Added SON-9, KS-19 by Hextopia. Added new S-300 3D models by ERO.  
-Added SA-10B implementation by LetMePickThat.
-Increased 5V55RUD missile performance slightly. Slightly reduced overload limit for V-759 missile.
-Restored launch warning for SA-23.  
-Added Polyana-D4M1.  
-Added improved textures and 3D models for everything.  
-#### V 1.2.0 2020-10-31 - 
-Kinematics updates to missiles, added S-300VM, 9K338 and 9K34, added truck mount for 30N6 radar  
-#### V 1.1.0 2020-10-10 - 
-Second release, added V-759, V-601P, and HQ missiles/launchers, changed 48N6 guidance to command (no more launch warning)  
-#### V 1.0.0 2020-10-3 - Initial release  
+#### Why didn't you make TVM as a way to guide missiles?
+Using only TVM is not realistic (final section is always in SARH mode). There is no combined guidance (TVM + SARH) in the game
+
+#### Any radio command guidance with SARH?
+I tried to make a software hack through the ARH guidance method, but failed due to incorrect operation of track radars with ARH missiles in DCS.

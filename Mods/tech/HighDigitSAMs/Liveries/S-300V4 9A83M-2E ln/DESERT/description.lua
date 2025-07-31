@@ -1,0 +1,33 @@
+livery = {
+	{"S300VM2",	DIFFUSE			,	"S-300VM-D", true};
+	{"S300VM2",	DIFFUSE			,	"S-300VM-D", true};
+	{"S300VM2",	DIFFUSE			,	"S-300VM-D", true};
+	{"S300VM",	DIFFUSE			,	"Russian_Camp2-D2_ERO", true};
+	{"S300VM",	DIFFUSE			,	"Russian_Camp2-D2_ERO", true};
+	{"S300VM",	DIFFUSE			,	"Russian_Camp2-D2_ERO", true};
+	{"S300VM2",	DIFFUSE			,	"S-300VM-D2", true};
+	{"S300Cyl",	DIFFUSE			,	"S-300_Shine", true};
+	{"S300VM2",	DIFFUSE			,	"S-300VM-D2", true};
+	{"S300VM3",	DIFFUSE			,	"S-300VM-3D", true};
+	{"S300VM2",	DIFFUSE			,	"S-300VM-D2", true};
+	{"S300VM2",	DIFFUSE			,	"S-300VM-D2", true};
+	{"S300VM",	DIFFUSE			,	"Russian_Camp2-D2_ERO", true};
+	{"S300VM",	DIFFUSE			,	"Russian_Camp2-D2_ERO", true};
+	{"S300VM",	DIFFUSE			,	"Russian_Camp2-D2_ERO", true};
+	{"S300VM",	DIFFUSE			,	"Russian_Camp2-D2_ERO", true};
+	{"Material.027",	DIFFUSE			,	"9s32radar-D", true};
+	{"S300VM",	DIFFUSE			,	"Russian_Camp2-D2_ERO", true};
+	{"S300VM",	DIFFUSE			,	"Russian_Camp2-D2_ERO", true};
+	{"S300VM",	DIFFUSE			,	"Russian_Camp2-D2_ERO", true};
+	{"S300VM",	DIFFUSE			,	"Russian_Camp2-D2_ERO", true};
+	{"Material.002",	DIFFUSE			,	"S-300VM-D", true};
+	{"S300VM2",	DIFFUSE			,	"S-300VM-D2", true};
+	{"S300VM3",	DIFFUSE			,	"S-300VM-3D", true};
+	{"S300VM",	DIFFUSE			,	"Russian_Camp2-D2_ERO", true};
+	{"S300VM",	DIFFUSE			,	"Russian_Camp2-D2_ERO", true};
+	{"S300VM",	DIFFUSE			,	"Russian_Camp2-D2_ERO", true};
+	{"S300VM",	DIFFUSE			,	"Russian_Camp2-D2_ERO", true};
+	{"S300VM",	DIFFUSE			,	"Russian_Camp2-D2_ERO", true};
+	{"S300VM2",	DIFFUSE			,	"S-300VM-D2", true};
+	{"Glass",	DIFFUSE			,	"glass", true};
+}

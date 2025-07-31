@@ -2,7 +2,7 @@
 
 GT = {};
 GT_t.ws = 0;
-set_recursive_metatable(GT, GT_t.generic_stationary);
+set_recursive_metatable(GT, GT_t.generic_wheel_vehicle);
 set_recursive_metatable(GT.chassis, GT_t.CH_t.MAZ543M);
 GT.chassis.life = 2;
 
@@ -38,7 +38,7 @@ GT.WS[ws].LN[1].depends_on_unit = {{{"S-300PS 40B6M tr"},},{{"S-300PMU1 40B6M tr
 GT.WS[ws].LN[1].reactionTime = 0.1;
 GT.WS[ws].LN[1].PL[1].ammo_capacity = 4;
 GT.WS[ws].LN[1].PL[1].shot_delay = 0.1;
-GT.WS[ws].LN[1].PL[1].reload_time = 7200;
+GT.WS[ws].LN[1].PL[1].reload_time = 3600;
 GT.WS[ws].LN[1].BR[1] = {pos = {10.05, 0.216,-1.045}, drawArgument = 4 };
 GT.WS[ws].LN[1].BR[2] = {pos = {10.05, 1.204,-0.614}, drawArgument = 5 };
 GT.WS[ws].LN[1].BR[3] = {pos = {10.05, 1.204, 0.614}, drawArgument = 6 };

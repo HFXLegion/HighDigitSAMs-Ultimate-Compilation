@@ -13,7 +13,7 @@ GT.visual.fire_pos[2] = 1;
 --chassis
 --GT.animation_arguments.locator_rotation = 0;
 --GT.radar_rotation_period = 0;
-GT.snd.radarRotation = "RadarRotation";
+GT.snd.radarRotation = "GndTech/RadarRotation";
 
 GT.sensor = {};
 GT.sensor.max_range_finding_target = 20000;

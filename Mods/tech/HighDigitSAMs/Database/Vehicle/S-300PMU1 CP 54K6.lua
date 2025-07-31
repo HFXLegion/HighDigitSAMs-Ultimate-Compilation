@@ -1,8 +1,7 @@
 -- S-300PMU1 CCP 54K6 based on MAZ-543
-
 GT = {};
 GT_t.ws = 0;
-set_recursive_metatable(GT, GT_t.generic_stationary)
+set_recursive_metatable(GT, GT_t.generic_wheel_vehicle)
 set_recursive_metatable(GT.chassis, GT_t.CH_t.MAZ543M);
 
 GT.visual.shape = "54k6cp"

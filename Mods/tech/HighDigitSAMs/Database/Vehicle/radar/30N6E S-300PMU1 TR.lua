@@ -2,7 +2,7 @@
 
 GT = {};
 GT_t.ws = 0;
-set_recursive_metatable(GT, GT_t.generic_stationary);
+set_recursive_metatable(GT, GT_t.generic_wheel_vehicle);
 set_recursive_metatable(GT.chassis, GT_t.CH_t.STATIC);
 GT.chassis.life = 4;
 
@@ -10,7 +10,7 @@ GT.visual.shape = "30h6_truck";
 GT.visual.shape_dstr = "30h6_truck_d";
 GT.visual.fire_pos[2] = 1;
 
-GT.snd.radarRotation = "RadarRotation"; -- íå ïîâîðîò, íî çâóê ðàáîòû
+GT.snd.radarRotation = "GndTech/RadarRotation";
 
 GT.sensor = {};
 GT.sensor.max_range_finding_target = 160000;
@@ -46,7 +46,7 @@ GT.WS.radar_type = 102;
 -- 6 trackers, first tracker is main, other 5 are limited within 120 degree
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};
-GT.WS[ws].pos = {0,5,0};
+GT.WS[ws].pos = {0,7.5,0};
 GT.WS[ws].angles = {
 					{math.rad(180), math.rad(-180), math.rad(-10), math.rad(80)},
 					};
@@ -67,7 +67,7 @@ GT.WS[ws].LN[1].reflection_limit = 0.02;
 GT.WS[ws].LN[1].ECM_K = 0.4;
 GT.WS[ws].LN[1].min_trg_alt = 25;
 GT.WS[ws].LN[1].max_trg_alt = 90000;
-GT.WS[ws].LN[1].beamWidth = math.rad(90);
+GT.WS[ws].LN[1].beamWidth = math.rad(0.5);
 
 for i = 1,5 do -- 5 tracker's
     ws = GT_t.inc_ws();
@@ -82,8 +82,6 @@ for i = 1,5 do -- 5 tracker's
     GT.WS[ws].LN = {}
     GT.WS[ws].LN[1] = {}
 	set_recursive_metatable(GT.WS[ws].LN[1], GT.WS[1].LN[1])
-	GT.WS[ws].LN[1].distanceMax = 160000;
-	GT.WS[ws].LN[1].beamWidth = math.rad(0);
 end --for
 
 GT.Name = "S-300PMU1 30N6E tr";
