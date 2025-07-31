@@ -3,14 +3,14 @@
 A fork of [HighDigitSAMs](https://github.com/Auranis/HighDigitSAMs) mod for DCS with lots of improvements
 
 ## Table of Contents
-- [About](#📢-about)
-- [Contributors and legal](#🧑‍🤝‍🧑-contributors-and-legal-information)
-- [How to Install](#💻-how-to-install)
-- [Improvements over origin](#🚀-improvements-over-origin)
-- [SkynetIADS integration](#🤖-skynet-iads-integration)
-- [Known issues](#🪲-known-issues)
-- [Content](#📚-content)
-- [FAQ](#💬-faq)
+- [About](#-about)
+- [Contributors and legal](#-contributors-and-legal-information)
+- [How to Install](#-how-to-install)
+- [Improvements over origin](#-improvements-over-origin)
+- [SkynetIADS integration](#-skynet-iads-integration)
+- [Known issues](#-known-issues)
+- [Content](#-content)
+- [FAQ](#-faq)
 
 ## 📢 About
 
