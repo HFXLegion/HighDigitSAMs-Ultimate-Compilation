@@ -27,7 +27,7 @@ end
 local SA2V601P = {
 	category = CAT_MISSILES,
 	Name = SAV601P, --5V27 S-125
-	display_name = _('5V27 S-125 (V-601P'),
+	display_name = _('5V27 S-125 (V-601P)'),
 	name = "SAV601P",
 	wsTypeOfWeapon  = {wsType_Missile, wsType_Missile, wsType_SA_Missile};
 	Escort = 3,

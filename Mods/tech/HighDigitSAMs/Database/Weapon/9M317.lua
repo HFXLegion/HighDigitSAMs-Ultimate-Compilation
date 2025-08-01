@@ -28,11 +28,8 @@ local SA9M317 = {
 	display_name = _('9M317 Buk-M2 (SA-17 Grizzly)'),
 	display_name_short = _('9M317 Buk-M2 (SA-17 Grizzly)'),
 	name = "SA9M317",
-	-- To emulate radio-command guidance on most of missile traectory Head_Type set to 2 (ARH), but active_radar_lock_dist is 0 (so missile wouldn't ever lock a target by itself)
-	-- In result target gets missile warning on 12 km of missile trajectory (~10 last seconds of missile flight, as it works in real)
-	Escort = 0, -- Escort(Requires tracking?): 0 - no, 1 - launch aircraft, 2 - another aircraft, 3 - from the ground
-	Head_Type = 2, -- Seeker type code, in our case 2 is for Active Radar Homing. 1 = Passive IR homing, 2 = Active Radar Homing
-	active_radar_lock_dist = 0, -- Disable missile's ability to lock the target by its own
+	Escort = 3,
+	Head_Type = 6,
 	sigma = {25, 25, 25},
 	M = 715,
 	H_max = 50000.0,
@@ -46,9 +43,9 @@ local SA9M317 = {
 	Nr_max = 24,
 	v_min = 200.0,
 	v_mid = 900.0,
-	Mach_max = 3.8,
+	Mach_max = 4.55,
 	t_b = 0.0,
-	t_acc = 7.0,
+	t_acc = 4.0,
 	t_marsh = 11.0,
 	Range_max = 50000.0,
 	H_min_t = 15.0,
@@ -66,6 +63,63 @@ local SA9M317 = {
 	Reflection = 0.0918,
 	KillDistance = 13,
 	ccm_k0       = 0.5,
+	loft = 1,
+	loft_factor = 4.5,
+	ModelData = { 
+		58, -- model params count
+		0.126, -- characteristic square
+		
+		-- Cx dependent parameters
+		0.24, -- Cx_k0 bar Cx0 on subsonic (M << 1)
+		0.45,  -- Cx_k1 height of the peak of the wave crisis 
+		0.01,  -- Cx_k2 steepness of the front on the approach to the wave crisis
+		0.1, -- Cx_k3 bar Cx0 at supersonic (M >> 1)
+		0.67,  -- Cx_k4 steepness of the decline after the wave crisis
+		0.048, -- coefficient of dumping of a polar
+
+		-- Cy dependent parameters
+		22, --Cy_k0 bar Сy0 at subsonic (M << 1)
+		13.5, -- Cy_k1 bar Cy0 at supersonic (M >> 1)
+		1.1, -- Cy_k2 steepness of the decline (front) behind the wave crisis
+
+		0.35, -- 7 Alfa_max maximum balancing angle, radians
+		0, -- angular velocity created by the moment of gas rudders
+		
+		--t_statr 	t_b 	t_accel 	t_march 	t_inertial 	t_break 	t_end
+		0,	 		0, 		4,	 		11,		0, 			0, 			1000000000, -- time of stage, sec
+		0, 			0, 		24.0, 		40.45,	0, 			0, 			0, 			-- fuel flow rate, kg/sec
+		0, 			0, 		295000, 	18000,	0, 			0, 			0, 			-- thrust, newtons
+		
+		1000000000, --self destruct by timer
+		60, --onboard power system operation time, sec
+		0, -- absolute self-destruction altitude. Altitude of the radio fuse triggering self destruct. 
+		1, -- control switch-on delay after launch, sec 
+
+		25000, -- Range to the target at the moment of launch, above which the missile will boost to climb.
+		25000, -- The range to the target at any given moment, below which the missile will end the boost phase and switch to pronav
+		0.3, -- sine of the elevation angle of the trajectory of the slide. 
+		150, -- longitude acceleration of the fuse cocking
+		0, -- speed module reported by the ejection device, expelling charge, etc.
+		4, -- characteristic of the ACS-RAKETA system, the coefficient of the second order filter K0
+		8,  -- characteristic of the SAU-RAKETA system, second-order filter coefficient K1
+		1, -- characteristic of the SAU-RAKETA system, bandwidth of the control loop
+		
+		-- DLZ. Data for calculating launch ranges (indication on the sight), also used by AI
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0 
+	},
+	PN_gain = 8,
     PN_coeffs = {
         4,                 -- Number of Entries
 		0, 1.0,

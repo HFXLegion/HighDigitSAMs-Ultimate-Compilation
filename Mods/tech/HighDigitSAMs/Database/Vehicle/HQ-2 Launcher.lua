@@ -50,8 +50,7 @@ __LN.launch_delay = 5;
 __LN.depends_on_unit = {{{"HQ_2_TR", 1},},{{"SNR_75V", 1},}};
 __LN.BR = {
 	{connector_name = 'POINT_ROCKET'},
-		};
-__LN = nil;
+};
 	
 GT.Name = "HQ_2_Guideline_LN";
 GT.DisplayName = _('SAM HQ-2 "Guideline" LN');

@@ -1,0 +1,1 @@
+dofile("GroundUnits/Infantry/US_infantry.lua")

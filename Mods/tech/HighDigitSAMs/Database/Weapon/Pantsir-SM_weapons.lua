@@ -154,23 +154,23 @@ local SA57E6ME			= {
 	Escort				= 3,
 	Head_Type			= 4,
 	sigma				= {10, 10, 10},
-	M					= 42.0,
+	M					= 82.5,
 	H_max				= 14000.0,
 	H_min				= 1.0,
 	Diam				= 100.0,
 	Cx_pil				= 6,
-	D_max				= 14000.0,
+	D_max				= 18000.0,
 	D_min				= 1500.0,
 	Head_Form			= 1,
-	Life_Time			= 30.0,
+	Life_Time			= 55.0,
 	Nr_max				= 25,
 	v_min				= 200.0,
 	v_mid				= 770.0,
-	Mach_max			= 4.5,
-	t_b					= 0.0,
-	t_acc				= 3.0,
+	Mach_max			= 5.0,
+	t_b					= 0.1,
+	t_acc				= 2.0,
 	t_marsh				= 0.0,
-	Range_max			= 25000.0,
+	Range_max			= 30000.0,
 	H_min_t				= 1.0,
 	Fi_start			= 3.14152,
 	Fi_rak				= 3.14152,
@@ -189,7 +189,64 @@ local SA57E6ME			= {
 	KillDistance		= 7.0,
 	ccm_k0				= 0.5,
 	category			= CAT_MISSILES,
-	wsTypeOfWeapon		= {wsType_Weapon,wsType_Missile,wsType_SA_Missile,WSTYPE_PLACEHOLDER};
+	wsTypeOfWeapon		= {wsType_Weapon,wsType_Missile,wsType_SA_Missile};
+	ModelData = { 
+		58, -- model params count
+		0.75, -- characteristic square
+		
+		-- Cx dependent parameters
+		0.004, -- Cx_k0 bar Cx0 on subsonic (M << 1)
+		0.008,  -- Cx_k1 height of the peak of the wave crisis 
+		0.01,  -- Cx_k2 steepness of the front on the approach to the wave crisis
+		-0.007, -- Cx_k3 bar Cx0 at supersonic (M >> 1)
+		0.22,  -- Cx_k4 steepness of the decline after the wave crisis
+		4, -- coefficient of dumping of a polar
+
+		-- Cy dependent parameters
+		0.87, --Cy_k0 bar Сy0 at subsonic (M << 1)
+		0.01, -- Cy_k1 bar Cy0 at supersonic (M >> 1)
+		0.21, -- Cy_k2 steepness of the decline (front) behind the wave crisis
+
+		0.6, -- 7 Alfa_max maximum balancing angle, radians
+		0, -- angular velocity created by the moment of gas rudders
+		
+		--t_statr 	t_b 	t_accel 	t_march 	t_inertial 	t_break 	t_end
+		0.1, 		0, 		2.0, 		0, 			0, 			0, 			1000000000, -- time of stage, sec
+		0, 			0, 		27.5, 		0, 			0, 			0, 			0, 			-- fuel flow rate, kg/sec
+		0, 			0, 		45000,	 	0, 			0, 			0, 			0, 			-- thrust, newtons
+		
+		60, --self destruct by timer
+		55, --onboard power system operation time, sec
+		0, -- absolute self-destruction altitude. Altitude of the radio fuse triggering self destruct. 
+		0.1, -- control switch-on delay after launch, sec 
+
+		12000, -- Range to the target at the moment of launch, above which the missile will boost to climb.
+		12000, -- The range to the target at any given moment, below which the missile will end the boost phase and switch to pronav
+		0.3, -- sine of the elevation angle of the trajectory of the slide. 
+		650, -- longitude acceleration of the fuse cocking
+		35, -- speed module reported by the ejection device, expelling charge, etc.
+		4, -- characteristic of the ACS-RAKETA system, the coefficient of the second order filter K0
+		8,  -- characteristic of the SAU-RAKETA system, second-order filter coefficient K1
+		1, -- characteristic of the SAU-RAKETA system, bandwidth of the control loop
+		
+		-- DLZ. Data for calculating launch ranges (indication on the sight), also used by AI
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0 
+	},
+	loft = 1,
+	loft_factor = 4.5,
+	PN_gain = 8,
 	shape_table_data	= 
 	{
 		{
@@ -213,7 +270,7 @@ GT_t.LN_t._96K6.max_number_of_missiles_channels = 1;
 GT_t.LN_t._96K6.type 							= 4;
 GT_t.LN_t._96K6.xc 								= -1.072;
 GT_t.LN_t._96K6.distanceMin 					= 1500;
-GT_t.LN_t._96K6.distanceMax 					= 25000;
+GT_t.LN_t._96K6.distanceMax 					= 30000;
 GT_t.LN_t._96K6.reactionTime 					= 1.5;
 GT_t.LN_t._96K6.radialDisperse 					= 0.0;
 GT_t.LN_t._96K6.dispertionReductionFactor 		= 0.0;

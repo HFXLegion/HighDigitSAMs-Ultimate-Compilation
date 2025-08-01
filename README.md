@@ -10,11 +10,12 @@ A fork of [HighDigitSAMs](https://github.com/Auranis/HighDigitSAMs) mod for DCS 
 - [SkynetIADS integration](#-skynet-iads-integration)
 - [Known issues](#-known-issues)
 - [Content](#-content)
+- [Changelog](#-changelog)
 - [FAQ](#-faq)
 
 ## 📢 About
 
-**HighDigitSAMs Ultimate Compilation** is a project based on the two mods ([HighDigitSAMs](https://github.com/Auranis/HighDigitSAMs) and [SAM Pack](https://forum.dcs.world/topic/275571-sam-sites-asset-pack-a-3d-assets-mod-to-populate-you-sam-sites-farp-and-other-bases)) and incorporating the work of many people from the DCS forum. This mod has **backward compatibility** with any version of these two mods.
+**HighDigitSAMs Ultimate Compilation** is a project based on the two mods ([HighDigitSAMs](https://github.com/Auranis/HighDigitSAMs) and [SAM Pack](https://forum.dcs.world/topic/275571-sam-sites-asset-pack-a-3d-assets-mod-to-populate-you-sam-sites-farp-and-other-bases)) and incorporating the work of many people from the DCS forum. This mod has **backward compatibility** with any version of these two mods.   
 
 ## 🧑‍🤝‍🧑 Contributors and legal information
 This mod is a modified version of [HighDigitSAMs](https://github.com/Auranis/HighDigitSAMs) mod by [Auranis](https://github.com/Auranis), Copyright (c) 2020 Auranis.  
@@ -31,8 +32,10 @@ Simply copy the **Mods** folder into your C:\Username\Saved Games\DCS folder, or
 - Fixed bug with maximum shooting range of SAM Sites
 - Fixed bug with disappearance of SA-10B (S-300PS) 30N6 TR when destroyed
 - Fixed bug SA-21 (S-400) complex not working with 92N6E mast track radar
+- Fixed SA-22 (Pantsir-SM) crazy recoil
+- Fixed SA-17 (Buk-M2) TELAR not firing
 - Added liveries for some SAMs
-- Added launch sounds for all missiles (actually TELs, to be more precise)
+- Added launch sounds for all missiles
 - Added engine sound for all vehicles (exclude masts)
 - Added radar sounds for all SR
 - Added SA-20B (S-300PMU-2) mast TR
@@ -47,10 +50,10 @@ Simply copy the **Mods** folder into your C:\Username\Saved Games\DCS folder, or
 - Added support of [Skynet-IADS](https://github.com/walder/Skynet-IADS) (see [Skynet IADS integration](#🤖-skynet-iads-integration))
 
 ## 🤖 Skynet IADS integration
-1.In order for the Skynet to correctly identify the SAM Site, the group leader **must be** Big Bird SR for S-300PT/PS/PMU1/PMU2, S-400 and Bill Board SR for S-300V/VM/V4. Otherwise IADS integration is not guaranteed
-> Your SAM Site with wrong group leader might be seen as "RADDEST" in Skynet debug menu
+1. In order for the Skynet to correctly identify the SAM Site, the group leader **must be** Big Bird SR for S-300PT/PS/PMU1/PMU2, S-400 and Bill Board SR for S-300V/VM/V4. Otherwise IADS integration is not guaranteed
+    > Your SAM Site with wrong group leader might be seen as "RADDEST" in Skynet debug menu
 
-2.Use my fork of Skynet IADS with [CurrentHill](https://www.currenthill.com/currenthill-milsim) and HighDigitSAMs SAM sites support: [click](https://github.com/HFXLegion/Skynet-IADS)
+2. Use my fork of Skynet IADS with [CurrentHill](https://www.currenthill.com/currenthill-milsim) and HighDigitSAMs SAM sites support: [click](https://github.com/HFXLegion/Skynet-IADS)
 
 ## 🪲 Known issues
 - 9S32 "Grill Pan" ("Imbir") SA-12 (S-300V) TR has 90 deg rotated model
@@ -144,6 +147,9 @@ The 9K32 system was the first man-portable SAM system to enter serial production
 Both versions are rear-aspect only, with the SA-7B featuring an improved seeker, warhead, and rocket motor.  
 For mission makers: use Average skill level and face the units away from the expected threat axis, so that they will have the best shot parameters.  
 
+## 📃 Changelog
+See **[CHANGELOG.md](/CHANGELOG.md)**
+
 ## 💬 FAQ
 #### Do you plan to continue supporting this fork?
 I can't give you an exact answer, but I'll definitely be updating it in a couple of months.
@@ -156,3 +162,6 @@ Using only TVM is not realistic (final section is always in SARH mode). There is
 
 #### Any radio command guidance with SARH?
 I tried to make a software hack through the ARH guidance method, but failed due to incorrect operation of track radars with ARH missiles in DCS.
+
+#### Why I can't lock target via radar menu playing SA-22 (Pantsir-SM)?
+Unfortunately, in DCS the AI's ability to lead multiple missiles eliminates the ability to lock targets via the radar menu (for some unknown reason)
