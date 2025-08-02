@@ -1,7 +1,7 @@
 -- S-300PMU2 CCP 54K6E2
 GT = {};
 GT_t.ws = 0;
-set_recursive_metatable(GT, GT_t.generic_wheel_vehicle)
+set_recursive_metatable(GT, GT_t.generic_wheel_vehicle);
 set_recursive_metatable(GT.chassis, GT_t.CH_t.MAZ543M);
 
 GT.visual.shape = "54k6cp"
@@ -53,7 +53,7 @@ for i = 1,24 do
 end
 
 GT.Name = "S-300PMU2 54K6E2 cp"
-GT.DisplayName = _('SAM SA-20B S-300PMU-2 "Favorit" C2')
+GT.DisplayName = _('SAM SA-20B S-300PMU-2 C2')
 GT.DisplayNameShort = _('SA-20B CP')
 GT.Rate = 20
 

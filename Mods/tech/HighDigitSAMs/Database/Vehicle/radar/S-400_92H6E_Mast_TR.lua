@@ -5,7 +5,7 @@ set_recursive_metatable(GT.chassis, GT_t.CH_t.STATIC);
 GT.chassis.life = 4;
 
 GT.visual.shape = "ERO_92N6E_TR_Mast";
-GT.visual.shape_dstr = "ERO_30N6_TR_Mast_D";
+GT.visual.shape_dstr = "ERO_92N6E_TR_Mast_D";
 GT.visual.fire_pos[2] = 1;
 
 GT.snd.radarRotation = "GndTech/RadarRotation";
@@ -44,9 +44,9 @@ GT.WS.radar_type = 102;
 -- 0 tracker, dummy
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};
-GT.WS[ws].pos = {0,42.158,0};
+GT.WS[ws].pos = {0,42,0};
 GT.WS[ws].angles = {
-					{math.rad(180), math.rad(-180), math.rad(-90), math.rad(90)},
+					{math.rad(180), math.rad(-180), math.rad(-10), math.rad(80)},
 					};
 GT.WS[ws].drawArgument1 = 0;
 GT.WS[ws].omegaY = 0.174533;
@@ -62,10 +62,10 @@ GT.WS[ws].LN[1].type = 102;
 GT.WS[ws].LN[1].distanceMin = 2000;
 GT.WS[ws].LN[1].distanceMax = 450000;
 GT.WS[ws].LN[1].reflection_limit = 0.039;
-GT.WS[ws].LN[1].ECM_K = 0.4;
-GT.WS[ws].LN[1].min_trg_alt = 25;
+GT.WS[ws].LN[1].ECM_K = 0.65;
+GT.WS[ws].LN[1].min_trg_alt = 10;
 GT.WS[ws].LN[1].max_trg_alt = 90000;
-GT.WS[ws].LN[1].beamWidth = math.rad(0.5);
+GT.WS[ws].LN[1].beamWidth = math.rad(90);
 
 -- "The S-300PMU-2 is referred in the West as SA-20B Gargoyle. The systems' fire control radar can detect 100 targets, track and engage 36 of them and guide 72 missiles.
 -- It is worth noting that earlier radars of the S-300 family could simultaneously engage only 6 targets and guide 12 missiles."
@@ -76,7 +76,7 @@ for i = 1,35 do -- 35 tracker's
     GT.WS[ws].base = 1
     GT.WS[ws].pos = {0,0,0}
 	GT.WS[ws].angles = {
-					{math.rad(45), math.rad(-45), math.rad(-90), math.rad(90)},
+					{math.rad(45), math.rad(-45), math.rad(-10), math.rad(80)},
 					};
     GT.WS[ws].omegaY = 3
     GT.WS[ws].omegaZ = 3
@@ -86,7 +86,7 @@ for i = 1,35 do -- 35 tracker's
 end --for
 
 GT.Name = "S-400 92N6E mast tr";
-GT.DisplayName = _("SAM SA-21 S-400 92N6E Grave Stone (mast) TR");
+GT.DisplayName = _("SAM SA-21 S-400 92N6E (mast) TR");
 GT.DisplayNameShort = _("SA-21 mast TR");
 GT.Rate = 20;
 

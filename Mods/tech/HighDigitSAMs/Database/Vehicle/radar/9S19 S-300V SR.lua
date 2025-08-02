@@ -2,7 +2,7 @@
 
 GT = {};
 GT_t.ws = 0;
-set_recursive_metatable(GT, GT_t.generic_track_vehicle);
+set_recursive_metatable(GT, GT_t.generic_stationary);
 set_recursive_metatable(GT.chassis, GT_t.CH_t.MAZ543M);
 GT.chassis.life = 4;
 
@@ -41,7 +41,7 @@ for i = 1,15 do
 	GT.WS[ws] = {}
     GT.WS[ws].pos = {0,9,0}
 	GT.WS[ws].angles = {
-					{math.rad(180), math.rad(-180), math.rad(-45), math.rad(75)},
+					{math.rad(180), math.rad(-180), math.rad(-10), math.rad(75)},
 					};
     GT.WS[ws].omegaY = 3
     GT.WS[ws].omegaZ = 3

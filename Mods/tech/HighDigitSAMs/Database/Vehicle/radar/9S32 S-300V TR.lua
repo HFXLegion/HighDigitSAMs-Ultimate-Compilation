@@ -2,12 +2,12 @@
 
 GT = {};
 GT_t.ws = 0;
-set_recursive_metatable(GT, GT_t.generic_track_vehicle);
+set_recursive_metatable(GT, GT_t.generic_stationary);
 set_recursive_metatable(GT.chassis, GT_t.CH_t.STATIC);
 GT.chassis.life = 4;
 
-GT.visual.shape = "9s32me"; --9s32 --model has broken
-GT.visual.shape_dstr = "9s32me_d"; --9s32_d -- model has broken
+GT.visual.shape = "9s32me"; --9s32 model has broken
+GT.visual.shape_dstr = "9s32me_d"; --9s32_d model has broken
 GT.visual.fire_pos[2] = 1;
 
 GT.snd.radarRotation = "GndTech/RadarRotation";
@@ -39,7 +39,7 @@ GT.WS.radar_type = 102;
 -- 0 tracker, dummy
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};
-GT.WS[ws].pos = {0,8.5,0};
+GT.WS[ws].pos = {0,9,0};
 GT.WS[ws].angles = {
 					{math.rad(180), math.rad(-180), math.rad(-10), math.rad(80)},
 					};
@@ -60,7 +60,7 @@ GT.WS[ws].LN[1].reflection_limit = 0.02;
 GT.WS[ws].LN[1].ECM_K = 0.4;
 GT.WS[ws].LN[1].min_trg_alt = 15;
 GT.WS[ws].LN[1].max_trg_alt = 150000;
-GT.WS[ws].LN[1].beamWidth = math.rad(0.5);
+GT.WS[ws].LN[1].beamWidth = math.rad(90);
 
 
 for i = 1,5 do -- 5 tracker's

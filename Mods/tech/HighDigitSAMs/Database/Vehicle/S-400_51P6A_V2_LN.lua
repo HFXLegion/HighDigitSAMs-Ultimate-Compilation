@@ -1,6 +1,6 @@
 GT = {};
 GT_t.ws = 0;
-set_recursive_metatable(GT, GT_t.generic_stationary);
+set_recursive_metatable(GT, GT_t.generic_wheel_vehicle);
 set_recursive_metatable(GT.chassis, GT_t.CH_t.MAZ543M);
 GT.chassis.life = 2;
 
@@ -23,7 +23,7 @@ GT.visual.fire_time = 1100; --burning time (seconds)
 -- weapon systems
 
 GT.WS = {};
-GT.WS.maxTargetDetectionRange = 300000;
+GT.WS.maxTargetDetectionRange = 400000;
 
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};
@@ -32,11 +32,11 @@ GT.WS[ws].pos = {-4.915, 2.036,0};
 GT.WS[ws].LN[1].ECM_K = -1
 GT.WS[ws].LN[1].beamWidth = 0.0;
 GT.WS[ws].LN[1].barrels_reload_type = 3; -- BarrelsReloadTypes.SEQUENTIALY
-GT.WS[ws].LN[1].depends_on_unit = {{{"S-400 92N6E tr"},},{{"S-400 92N6E mast tr"},},};
+GT.WS[ws].LN[1].depends_on_unit = {{{"S-400 92N6E tr"},},{{"S-400 92N6E mast tr"},}};
 GT.WS[ws].LN[1].reactionTime = 0.1;
 GT.WS[ws].LN[1].PL[1].ammo_capacity = 3;
 GT.WS[ws].LN[1].PL[1].shot_delay = 1.0;
-GT.WS[ws].LN[1].PL[1].reload_time = 3600;
+GT.WS[ws].LN[1].PL[1].reload_time = 1800;
 GT.WS[ws].LN[1].BR[1] = {pos = {10.05, 0.216,-1.045}, drawArgument = 188 };
 GT.WS[ws].LN[1].BR[2] = {pos = {10.05, 1.204,-0.614}, drawArgument = 189 };
 GT.WS[ws].LN[1].BR[3] = {pos = {10.05, 1.204, 0.614}, drawArgument = 190 };
@@ -49,11 +49,11 @@ GT.WS[ws].pos = {-4.915, 2.036,0};
 GT.WS[ws].LN[1].ECM_K = -1
 GT.WS[ws].LN[1].beamWidth = 0.0;
 GT.WS[ws].LN[1].barrels_reload_type = 3; -- BarrelsReloadTypes.SEQUENTIALY
-GT.WS[ws].LN[1].depends_on_unit = {{{"S-400 92N6E tr"},},{{"S-400 92N6E mast tr"},},};
+GT.WS[ws].LN[1].depends_on_unit = {{{"S-400 92N6E tr"},},};
 GT.WS[ws].LN[1].reactionTime = 0.1;
 GT.WS[ws].LN[1].PL[1].ammo_capacity = 4;
 GT.WS[ws].LN[1].PL[1].shot_delay = 1.0;
-GT.WS[ws].LN[1].PL[1].reload_time = 7200;
+GT.WS[ws].LN[1].PL[1].reload_time = 1800;
 GT.WS[ws].LN[1].BR[1] = {pos = {10.05, 0.216, 1.045}, drawArgument = 191 };
 GT.WS[ws].LN[1].BR[2] = {pos = {10.05, 0.216, 1.045}, drawArgument = 192 };
 GT.WS[ws].LN[1].BR[3] = {pos = {10.05, 0.216, 1.045}, drawArgument = 193 };
@@ -78,4 +78,4 @@ GT.tags  =
     "Air Defence",
 	"Launcher",
 };
-GT.Countries = {"Russia", "Turkey"}
+GT.Countries = {"Russia", "Turkey",}

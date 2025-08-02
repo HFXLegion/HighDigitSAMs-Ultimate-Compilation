@@ -38,14 +38,14 @@ GT.WS[ws].LN[1].depends_on_unit = {{{"S-300PS 40B6M tr"},},{{"S-300PMU1 40B6M tr
 GT.WS[ws].LN[1].reactionTime = 0.1;
 GT.WS[ws].LN[1].PL[1].ammo_capacity = 4;
 GT.WS[ws].LN[1].PL[1].shot_delay = 0.1;
-GT.WS[ws].LN[1].PL[1].reload_time = 3600;
+GT.WS[ws].LN[1].PL[1].reload_time = 1800;
 GT.WS[ws].LN[1].BR[1] = {pos = {10.05, 0.216,-1.045}, drawArgument = 4 };
 GT.WS[ws].LN[1].BR[2] = {pos = {10.05, 1.204,-0.614}, drawArgument = 5 };
 GT.WS[ws].LN[1].BR[3] = {pos = {10.05, 1.204, 0.614}, drawArgument = 6 };
 GT.WS[ws].LN[1].BR[4] = {pos = {10.05, 0.216, 1.045}, drawArgument = 7 };
 
 GT.Name = "S-300PMU1 5P85DE ln";
-GT.DisplayName = _('SAM SA-20A S-300PMU-1 "Gargoyle" TEL D');
+GT.DisplayName = _('SAM SA-20A S-300PMU-1 TEL D');
 GT.DisplayNameShort = _("SA-20A");
 GT.Rate = 10;
 

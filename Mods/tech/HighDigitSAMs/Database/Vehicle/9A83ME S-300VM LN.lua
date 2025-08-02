@@ -2,12 +2,12 @@
 
 GT = {};
 GT_t.ws = 0;
-set_recursive_metatable(GT, GT_t.generic_track_vehicle);
+set_recursive_metatable(GT, GT_t.generic_stationary);
 set_recursive_metatable(GT.chassis, GT_t.CH_t.MAZ543M);
 GT.chassis.life = 2;
 
 GT.visual.shape = "9a83me";
-GT.visual.shape_dstr = "9a83me_d";
+GT.visual.shape_dstr = "Auto_crush";
 
 --chassis
 
@@ -38,14 +38,14 @@ GT.WS[ws].LN[1].depends_on_unit = {{{"S-300VM 9S32ME tr"},},};
 GT.WS[ws].LN[1].reactionTime = 0.1;
 GT.WS[ws].LN[1].PL[1].ammo_capacity = 4;
 GT.WS[ws].LN[1].PL[1].shot_delay = 0.1;
-GT.WS[ws].LN[1].PL[1].reload_time = 3600;
-GT.WS[ws].LN[1].BR[1] = {pos = {3, 0.75,-1.825}, drawArgument = 10 };
-GT.WS[ws].LN[1].BR[2] = {pos = {3, 0.75,-0.65}, drawArgument = 11 };
-GT.WS[ws].LN[1].BR[3] = {pos = {3, 0.75, 0.65}, drawArgument = 12 };
-GT.WS[ws].LN[1].BR[4] = {pos = {3, 0.75, 1.825}, drawArgument = 13 };
+GT.WS[ws].LN[1].PL[1].reload_time = 7200;
+GT.WS[ws].LN[1].BR[1] = {pos = {10.05, 0.216,-1.045}, drawArgument = 0 };
+GT.WS[ws].LN[1].BR[2] = {pos = {10.05, 1.204,-0.614}, drawArgument = 1 };
+GT.WS[ws].LN[1].BR[3] = {pos = {10.05, 1.204, 0.614}, drawArgument = 2 };
+GT.WS[ws].LN[1].BR[4] = {pos = {10.05, 0.216, 1.045}, drawArgument = 3 };
 
 GT.Name = "S-300VM 9A83ME ln";
-GT.DisplayName = _('SAM SA-23 S-300VM "Gladiator" TEL A');
+GT.DisplayName = _('SAM SA-23 S-300VM TEL A');
 GT.DisplayNameShort = _('SA-23A');
 GT.Rate = 10;
 

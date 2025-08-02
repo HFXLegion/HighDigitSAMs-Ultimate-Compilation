@@ -1,6 +1,6 @@
 GT = {};
 GT_t.ws = 0;
-set_recursive_metatable(GT, GT_t.generic_track_vehicle);
+set_recursive_metatable(GT, GT_t.generic_stationary);
 set_recursive_metatable(GT.chassis, GT_t.CH_t.MAZ543M);
 GT.chassis.life = 4;
 
@@ -39,7 +39,7 @@ for i = 1,15 do
 	GT.WS[ws] = {}
     GT.WS[ws].pos = {0,9,0}
 	GT.WS[ws].angles = {
-					{math.rad(180), math.rad(-180), math.rad(-45), math.rad(75)},
+					{math.rad(180), math.rad(-180), math.rad(-10), math.rad(75)},
 					};
     GT.WS[ws].omegaY = 3
     GT.WS[ws].omegaZ = 3
@@ -68,8 +68,7 @@ GT.Sensors = { RADAR = GT.Name };
 GT.DetectionRange  = GT.sensor.max_range_finding_target;
 GT.ThreatRange = 0;
 GT.mapclasskey = "P0091000083";
-GT.attribute = {wsType_Ground,wsType_SAM,wsType_Radar,
-                RLO_9C19M2, -- RLO 9C19M2, RWR: HS, HARM Code: 106
+GT.attribute = {wsType_Ground,wsType_SAM,wsType_Radar,RLO_9C19M2,
 				"LR SAM",
 				"SAM SR",
 				"RADAR_BAND1_FOR_ARM",

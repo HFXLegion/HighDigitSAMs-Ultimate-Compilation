@@ -36,7 +36,7 @@ local SA9M317 = {
 	H_min = 15.0,
 	Diam = 400.0,
 	Cx_pil = 4,
-	D_max = 38000.0,
+	D_max = 30000.0,
 	D_min = 3000.0,
 	Head_Form = 1,
 	Life_Time = 80.0,
@@ -67,28 +67,28 @@ local SA9M317 = {
 	loft_factor = 4.5,
 	ModelData = { 
 		58, -- model params count
-		1, -- characteristic square
+		0.126, -- characteristic square
 		
 		-- Cx dependent parameters
-		0.05, -- Cx_k0 bar Cx0 on subsonic (M << 1)
-		0.092,  -- Cx_k1 height of the peak of the wave crisis 
-		0.014,  -- Cx_k2 steepness of the front on the approach to the wave crisis
-		-0.015, -- Cx_k3 bar Cx0 at supersonic (M >> 1)
-		0.72,  -- Cx_k4 steepness of the decline after the wave crisis
-		1.13, -- coefficient of dumping of a polar
+		0.24, -- Cx_k0 bar Cx0 on subsonic (M << 1)
+		0.45,  -- Cx_k1 height of the peak of the wave crisis 
+		0.01,  -- Cx_k2 steepness of the front on the approach to the wave crisis
+		0.1, -- Cx_k3 bar Cx0 at supersonic (M >> 1)
+		0.67,  -- Cx_k4 steepness of the decline after the wave crisis
+		0.048, -- coefficient of dumping of a polar
 
 		-- Cy dependent parameters
-		0.87, --Cy_k0 bar Сy0 at subsonic (M << 1)
-		0.01, -- Cy_k1 bar Cy0 at supersonic (M >> 1)
-		0.21, -- Cy_k2 steepness of the decline (front) behind the wave crisis
+		22, --Cy_k0 bar Сy0 at subsonic (M << 1)
+		13.5, -- Cy_k1 bar Cy0 at supersonic (M >> 1)
+		1.1, -- Cy_k2 steepness of the decline (front) behind the wave crisis
 
-		0.3, -- 7 Alfa_max maximum balancing angle, radians
+		0.35, -- 7 Alfa_max maximum balancing angle, radians
 		0, -- angular velocity created by the moment of gas rudders
 		
 		--t_statr 	t_b 	t_accel 	t_march 	t_inertial 	t_break 	t_end
 		0,	 		0, 		4,	 		11,		0, 			0, 			1000000000, -- time of stage, sec
 		0, 			0, 		24.0, 		40.45,	0, 			0, 			0, 			-- fuel flow rate, kg/sec
-		0, 			0, 		185000, 	32000,	0, 			0, 			0, 			-- thrust, newtons
+		0, 			0, 		295000, 	18000,	0, 			0, 			0, 			-- thrust, newtons
 		
 		1000000000, --self destruct by timer
 		60, --onboard power system operation time, sec

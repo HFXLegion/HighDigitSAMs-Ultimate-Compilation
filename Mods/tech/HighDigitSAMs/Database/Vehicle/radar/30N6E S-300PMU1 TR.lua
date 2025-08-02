@@ -46,7 +46,7 @@ GT.WS.radar_type = 102;
 -- 6 trackers, first tracker is main, other 5 are limited within 120 degree
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};
-GT.WS[ws].pos = {0,7.5,0};
+GT.WS[ws].pos = {0,8,0};
 GT.WS[ws].angles = {
 					{math.rad(180), math.rad(-180), math.rad(-10), math.rad(80)},
 					};
@@ -67,7 +67,7 @@ GT.WS[ws].LN[1].reflection_limit = 0.02;
 GT.WS[ws].LN[1].ECM_K = 0.4;
 GT.WS[ws].LN[1].min_trg_alt = 25;
 GT.WS[ws].LN[1].max_trg_alt = 90000;
-GT.WS[ws].LN[1].beamWidth = math.rad(0.5);
+GT.WS[ws].LN[1].beamWidth = math.rad(90);
 
 for i = 1,5 do -- 5 tracker's
     ws = GT_t.inc_ws();
@@ -82,10 +82,12 @@ for i = 1,5 do -- 5 tracker's
     GT.WS[ws].LN = {}
     GT.WS[ws].LN[1] = {}
 	set_recursive_metatable(GT.WS[ws].LN[1], GT.WS[1].LN[1])
+	GT.WS[ws].LN[1].distanceMax = 160000;
+	GT.WS[ws].LN[1].beamWidth = math.rad(0);
 end --for
 
 GT.Name = "S-300PMU1 30N6E tr";
-GT.DisplayName = _("SAM SA-20A S-300PMU-1 Tomb Stone(truck) TR");
+GT.DisplayName = _("SAM SA-20A S-300PMU-1 Tomb Stone (truck) TR");
 GT.DisplayNameShort = _("SA-20A TR");
 GT.Rate = 20;
 

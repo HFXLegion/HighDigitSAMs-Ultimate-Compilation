@@ -1,6 +1,6 @@
 GT = {};
 GT_t.ws = 0;
-set_recursive_metatable(GT, GT_t.generic_track_vehicle)
+set_recursive_metatable(GT, GT_t.generic_stationary)
 set_recursive_metatable(GT.chassis, GT_t.CH_t.MAZ543M);
 
 GT.visual.shape = "ERO_9S457ME"
@@ -20,13 +20,13 @@ GT.visual.fire_pos[3] = 0 -- center of burn at transverse axis shift(meters)
 GT.visual.fire_time = 900 --burning time (seconds)
 
 GT.sensor = {};
-GT.sensor.max_range_finding_target = 350000;
+GT.sensor.max_range_finding_target = 400000;
 GT.sensor.min_range_finding_target = 1;
 GT.sensor.max_alt_finding_target = 80000;
 GT.sensor.height = 8.68;
 
 GT.WS = {};
-GT.WS.maxTargetDetectionRange = 350000;
+GT.WS.maxTargetDetectionRange = 400000;
 
 local ws = 0;
 for i = 1,15 do
@@ -52,7 +52,7 @@ for i = 1,15 do
 end
 
 GT.Name = "S-300V4 9S457-2E cp"
-GT.DisplayName = _('SAM SA-23 S-300V4 "Gladiator/Giant" C2')
+GT.DisplayName = _('SAM SA-23 S-300V4 C2')
 GT.DisplayNameShort = _('SA-23 (S-300V4) CP')
 GT.Rate = 20
 

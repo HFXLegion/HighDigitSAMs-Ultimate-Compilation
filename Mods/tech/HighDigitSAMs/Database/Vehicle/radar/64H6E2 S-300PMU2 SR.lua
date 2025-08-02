@@ -39,7 +39,7 @@ local ws = 0;
 for i = 1,24 do 
     ws = GT_t.inc_ws();
 	GT.WS[ws] = {}
-    GT.WS[ws].pos = {0,7.6,0}
+    GT.WS[ws].pos = {0,8,0}
 	GT.WS[ws].angles = {
 					{math.rad(180), math.rad(-180), math.rad(-15), math.rad(50)},
 					};
@@ -52,7 +52,7 @@ for i = 1,24 do
 		reflection_limit = 0.02,
         distanceMin = GT.sensor.min_range_finding_target,
         distanceMax = GT.sensor.max_range_finding_target,
-		ECM_K = 0.4,
+		ECM_K = 0.65,
         min_trg_alt = 100,
         max_trg_alt = GT.sensor.max_alt_finding_target,
         reactionTime = 6;

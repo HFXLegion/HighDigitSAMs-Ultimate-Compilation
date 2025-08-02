@@ -46,7 +46,7 @@ GT.WS.radar_type = 102;
 -- 0 tracker, dummy
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};
-GT.WS[ws].pos = {0,7.5,0};
+GT.WS[ws].pos = {0,8,0};
 GT.WS[ws].angles = {
 					{math.rad(180), math.rad(-180), math.rad(-10), math.rad(80)},
 					};
@@ -64,10 +64,10 @@ GT.WS[ws].LN[1].type = 102;
 GT.WS[ws].LN[1].distanceMin = 2000;
 GT.WS[ws].LN[1].distanceMax = 270000;
 GT.WS[ws].LN[1].reflection_limit = 0.02;
-GT.WS[ws].LN[1].ECM_K = 0.4;
+GT.WS[ws].LN[1].ECM_K = 0.65;
 GT.WS[ws].LN[1].min_trg_alt = 25;
 GT.WS[ws].LN[1].max_trg_alt = 90000;
-GT.WS[ws].LN[1].beamWidth = math.rad(0.5);
+GT.WS[ws].LN[1].beamWidth = math.rad(90);
 
 -- "The S-300PMU-2 is referred in the West as SA-20B Gargoyle. The systems' fire control radar can detect 100 targets, track and engage 36 of them and guide 72 missiles.
 -- It is worth noting that earlier radars of the S-300 family could simultaneously engage only 6 targets and guide 12 missiles."
@@ -88,7 +88,7 @@ for i = 1,35 do -- 35 tracker's
 end --for
 
 GT.Name = "S-300PMU2 92H6E tr";
-GT.DisplayName = _("SAM SA-20B S-300PMU2 Grave Stone(truck) TR");
+GT.DisplayName = _("SAM SA-20B S-300PMU2 Tomb Stone (truck) TR");
 GT.DisplayNameShort = _("SA-20B TR");
 GT.Rate = 20;
 

@@ -39,7 +39,7 @@ local ws = 0;
 for i = 1,24 do 
     ws = GT_t.inc_ws();
 	GT.WS[ws] = {}
-    GT.WS[ws].pos = {0,7.6,0}
+    GT.WS[ws].pos = {0,8,0}
 	GT.WS[ws].angles = {
 					{math.rad(180), math.rad(-180), math.rad(-15), math.rad(50)},
 					};
