@@ -1,6 +1,6 @@
 GT = {};
 GT_t.ws = 0;
-set_recursive_metatable(GT, GT_t.generic_wheel_vehicle);
+set_recursive_metatable(GT, GT_t.generic_stationary);
 set_recursive_metatable(GT.chassis, GT_t.CH_t.MAZ543M);
 GT.chassis.life = 4;
 
