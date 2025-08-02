@@ -44,7 +44,7 @@ __LN.min_launch_angle = math.rad(9);
 __LN = nil;
 
 GT.Name = "5p73 V-601P ln";
-GT.DisplayName = _("SAM SA-3 (V-601P) S-125 LN");
+GT.DisplayName = _('SAM SA-3 S-125 (V-601P) "Goa" LN');
 GT.DisplayNameShort = _("SA-3 (HDS)");
 GT.Rate = 5;
 

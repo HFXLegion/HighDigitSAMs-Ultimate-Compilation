@@ -59,7 +59,7 @@ for i = 1,15 do
 end --for
 
 GT.Name = "S-300V4 9S19M-1E sr";
-GT.DisplayName = _("SAM SA-23 S-300V4  9S19M-1E High Screen SR");
+GT.DisplayName = _("SAM SA-23 S-300V4 High Screen SR");
 GT.DisplayNameShort = _("SA-23 S-300V4 SR");
 GT.Rate = 20;
 

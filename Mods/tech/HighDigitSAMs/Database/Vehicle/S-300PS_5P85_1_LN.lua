@@ -49,7 +49,7 @@ GT.WS[ws].LN[1].BR[3] = {pos = {10.05, 1.204, 0.614}, drawArgument = 190 }; -- C
 GT.WS[ws].LN[1].BR[4] = {pos = {10.05, 0.216, 1.045}, drawArgument = 191 }; -- Changed by ERO
 
 GT.Name = "S-300PS 5P85_1_mod ln";
-GT.DisplayName = _('SAM SA-10A S-300PT 5P85-1 (5V55K) TEL A');
+GT.DisplayName = _('SAM SA-10A S-300PT "Grumble" (5V55K) TEL A');
 GT.DisplayNameShort = _("SA-10A");
 GT.Rate = 10;
 

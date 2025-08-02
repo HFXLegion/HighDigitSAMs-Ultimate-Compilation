@@ -53,7 +53,7 @@ for i = 1,24 do
 end
 
 GT.Name = "S-400 55K6 cp"
-GT.DisplayName = _('SAM SA-21 S-400 55K6 C2')
+GT.DisplayName = _('SAM SA-21 S-400 "Growler" C2')
 GT.DisplayNameShort = _('SA-21 CP')
 GT.Rate = 20
 

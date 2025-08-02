@@ -86,7 +86,7 @@ for i = 1,35 do -- 35 tracker's
 end --for
 
 GT.Name = "S-400 92N6E mast tr";
-GT.DisplayName = _("SAM SA-21 S-400 92N6E (mast) TR");
+GT.DisplayName = _("SAM SA-21 S-400 Grave Stone (mast) TR");
 GT.DisplayNameShort = _("SA-21 mast TR");
 GT.Rate = 20;
 

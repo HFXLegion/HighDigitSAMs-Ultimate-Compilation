@@ -80,7 +80,7 @@ for i = 1,23 do -- 23 tracker's
 end --for
 
 GT.Name = "S-300V4 9S32M-1E tr";
-GT.DisplayName = _("SAM SA-23 S-300V4 9S32M-1E Grill Screen TR");
+GT.DisplayName = _("SAM SA-23 S-300V4 Grill Screen TR");
 GT.DisplayNameShort = _("SA-23 S-300V4 TR")
 GT.Rate = 20;
 

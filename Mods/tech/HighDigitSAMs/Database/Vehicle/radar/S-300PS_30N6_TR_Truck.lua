@@ -74,7 +74,7 @@ for i = 1,5 do -- 5 tracker's
 end --for
 
 GT.Name = "S-300PS 30N6 TRAILER tr";
-GT.DisplayName = _('SAM SA-10B S-300PS 30N5 Flap Lid (truck) TR');
+GT.DisplayName = _('SAM SA-10B S-300PS Flap Lid (truck) TR');
 GT.DisplayNameShort = _('SA-10B TR')
 GT.Rate = 20;
 

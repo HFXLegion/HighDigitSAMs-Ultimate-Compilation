@@ -59,7 +59,7 @@ for i = 1,24 do
 end --for
 
 GT.Name = "S-400 96L6E sr";
-GT.DisplayName = _("SAM SA-21 S-400 96L6E (truck) SR");
+GT.DisplayName = _("SAM SA-21 S-400 Cheese Board (truck) SR");
 GT.DisplayNameShort = _("SA-21 CB SR");
 GT.Rate = 20;
 

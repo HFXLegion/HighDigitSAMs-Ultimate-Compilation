@@ -209,7 +209,7 @@ __LN.depends_on_unit = RADAR_TRACKERS;
 
 GT.Name = "Pantsir_SM";
 GT.Aliases = {"SAM SA-22 Pantsir-SM"}
-GT.DisplayName = _("[HDS] SAM SA-22 Pantsir-SM");
+GT.DisplayName = _('SAM SA-22 Pantsir-SM "Greyhound"');
 GT.Rate = 20;
 
 GT.Sensors = { OPTIC = {"TKN-3B day", "TKN-3B night",

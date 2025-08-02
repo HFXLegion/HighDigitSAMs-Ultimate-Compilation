@@ -61,7 +61,7 @@ GT.WS[ws].LN[1].BR[4] = {pos = {10.05, 0.216, 1.045}, drawArgument = 194 };
 
 
 GT.Name = "S-400 51P6A (9M96E2) ln";
-GT.DisplayName = _('SAM SA-21 S-400 51P6A TEL B');
+GT.DisplayName = _('SAM SA-21 S-400 "Growler" TEL B');
 GT.DisplayNameShort = _("SA-21 TEL B");
 GT.Rate = 10;
 

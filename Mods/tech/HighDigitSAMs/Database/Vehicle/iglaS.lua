@@ -32,7 +32,7 @@ __LN.sightMasterMode = 1;
 __LN.sightIndicationMode = 1;
 
 GT.Name = "SA-24 Igla-S manpad";
-GT.DisplayName = _('MANPADS SA-24 Igla-S');
+GT.DisplayName = _('MANPADS SA-24 Igla-S "Grinch"');
 GT.DisplayNameShort = _('SA-24');
 GT.Rate = 5;
 

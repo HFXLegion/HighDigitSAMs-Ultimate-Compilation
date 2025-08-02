@@ -45,7 +45,7 @@ GT.WS[ws].LN[1].BR[3] = {pos = {10.05, 1.204, 0.614}, drawArgument = 6 };
 GT.WS[ws].LN[1].BR[4] = {pos = {10.05, 0.216, 1.045}, drawArgument = 7 };
 
 GT.Name = "S-300PMU1 5P85CE ln";
-GT.DisplayName = _('SAM SA-20A S-300PMU-1 TEL C');
+GT.DisplayName = _('SAM SA-20A S-300PMU-1 "Gargoyle" TEL C');
 GT.DisplayNameShort = _("SA-20A");
 GT.Rate = 10;
 

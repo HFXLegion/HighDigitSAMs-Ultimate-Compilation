@@ -74,7 +74,7 @@ for i = 1,5 do -- 5 tracker's
 end --for
 
 GT.Name = "S-300PS SA-10B 30N6 MAST tr";
-GT.DisplayName = _("SAM SA-10B S-300PS 30N6 Flap Lid (mast) TR");
+GT.DisplayName = _("SAM SA-10B S-300PS Flap Lid (mast) TR");
 GT.DisplayNameShort = _("SA-10B TR");
 GT.Rate = 20;
 

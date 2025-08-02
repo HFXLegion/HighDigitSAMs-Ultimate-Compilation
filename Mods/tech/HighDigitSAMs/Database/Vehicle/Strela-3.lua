@@ -32,7 +32,7 @@ __LN.sightMasterMode = 1;
 __LN.sightIndicationMode = 1;
 
 GT.Name = "SA-14 Strela-3 manpad";
-GT.DisplayName = _('MANPADS SA-14 Strela-3');
+GT.DisplayName = _('MANPADS SA-14 Strela-3 "Gremlin"');
 GT.DisplayNameShort = _('SA-14');
 GT.Rate = 5;
 

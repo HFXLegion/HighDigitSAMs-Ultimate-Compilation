@@ -33,7 +33,7 @@ GT.visual.fire_pos[3] = 0; -- center of burn at transverse axis shift(meters)
 GT.visual.fire_time = 900; --burning time (seconds)
 
 GT.Name = "S-300PS SA-10B 76N6E sr";
-GT.DisplayName = _("SAM SA-10B S-300PS 76N6E Clam Shell SR");
+GT.DisplayName = _("SAM SA-10B S-300PS Clam Shell SR");
 GT.DisplayNameShort = _("SA-10B SR");
 GT.Rate = 20;
 
