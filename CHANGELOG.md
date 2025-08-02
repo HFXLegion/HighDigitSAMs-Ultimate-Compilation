@@ -1,4 +1,7 @@
 ## Changelog
+### v.1.1.1
+- Rework of SA-17 (Buk-M2) 9M317 missile thrust
+- Fixed multiplayer crash
 ### v.1.1.0
 - Fixed SA-22 (Pantsir-SM) AI doesn't use multiple channels for missiles guidance
 - Fixed SA-22 (Pantsir-SM) sight disappears when switching to missiles
