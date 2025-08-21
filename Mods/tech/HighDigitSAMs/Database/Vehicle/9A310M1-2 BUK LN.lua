@@ -34,30 +34,33 @@ GT.WS.radar_type = 102;
 GT.WS.maxTargetDetectionRange = 60000;
 GT.WS.fire_on_march = false;
 
--- visual
-ws = GT_t.inc_ws();
+-- track radar
+local ws = GT_t.inc_ws();
+local BASE = ws;
 GT.WS[ws] = {};
-GT.WS[ws].pos = {0, 0, 0};
-GT.WS[ws].base = BASE;
+GT.WS[ws].pos = {0, 3.1,0};
 GT.WS[ws].angles = {
-	{math.rad(60), math.rad(-60), math.rad(-5), math.rad(70)},
-	};
-GT.WS[ws].omegaY = 1;
-GT.WS[ws].omegaZ = 1;
-GT.WS[ws].pidY = {p=10,i=0.1,d=3, inn=3};
-GT.WS[ws].pidZ = {p=10,i=0.1,d=3, inn=3};
+					{math.rad(180), math.rad(-180), math.rad(-5), math.rad(70)},
+					};
+GT.WS[ws].base = BASE;
+GT.WS[ws].omegaY = 0.523599;
+GT.WS[ws].omegaZ = math.rad(10);
+GT.WS[ws].pidY = {p=40, i=0.1, d=7, inn=4};
+GT.WS[ws].reference_angle_Y = math.pi;
 GT.WS[ws].LN = {};
 GT.WS[ws].LN[1] = {};
-GT.WS[ws].LN[1].type = 101;
-GT.WS[ws].LN[1].distanceMax = 18500;
-GT.WS[ws].LN[1].ECM_K = 0.3;
+GT.WS[ws].LN[1].type = 102;
+GT.WS[ws].LN[1].max_number_of_missiles_channels = 2;
+GT.WS[ws].LN[1].distanceMax = 50000;
+GT.WS[ws].LN[1].ECM_K = 0.65;
 GT.WS[ws].LN[1].distanceMin = GT.sensor.min_range_finding_target;
 GT.WS[ws].LN[1].max_trg_alt = GT.sensor.max_alt_finding_target;
 GT.WS[ws].LN[1].min_trg_alt = GT.sensor.min_alt_finding_target;
 GT.WS[ws].LN[1].reflection_limit = 0.02;
-GT.WS[ws].LN[1].reactionTime = 10;
-GT.WS[ws].LN[1].beamWidth = math.rad(0);
+GT.WS[ws].LN[1].reactionTime = 4;
+GT.WS[ws].LN[1].beamWidth = math.rad(90);
 GT.WS[ws].LN[1].maxShootingSpeed = 0;
+GT.WS[ws].LN[1].depends_on_unit = {{ { "self", 3 } }, {{ "SA-11 Buk CC 9S470M1" } }, { { "SA-11 Buk SR 9S18M1" } }};
 
 --launcher
 ws = GT_t.inc_ws();
@@ -82,7 +85,7 @@ GT.WS[ws].cockpit 		= {'_1A29/_1A29', {0.0, 0.0, 0.6} }
 __LN = add_launcher(GT.WS[ws], GT_t.LN_t._9A310M12);
 __LN.launch_delay = 5;
 __LN.beamWidth = math.rad(90);
-__LN.depends_on_unit = {{ { "self", 1 } }, {{ "SA-11 Buk CC 9S470M1" } }, { { "SA-11 Buk SR 9S18M1" } }};
+__LN.depends_on_unit = {{ { "self", 1 } },};
 __LN.BR = {
 			{connector_name = "POINT_ROCKET_01"},
 			{connector_name = "POINT_ROCKET_02"},
@@ -91,6 +94,31 @@ __LN.BR = {
 };
 __LN.sightMasterMode = 1;
 __LN.sightIndicationMode = 4;
+
+-- visual
+ws = GT_t.inc_ws();
+GT.WS[ws] = {};
+GT.WS[ws].pos = {0, 0, 0};
+GT.WS[ws].base = BASE;
+GT.WS[ws].angles = {
+	{math.rad(60), math.rad(-60), math.rad(-5), math.rad(70)},
+	};
+GT.WS[ws].omegaY = 1;
+GT.WS[ws].omegaZ = 1;
+GT.WS[ws].pidY = {p=10,i=0.1,d=3, inn=3};
+GT.WS[ws].pidZ = {p=10,i=0.1,d=3, inn=3};
+GT.WS[ws].LN = {};
+GT.WS[ws].LN[1] = {};
+GT.WS[ws].LN[1].type = 101;
+GT.WS[ws].LN[1].distanceMax = 18500;
+GT.WS[ws].LN[1].ECM_K = 0.3;
+GT.WS[ws].LN[1].distanceMin = GT.sensor.min_range_finding_target;
+GT.WS[ws].LN[1].max_trg_alt = GT.sensor.max_alt_finding_target;
+GT.WS[ws].LN[1].min_trg_alt = GT.sensor.min_alt_finding_target;
+GT.WS[ws].LN[1].reflection_limit = 0.02;
+GT.WS[ws].LN[1].reactionTime = 10;
+GT.WS[ws].LN[1].beamWidth = math.rad(0);
+GT.WS[ws].LN[1].maxShootingSpeed = 0;
 
 
 GT.Name = "SA-17 Buk M1-2 LN 9A310M1-2";
