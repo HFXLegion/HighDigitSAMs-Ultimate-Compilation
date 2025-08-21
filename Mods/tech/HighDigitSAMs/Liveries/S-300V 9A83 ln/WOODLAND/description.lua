@@ -36,4 +36,5 @@ livery = {
 	{"Material.005",	DIFFUSE			,	"Russian_Camp5_ERO", true};
 	{"Material.009",	DIFFUSE			,	"glass", true};
 }
+
 name = "Russian woodland Camo"

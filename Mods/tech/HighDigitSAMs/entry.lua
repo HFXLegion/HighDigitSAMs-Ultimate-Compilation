@@ -4,8 +4,15 @@ installed 	 	  = true,
 displayName   = _("High Digit SAMs - Ultimate HFX's compilation"),
 shortName	  =   "HighDigitSAMs - Ultimate Compilation",
 state		 	  = "installed",
-developerName	  = "E. 'Wiki' Crouch, ERO, Fox, BlackFalco, HFX and others",
+developerName	  = "E. 'Wiki' Crouch, ERO, LetMePickThat, Fox, BlackFalco, HFX and others",
 version		 	  = "1.1.1",
+Skins	=
+	{
+		{
+			name	= "HighDigitSAMs",
+			dir		= "Theme"
+		},
+	},
 info		  =    _("Adds various modern and historical air defense units to DCS world."),
 encyclopedia_path = current_mod_path .. '/Encyclopedia',
 })
@@ -71,6 +78,27 @@ end
 
 -- Sensors
 dofile(current_mod_path.."/Database/Sensors/sensors.lua")
+
+-- Static objects
+dofile(current_mod_path..'/Database/PackObjects/Bunkers.lua')
+dofile(current_mod_path..'/Database/PackObjects/Objects.lua')
+dofile(current_mod_path.."/Database/PackObjects/Revetments.lua")
+
+
+
+vehicle_file("/Database/Vehicles/radar/EWR_P_37.lua")
+vehicle_file("/Database/Vehicles/radar/EWR_55Zh6U.lua")
+vehicle_file("/Database/Vehicles/radar/EWR_1L119.lua")
+vehicle_file("/Database/Vehicles/radar/EWR_GenericEW.lua")
+vehicle_file("/Database/Vehicles/ERO_SA2_SNR75.lua")
+vehicle_file("/Database/Vehicles/ERO_SA2_Trailer.lua")
+vehicle_file("/Database/Vehicles/ERO_5S99_Trailer.lua")
+vehicle_file("/Database/Vehicles/ERO_Toyota_ZU23.lua")
+vehicle_file("/Database/Vehicles/ERO_Toyota_ZU23_Armored.lua")
+--vehicle_file("/Database/Vehicles/ERO_Toyota_ZPU2.lua")
+--vehicle_file("/Database/Vehicles/ERO_Toyota_ZPU2_Armored.lua")
+vehicle_file("/Database/Vehicles/ERO_Toyota.lua")
+vehicle_file("/Database/Vehicles/ERO_ZU23_Insurgent.lua")
 
 -- SAMP-T (WIP)
 dofile(current_mod_path..'/Database/Weapon/ASTER-30-1.lua')

@@ -1,3 +1,4 @@
 livery = {
-	{"Material",	DIFFUSE			,	"S-300-2D", true};
+	{"Material",	DIFFUSE			,	"S-300-D", true};
 }
+name = "Desert Camo"

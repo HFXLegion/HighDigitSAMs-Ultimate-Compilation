@@ -19,7 +19,7 @@ A fork of [HighDigitSAMs](https://github.com/Auranis/HighDigitSAMs) mod for DCS 
 
 ## 🧑‍🤝‍🧑 Contributors and legal information
 This mod is a modified version of [HighDigitSAMs](https://github.com/Auranis/HighDigitSAMs) mod by [Auranis](https://github.com/Auranis), Copyright (c) 2020 Auranis.  
-United with [SAM Sites Asset Pack](https://forum.dcs.world/topic/275571-sam-sites-asset-pack-a-3d-assets-mod-to-populate-you-sam-sites-farp-and-other-bases) mod by [LetMePickThat](https://github.com/LetMePickThat).  
+United with [SAM Sites Asset Pack](https://forum.dcs.world/topic/275571-sam-sites-asset-pack-a-3d-assets-mod-to-populate-you-sam-sites-farp-and-other-bases) mod by [LetMePickThat](https://github.com/LetMePickThat) and ERO.  
 **3D models** by ERO.   
 **Liveries** by [flag02004](https://forum.dcs.world/profile/39074-flag02004).    
 This product is distributed under a **MIT license**. You can review the original license agreement [here](https://github.com/Auranis/HighDigitSAMs/blob/main/LICENSE).

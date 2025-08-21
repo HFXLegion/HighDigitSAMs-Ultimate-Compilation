@@ -1,4 +1,9 @@
 ## Changelog
+### v1.2.0
+- Integration with 2SAP units
+- Added SA-10A/B (S-300PT/PS) liveries
+- Fixed SA-12 (S-300V) liveries
+- Fixed SA-23 (S-300VM) Grill Pan TR desert camo
 ### v1.1.2
 - Added extra attributes to launchers
 - Changed model of SA-12 S-300V "Grill Pan" TR to legacy one (by ERO)

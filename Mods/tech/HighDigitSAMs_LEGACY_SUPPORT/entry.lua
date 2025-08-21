@@ -11,3 +11,15 @@ info		  =    _("Legacy support for SAM Pack enjoyers"),
 })
 
 plugin_done()
+
+declare_plugin("SAM Sites Asset Pack",
+{
+installed 	 	  = true, 
+displayName  	  = _("SAM Sites Asset Pack"),
+shortName	 	  =   "2SAP",
+state		 	  = "installed",
+developerName	  = "ERO, LetMePickThat",
+version		 	  = "Beta 1.8.2",
+info			  = _("This asset pack adds various 3D props and radars for use along the High Digit SAMs mod. Some vehicles are also included. Made by ERO and LetMePickThat"),
+})
+plugin_done()

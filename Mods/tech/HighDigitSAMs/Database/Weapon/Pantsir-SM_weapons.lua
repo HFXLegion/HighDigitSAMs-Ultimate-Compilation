@@ -187,7 +187,7 @@ local SA57E6ME			= {
 	KillDistance		= 7.0,
 	ccm_k0				= 0.5,
 	category			= CAT_MISSILES,
-	wsTypeOfWeapon		= {wsType_Weapon,wsType_Missile,wsType_SA_Missile};
+	wsTypeOfWeapon		= {wsType_Weapon,wsType_Missile,wsType_AA_Missile}; -- no self destruct
 	ModelData = { 
 		58, -- model params count
 		0.75, -- characteristic square
