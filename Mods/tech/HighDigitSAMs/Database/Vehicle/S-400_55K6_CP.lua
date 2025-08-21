@@ -62,7 +62,7 @@ GT.Sensors = {RADAR = {"S-300PMU2 92H6E tr"}};
 GT.DetectionRange  = 0;
 GT.ThreatRange = 0;
 GT.mapclasskey = "P0091000046";
-GT.attribute = {wsType_Ground,wsType_SAM,wsType_NoWeapon,wsType_GenericVehicle,
+GT.attribute = {wsType_Ground,wsType_SAM,wsType_NoWeapon,KP_54K6,
 				"SAM CC",
 				"CustomAimPoint",
 				};

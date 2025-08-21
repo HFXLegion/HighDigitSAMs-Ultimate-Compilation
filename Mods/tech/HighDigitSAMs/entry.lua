@@ -1,12 +1,12 @@
 declare_plugin("HighDigitSAMs",
 {
 installed 	 	  = true,
-displayName   = _("High Digit SAMs (HFX's compilation)"),
-shortName	  =   "HighDigitSAMs",
+displayName   = _("High Digit SAMs - Ultimate HFX's compilation"),
+shortName	  =   "HighDigitSAMs - Ultimate Compilation",
 state		 	  = "installed",
 developerName	  = "E. 'Wiki' Crouch, ERO, Fox, BlackFalco, HFX and others",
-version		 	  = "2.1.0",	
-info		  =    _("Adds various modern and historical air defense units to DCS world."),	 
+version		 	  = "1.1.1",
+info		  =    _("Adds various modern and historical air defense units to DCS world."),
 encyclopedia_path = current_mod_path .. '/Encyclopedia',
 })
 
@@ -209,21 +209,5 @@ vehicle_file("/Database/Vehicle/Strela-2M.lua")
 
 vehicle_file("/Database/Vehicle/Polyana-D4M1.lua")
 vehicle_file("/Database/Vehicle/radar/34Ya6E Gazetchik E decoy.lua")
-
-plugin_done()
-
-
--- LEGACY SUPPORT
-
-declare_plugin("SAM Pack",
-{
-installed 	 	  = true,
-displayName   = _("SAM Pack DEV"),
-shortName	  =   "SAM Pack DEV",
-state		 	  = "installed",
-developerName	  = "ERO & Fox",
-version		 	  = "0.4",	
-info		  =    _("Legacy support for SAM Pack enjoyers"),
-})
 
 plugin_done()

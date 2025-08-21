@@ -1,4 +1,12 @@
 ## Changelog
+### v1.1.2
+- Added extra attributes to launchers
+- Changed model of SA-12 S-300V "Grill Pan" TR to legacy one (by ERO)
+  > Temporary without liveries
+- Fixed SA-22 (Pantsir-SM) guns elevation
+- Fixed SA-22 (Pantsir-SM) no lock warning on RWR
+- Fixed SA-17 (Buk-M1-2) TELAR always emits
+- Fixed SA-17 (Buk-M1-2) TELAR ignore low altitude targets
 ### v.1.1.1
 - Rework of SA-17 (Buk-M2) 9M317 missile thrust
 - Fixed multiplayer crash

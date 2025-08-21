@@ -52,7 +52,7 @@ GT.Rate = 10;
 GT.DetectionRange  = 0;
 GT.ThreatRange = GT.WS[1].LN[1].distanceMax;
 GT.mapclasskey = "P0091000079";
-GT.attribute = {wsType_Ground,wsType_SAM,wsType_Miss,PU_5P85D,
+GT.attribute = {wsType_Ground,wsType_SAM,wsType_Miss,S300V_9A82,
 				"AA_missile",
 				"SAM LL",
 				};

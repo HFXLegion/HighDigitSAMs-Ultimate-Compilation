@@ -141,7 +141,7 @@ local SA9M82ME = {
 		0, 
 		0 
 	},
-	wsTypeOfWeapon  = {wsType_Weapon,wsType_Missile,wsType_SA_Missile,WSTYPE_PLACEHOLDER};
+	wsTypeOfWeapon  = {wsType_Weapon,wsType_Missile,wsType_SA_Missile};
 	shape_table_data = 
 	{
 		{

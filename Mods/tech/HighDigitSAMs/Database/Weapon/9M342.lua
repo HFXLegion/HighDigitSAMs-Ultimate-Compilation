@@ -32,7 +32,7 @@ local SA9M342 = {
 	model			= "9m39",
 	mass			= 11.7,
 	
-	wsTypeOfWeapon  = {wsType_Weapon,wsType_Missile,wsType_SA_Missile,WSTYPE_PLACEHOLDER};
+	wsTypeOfWeapon  = {wsType_Weapon,wsType_Missile,wsType_SA_Missile};
 	
 	Escort = 0,
 	Head_Type = 1,

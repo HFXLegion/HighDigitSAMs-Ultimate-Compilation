@@ -87,7 +87,7 @@ GT.visual.dust_pos		= {3.6, 0.1, -GT.chassis.Z_gear_1}
 GT.visual.dirt_pos		= {-3.3, 0.5, -GT.chassis.Z_gear_2}
 
 GT.driverViewPoint = {0.0, 0.0, 0.0};
-GT.driverViewConnectorName = {"POINT_DRIVER_01", offset = {0.0, -0.1, 0.0}}
+GT.driverViewConnectorName = "POINT_DRIVER";
 GT.driverCockpit = "DriverCockpit/DriverCockpitWithIRandLLTV"
 
 
@@ -121,7 +121,7 @@ GT.WS[ws]	= {
 			min_trg_alt						= 1,
 			max_trg_alt						= 12000,
 			max_number_of_missiles_channels = 1,
-			beamWidth						= math.rad(0)
+			beamWidth						= math.rad(0.5)
 		}
 	}
 };
@@ -149,23 +149,37 @@ GT.WS[ws].omegaZ		= math.rad(80);
 GT.WS[ws].pidY = {p=100, i = 2, d = 10.0, inn = 10};
 GT.WS[ws].pidZ = {p=100, i = 2, d = 10.0, inn = 10};
 GT.WS[ws].stabilizer	= true;
-GT.WS[ws].isoviewOffset	= {0.0, 3.5, 0.0};
-GT.WS[ws].pointer		= "POINT_SIGHT_01"
-GT.WS[ws].cockpit 		= {'_1A29/_1A29', {0.1, 0.0, 0.0} }
+GT.WS[ws].cockpit 		= {'_1A29/_1A29', {0.0, 0.0, 0.6} }
 GT.WS[ws].PPI_view 		= "GenericPPI/GenericPPI";
 
 __LN 													= add_launcher(GT.WS[ws], GT_t.LN_t.automatic_gun_2A38M);
-__LN.beamWidth											= math.rad(90);
+__LN.beamWidth											= math.rad(0.5);
 __LN.ECM_K												= 0.9;
-__LN.BR 												= {{connector_name = 'POINT_GUN_01'},{connector_name = 'POINT_GUN_02'}};
+__LN.BR 												= {{pos = {0, 1, -1}},{pos = {0, 1, 0.8}}};
 __LN.fireAnimationArgument								= 23;
 __LN.sightMasterMode									= 1;
 __LN.sightIndicationMode								= 1;
 
+
 __LN													= add_launcher(GT.WS[ws], GT_t.LN_t._96K6);
-__LN.depends_on_unit									= RADAR_TRACKERS
+__LN.BR													= {
+															{pos = {0, 1, 0.8}, 		drawArgument = 188},
+															{pos = {0, 1, -1},		drawArgument = 191},
+															{pos = {0, 1, 0.8}, 		drawArgument = 189},
+															{pos = {0, 1, -1},		drawArgument = 190},
+															{pos = {0, 1, 0.8}, 		drawArgument = 192},
+															{pos = {0, 1, -1},		drawArgument = 195},
+															{pos = {0, 1, 0.8}, 		drawArgument = 193},
+															{pos = {0, 1, -1},		drawArgument = 194},
+															{pos = {0, 1, 0.8}, 		drawArgument = 196},
+															{pos = {0, 1, -1},		drawArgument = 199},
+															{pos = {0, 1, 0.8}, 		drawArgument = 197},
+															{pos = {0, 1, -1},		drawArgument = 198},
+														};
+__LN.beamWidth											= math.rad(0.5);
 __LN.inclination_correction_upper_limit					= math.rad(20);
 __LN.inclination_correction_bias						= math.rad(3);
+__LN.depends_on_unit									= RADAR_TRACKERS
 __LN.sightMasterMode									= 1;
 __LN.sightIndicationMode								= 4;
 
@@ -184,9 +198,10 @@ GT.Sensors = { OPTIC = {"TKN-3B day", "TKN-3B night",
              };
 
 GT.DetectionRange	= GT.sensor.max_range_finding_target;
-GT.ThreatRange		= GT_t.LN_t._96K6.distanceMax
+GT.ThreatRange		= GT_t.LN_t._96K6.distanceMax;
+GT.ThreatRangeMin 	= 1200;
 GT.mapclasskey		= "P0091000014";
-GT.attribute		= {wsType_Ground,wsType_SAM,wsType_Radar,Patr_AN_MPQ_53_P,
+GT.attribute		= {wsType_Ground,wsType_SAM,wsType_Radar_MissGun,Patr_AN_MPQ_53_P,
 						"AA_missile",
 						"AA_flak", "Mobile AAA",
 						"SR SAM",

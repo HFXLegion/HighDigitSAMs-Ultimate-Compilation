@@ -6,8 +6,8 @@ set_recursive_metatable(GT, GT_t.generic_stationary);
 set_recursive_metatable(GT.chassis, GT_t.CH_t.STATIC);
 GT.chassis.life = 4;
 
-GT.visual.shape = "9s32me"; --9s32 model has broken
-GT.visual.shape_dstr = "9s32me_d"; --9s32_d model has broken
+GT.visual.shape = "ERO_9S32"; --9s32 model has broken
+GT.visual.shape_dstr = "9s32_d";
 GT.visual.fire_pos[2] = 1;
 
 GT.snd.radarRotation = "GndTech/RadarRotation";

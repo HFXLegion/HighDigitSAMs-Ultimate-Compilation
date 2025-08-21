@@ -121,17 +121,15 @@ declare_weapon(AA30HE);
 GT_t.LN_t.automatic_gun_2A38M 										= {name = "2A38M", display_name = _("2A38M")};
 GT_t.LN_t.automatic_gun_2A38M										= {} 
 GT_t.LN_t.automatic_gun_2A38M.type		  	  						= 3
-GT_t.LN_t.automatic_gun_2A38M.xc			  	  					= 0.585
+GT_t.LN_t.automatic_gun_2A38M.useTargetAccelInSight 				= true
 GT_t.LN_t.automatic_gun_2A38M.distanceMin  	  						= 200
-GT_t.LN_t.automatic_gun_2A38M.distanceMax  	 	 					= 4000
+GT_t.LN_t.automatic_gun_2A38M.distanceMax  	 	 					= 2500
 GT_t.LN_t.automatic_gun_2A38M.max_trg_alt  	  						= 3000
 GT_t.LN_t.automatic_gun_2A38M.reactionTime 	  						= 1.0;
 GT_t.LN_t.automatic_gun_2A38M.maxTrackingSpeed						= 0.0;
 GT_t.LN_t.automatic_gun_2A38M.maxShootingSpeed 						= 0.0;
 GT_t.LN_t.automatic_gun_2A38M.reflection_limit 						= 0.03;
 GT_t.LN_t.automatic_gun_2A38M.beamWidth 		 					= math.rad(90);
-GT_t.LN_t.automatic_gun_2A38M.inclination_correction_upper_limit	= math.rad(20);
-GT_t.LN_t.automatic_gun_2A38M.inclination_correction_bias 			= math.rad(0.1);
 GT_t.LN_t.automatic_gun_2A38M.sensor = {}
 set_recursive_metatable(GT_t.LN_t.automatic_gun_2A38M.sensor, GT_t.WSN_t[0])
 GT_t.LN_t.automatic_gun_2A38M.PL									= {}
@@ -141,7 +139,7 @@ GT_t.LN_t.automatic_gun_2A38M.PL[1].ammo_capacity					= 1400 -- for the two-gun 
 GT_t.LN_t.automatic_gun_2A38M.PL[1].reload_time						= 180;
 GT_t.LN_t.automatic_gun_2A38M.PL[1].shell_name						= {"2A38M 30mm AP", "2A38M 30mm HE", "2A38M 30mm HE", "2A38M 30mm HE", "2A38M 30mm HE"};
 GT_t.LN_t.automatic_gun_2A38M.PL[1].shell_display_name 				= "2A38M 30mm AP+HE";
-GT_t.LN_t.automatic_gun_2A38M.BR									= { {pos = {1.2, 0, 0} } }
+GT_t.LN_t.automatic_gun_2A38M.BR									= { {pos = {0, 0, 0} } }
 
 
 
@@ -245,7 +243,7 @@ local SA57E6ME			= {
 		0 
 	},
 	loft = 1,
-	loft_factor = 4.5,
+	loft_factor = 1.1,
 	PN_gain = 8,
 	shape_table_data	= 
 	{
@@ -292,17 +290,3 @@ GT_t.LN_t._96K6.PL[1].type_ammunition 			= SA57E6ME.wsTypeOfWeapon;
 GT_t.LN_t._96K6.PL[1].missile_name 				= {"SA57E6ME"};
 GT_t.LN_t._96K6.PL[1].shot_delay 				= 0.1;
 GT_t.LN_t._96K6.PL[1].reload_time 				= 600;
-GT_t.LN_t._96K6.BR = {
-                    {connector_name = 'POINT_Rocket_1',drawArgument = 188},
-					{connector_name = 'POINT_Rocket_8',drawArgument = 191},
-					{connector_name = 'POINT_Rocket_2',drawArgument = 189},
-					{connector_name = 'POINT_Rocket_7',drawArgument = 190},
-					{connector_name = 'POINT_Rocket_3',drawArgument = 192},
-					{connector_name = 'POINT_Rocket_10',drawArgument = 195},
-					{connector_name = 'POINT_Rocket_4',drawArgument = 193},
-					{connector_name = 'POINT_Rocket_9',drawArgument = 194},
-					{connector_name = 'POINT_Rocket_5',drawArgument = 196},
-					{connector_name = 'POINT_Rocket_12',drawArgument = 199},
-					{connector_name = 'POINT_Rocket_6',drawArgument = 197},
-					{connector_name = 'POINT_Rocket_11',drawArgument = 198},
-                };

@@ -30,7 +30,7 @@ GT.visual.fire_time = 1000; --burning time (seconds)
 
 GT.WS = {};
 
-GT.WS.radar_type = 103;
+GT.WS.radar_type = 102;
 GT.WS.maxTargetDetectionRange = 60000;
 GT.WS.fire_on_march = false;
 
@@ -53,7 +53,6 @@ GT.WS[ws].drawArgument1 = 0;
 GT.WS[ws].drawArgument2 = 1;
 GT.WS[ws].mount_before_move = true;
 __LN = add_launcher(GT.WS[ws], GT_t.LN_t._9A310M12);
-__LN.min_launch_angle = math.rad(37);
 __LN.launch_delay = 5;
 __LN.depends_on_unit = {{ "SA-11 Buk CC 9S470M1" } }, { { "self", 2 } };
 __LN.BR = {
@@ -63,8 +62,7 @@ __LN.BR = {
 			{connector_name = "POINT_ROCKET_04"},
 };
 
--- virtual trackers
---primary
+-- track radar
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};
 GT.WS[ws].pos = {0, 3.1,0};
@@ -80,7 +78,7 @@ GT.WS[ws].LN = {};
 GT.WS[ws].LN[1] = {};
 GT.WS[ws].LN[1].type = 102;
 GT.WS[ws].LN[1].max_number_of_missiles_channels = 2;
-GT.WS[ws].LN[1].distanceMax = GT.sensor.max_range_finding_target;
+GT.WS[ws].LN[1].distanceMax = 50000;
 GT.WS[ws].LN[1].ECM_K = 0.65;
 GT.WS[ws].LN[1].distanceMin = GT.sensor.min_range_finding_target;
 GT.WS[ws].LN[1].max_trg_alt = GT.sensor.max_alt_finding_target;
@@ -91,7 +89,7 @@ GT.WS[ws].LN[1].beamWidth = math.rad(90);
 GT.WS[ws].LN[1].maxShootingSpeed = 0;
 GT.WS[ws].LN[1].depends_on_unit = { { { "self", 3 } }, { { "SA-11 Buk CC 9S470M1" } } }; 
 
-
+-- visual
 ws = GT_t.inc_ws();
 GT.WS[ws] = {};
 GT.WS[ws].pos = {0, 0, 0};
@@ -106,14 +104,14 @@ GT.WS[ws].pidZ = {p=10,i=0.1,d=3, inn=3};
 GT.WS[ws].LN = {};
 GT.WS[ws].LN[1] = {};
 GT.WS[ws].LN[1].type = 101;
-GT.WS[ws].LN[1].distanceMax = GT.sensor.max_range_finding_target;
+GT.WS[ws].LN[1].distanceMax = 30000;
 GT.WS[ws].LN[1].ECM_K = 0.65;
 GT.WS[ws].LN[1].distanceMin = GT.sensor.min_range_finding_target;
 GT.WS[ws].LN[1].max_trg_alt = GT.sensor.max_alt_finding_target;
 GT.WS[ws].LN[1].min_trg_alt = GT.sensor.min_alt_finding_target;
 GT.WS[ws].LN[1].reflection_limit = 0.02;
 GT.WS[ws].LN[1].reactionTime = 10;
-GT.WS[ws].LN[1].beamWidth = math.rad(90);
+GT.WS[ws].LN[1].beamWidth = math.rad(0);
 GT.WS[ws].LN[1].maxShootingSpeed = 0;
 
 
@@ -125,7 +123,7 @@ GT.Rate = 70;
 GT.Sensors = { Mount_WS_ID = BASE, OPTIC = {"Karat visir"}, RADAR = {"SA-17 Buk TR"}};
 
 GT.DetectionRange  = GT.sensor.max_range_finding_target;
-GT.ThreatRange = GT.sensor.max_range_finding_target;
+GT.ThreatRange = 50000;
 GT.mapclasskey = "P0091000081";
 GT.attribute = {wsType_Ground,wsType_SAM,wsType_Radar_Miss,BUK_PU,
 				"AA_missile",
