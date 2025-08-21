@@ -62,7 +62,7 @@ local SA5V55K = {
 	KillDistance = 20.0,
 	category = CAT_MISSILES,
 	ccm_k0       = 0.5,
-	PN_gain = 8,
+	PN_gain = 10,
 	PN_coeffs = {7,
 				1000.0 ,1.0,
 				5000.0, 0.80,

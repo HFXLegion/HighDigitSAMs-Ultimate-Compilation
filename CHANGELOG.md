@@ -1,5 +1,6 @@
 ## Changelog
 ### v1.2.1
+- Static objects are implemented as air defense units (for templates support)
 - SA-17 (Buk-M1-2) TELAR now player drivable (fire control included)
 - Fixed SA-22 (Pantsir-SM) doesn't show in **Player Drivable** subcategory
 ### v1.2.0

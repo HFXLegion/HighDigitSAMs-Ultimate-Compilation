@@ -29,6 +29,7 @@ This product is distributed under a **MIT license**. You can review the original
 Simply copy the **Mods** folder into your C:\Username\Saved Games\DCS folder, or use OVGME to install the files there.  
 
 ## 🚀 Improvements over origin
+- Static objects are implemented as air defense units (for templates support)
 - Fixed bug with maximum shooting range of SAM Sites
 - Fixed bug with disappearance of SA-10B (S-300PS) 30N6 TR when destroyed
 - Fixed bug SA-21 (S-400) complex not working with 92N6E mast track radar
