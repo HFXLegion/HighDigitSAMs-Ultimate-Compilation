@@ -1,4 +1,7 @@
 ## Changelog
+### v1.2.1
+- SA-17 (Buk-M1-2) TELAR now player drivable (fire control included)
+- Fixed SA-22 (Pantsir-SM) doesn't show in **Player Drivable** subcategory
 ### v1.2.0
 - Integration with 2SAP units
 - Added SA-10A/B (S-300PT/PS) liveries

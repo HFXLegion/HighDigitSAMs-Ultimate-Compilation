@@ -33,10 +33,13 @@ Simply copy the **Mods** folder into your C:\Username\Saved Games\DCS folder, or
 - Fixed bug with disappearance of SA-10B (S-300PS) 30N6 TR when destroyed
 - Fixed bug SA-21 (S-400) complex not working with 92N6E mast track radar
 - Fixed SA-22 (Pantsir-SM) crazy recoil
-- Fixed SA-17 (Buk-M2) TELAR not firing
+- Fixed SA-22 (Pantsir-SM) no lock warning on RWR
+- Fixed SA-22 (Pantsir-SM) doesn't show in **Player Drivable** subcategory
+- Fixed SA-17 (Buk-M2) TELAR not working
 - Added liveries for some SAMs
 - Added launch sounds for all missiles
 - Added engine sound for all vehicles (exclude masts)
+- Added extra liveries
 - Added radar sounds for all SR
 - Added SA-20B (S-300PMU-2) mast TR
 - Added SA-10A (S-300PT) launcher with 5V55K missile (47 km range)
@@ -64,7 +67,7 @@ Simply copy the **Mods** folder into your C:\Username\Saved Games\DCS folder, or
 
 ## 📚 Content
 
-### SAMP/T Complex
+### SAMP/T Complex (WIP)
 This is the ground version of the Aster series of missiles. These also exist on ships like on the British Type 45 destroyer.
 For a battery you need the MGE, ME, one of the radars and of course at least one launcher. The MC is optional but does not add any functionality in DCS.
 IRL the MC adds a datalink functionality, akin to the ICC for the MIM-104 Patriot.

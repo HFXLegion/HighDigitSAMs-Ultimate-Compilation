@@ -87,7 +87,7 @@ GT.visual.dust_pos		= {3.6, 0.1, -GT.chassis.Z_gear_1}
 GT.visual.dirt_pos		= {-3.3, 0.5, -GT.chassis.Z_gear_2}
 
 GT.driverViewPoint = {0.0, 0.0, 0.0};
-GT.driverViewConnectorName = "POINT_DRIVER";
+GT.driverViewConnectorName = "DRIVER_POINT_01";
 GT.driverCockpit = "DriverCockpit/DriverCockpitWithIRandLLTV"
 
 
@@ -187,7 +187,6 @@ __LN.sightIndicationMode								= 4;
 -- MISC --
 
 GT.Name			= "Pantsir_SM";
-GT.Aliases		= {'SAM SA-22 Pantsir-SM'}
 GT.DisplayName	= _('SAM SA-22 Pantsir-SM "Greyhound"');
 GT.Rate 		= 20;
 
@@ -209,5 +208,9 @@ GT.attribute		= {wsType_Ground,wsType_SAM,wsType_Radar_MissGun,Patr_AN_MPQ_53_P,
 						"SAM TR",
 						"RADAR_BAND1_FOR_ARM",
 						};
-GT.category			= "Air Defence";
+GT.tags  =
+{
+    "Air Defence",
+	"SP AAA",
+};
 GT.Countries = {"Russia"}

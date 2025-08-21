@@ -160,7 +160,7 @@ local SA57E6ME			= {
 	D_max				= 18000.0,
 	D_min				= 1500.0,
 	Head_Form			= 1,
-	Life_Time			= 55.0,
+	Life_Time			= 65.0,
 	Nr_max				= 25,
 	v_min				= 200.0,
 	v_mid				= 770.0,
@@ -187,7 +187,7 @@ local SA57E6ME			= {
 	KillDistance		= 7.0,
 	ccm_k0				= 0.5,
 	category			= CAT_MISSILES,
-	wsTypeOfWeapon		= {wsType_Weapon,wsType_Missile,wsType_AA_Missile}; -- no self destruct
+	wsTypeOfWeapon		= {wsType_Weapon,wsType_Missile,wsType_SA_Missile};
 	ModelData = { 
 		58, -- model params count
 		0.75, -- characteristic square
@@ -214,7 +214,7 @@ local SA57E6ME			= {
 		0, 			0, 		45000,	 	0, 			0, 			0, 			0, 			-- thrust, newtons
 		
 		60, --self destruct by timer
-		55, --onboard power system operation time, sec
+		65, --onboard power system operation time, sec
 		0, -- absolute self-destruction altitude. Altitude of the radio fuse triggering self destruct. 
 		0.1, -- control switch-on delay after launch, sec 
 

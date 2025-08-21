@@ -67,7 +67,7 @@ local SA9M317 = {
 	loft_factor = 4.5,
 	ModelData = { 
 		58, -- model params count
-		1, -- characteristic square
+		0.75, -- characteristic square
 		
 		-- Cx dependent parameters
 		0.05, -- Cx_k0 bar Cx0 on subsonic (M << 1)
