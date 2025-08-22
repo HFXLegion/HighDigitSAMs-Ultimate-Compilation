@@ -51,7 +51,7 @@ GT.WS[ws].pidZ = { p = 10, i = 0.1, d = 4};
 GT.WS[ws].LN = {};
 GT.WS[ws].LN[1] = {};
 GT.WS[ws].LN[1].depends_on_unit = {{{"S-300V 9S457 cp"}}};
-GT.WS[ws].LN[1].reactionTime = 1;
+GT.WS[ws].LN[1].reactionTime = 3;
 GT.WS[ws].LN[1].max_number_of_missiles_channels = 2;
 GT.WS[ws].LN[1].type = 102;
 GT.WS[ws].LN[1].distanceMin = 2000;

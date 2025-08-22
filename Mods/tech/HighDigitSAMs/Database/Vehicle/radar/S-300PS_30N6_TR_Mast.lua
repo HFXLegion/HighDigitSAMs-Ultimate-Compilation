@@ -47,7 +47,7 @@ GT.WS[ws].pidZ = { p = 10, i = 0.1, d = 4};
 GT.WS[ws].LN = {};
 GT.WS[ws].LN[1] = {};
 GT.WS[ws].LN[1].depends_on_unit = {{{"S-300PS SA-10B 54K6 cp"}}};
-GT.WS[ws].LN[1].reactionTime = 6;
+GT.WS[ws].LN[1].reactionTime = 3;
 GT.WS[ws].LN[1].max_number_of_missiles_channels = 2;
 GT.WS[ws].LN[1].type = 102;
 GT.WS[ws].LN[1].distanceMin = 2000;
@@ -56,7 +56,7 @@ GT.WS[ws].LN[1].reflection_limit = 0.049;
 GT.WS[ws].LN[1].ECM_K = 0.4;
 GT.WS[ws].LN[1].min_trg_alt = 25;
 GT.WS[ws].LN[1].max_trg_alt = 27000;
-GT.WS[ws].LN[1].beamWidth = math.rad(0.5);
+GT.WS[ws].LN[1].beamWidth = math.rad(90);
 
 for i = 1,5 do -- 5 tracker's
     ws = GT_t.inc_ws();

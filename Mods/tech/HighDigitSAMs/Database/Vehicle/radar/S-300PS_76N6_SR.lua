@@ -56,7 +56,7 @@ for i = 1,15 do -- 15 target tracker's
 		ECM_K = 0.65,
         min_trg_alt = 5,
         max_trg_alt = 3000,
-        reactionTime = 3;
+        reactionTime = 1;
         },
     }
 end --for

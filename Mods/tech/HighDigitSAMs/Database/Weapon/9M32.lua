@@ -69,7 +69,7 @@ local SA9M32 = {
 	Y_back = 0.0,
 	Z_back = 0.0,
 	Reflection = 0.01,
-	KillDistance = 0.5,
+	KillDistance = 1.0,
 	--seeker sensivity params
 	SeekerSensivityDistance = 5000, -- original value 8000 The range of target with IR value = 1. In meters.
 	ccm_k0 = 3.0,  -- original value 1.0 | Counter Countermeasures Probability Factor. Value = 0 - missile has absolutely resistance to countermeasures. Default = 1 (medium probability)

@@ -53,7 +53,7 @@ for i = 1,24 do
 		ECM_K = 0.4,
         min_trg_alt = 100,
         max_trg_alt = GT.sensor.max_alt_finding_target,
-        reactionTime = 4;
+        reactionTime = 1;
         },
     }
 end --for
