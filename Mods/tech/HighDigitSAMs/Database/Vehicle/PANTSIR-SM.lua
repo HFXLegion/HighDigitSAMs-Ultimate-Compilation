@@ -188,6 +188,7 @@ __LN.sightIndicationMode								= 4;
 
 GT.Name			= "Pantsir_SM";
 GT.DisplayName	= _('SAM SA-22 Pantsir-SM "Greyhound"');
+GT.DisplayNameShort = _('Pantsir SM') 
 GT.Rate 		= 20;
 
 GT.Sensors = { OPTIC = {"TKN-3B day", "TKN-3B night",
@@ -200,7 +201,7 @@ GT.DetectionRange	= GT.sensor.max_range_finding_target;
 GT.ThreatRange		= GT_t.LN_t._96K6.distanceMax;
 GT.ThreatRangeMin 	= 1200;
 GT.mapclasskey		= "P0091000014";
-GT.attribute		= {wsType_Ground,wsType_SAM,wsType_Radar_MissGun,Patr_AN_MPQ_53_P,
+GT.attribute		= {wsType_Ground,wsType_SAM,wsType_Radar_MissGun,WSTYPE_PLACEHOLDER,
 						"AA_missile",
 						"AA_flak", "Mobile AAA",
 						"SR SAM",

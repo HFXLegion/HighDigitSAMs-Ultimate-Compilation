@@ -6,8 +6,8 @@ set_recursive_metatable(GT, GT_t.generic_stationary);
 set_recursive_metatable(GT.chassis, GT_t.CH_t.MAZ543M);
 GT.chassis.life = 2;
 
-GT.visual.shape = "9a82me";
-GT.visual.shape_dstr = "9a82me_d";
+GT.visual.shape = "ERO_9A82ME";
+GT.visual.shape_dstr = "ERO_9A82ME_D";
 
 --chassis
 
@@ -39,10 +39,10 @@ GT.WS[ws].LN[1].reactionTime = 1.0;
 GT.WS[ws].LN[1].PL[1].ammo_capacity = 2;
 GT.WS[ws].LN[1].PL[1].shot_delay = 0.1;
 GT.WS[ws].LN[1].PL[1].reload_time = 7200;
-GT.WS[ws].LN[1].BR[1] = {pos = {10.05, 0.216,-1.045}, drawArgument = 3 };
-GT.WS[ws].LN[1].BR[2] = {pos = {10.05, 1.204,-0.614}, drawArgument = 4 };
-GT.WS[ws].LN[1].BR[3] = {pos = {10.05, 1.204, 0.614}, drawArgument = 2 };
-GT.WS[ws].LN[1].BR[4] = {pos = {10.05, 0.216, 1.045}, drawArgument = 3 };
+GT.WS[ws].LN[1].BR[1] = {pos = {10.05, 0.216,-1.045}, drawArgument = 188 }; -- Changed by ERO
+GT.WS[ws].LN[1].BR[2] = {pos = {10.05, 1.204,-0.614}, drawArgument = 189 }; -- Changed by ERO
+GT.WS[ws].LN[1].BR[3] = {pos = {10.05, 1.204, 0.614}, drawArgument = 190 }; -- Changed by ERO
+GT.WS[ws].LN[1].BR[4] = {pos = {10.05, 0.216, 1.045}, drawArgument = 191 }; -- Changed by ERO
 
 GT.Name = "S-300V 9A82 ln";
 GT.DisplayName = _('SAM SA-12 S-300V "Giant" TEL A');

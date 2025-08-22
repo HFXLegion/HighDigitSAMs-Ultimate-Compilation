@@ -29,7 +29,7 @@ local SA9M36 = {
 	user_name		= _("9M36 Strela-3"),
 	scheme			= "self_homing_spin_missile2",
 	class_name		= "wAmmunitionSelfHoming",
-	model			= "fim-92",
+	model			= "9m39",
 	mass			= 10.3,
 	
 	wsTypeOfWeapon  = {wsType_Weapon,wsType_Missile,wsType_SA_Missile};
@@ -99,7 +99,7 @@ local SA9M36 = {
 	{
 		{
 			name	 = "Strela-3";
-			file  	 = "fim-92";
+			file  	 = "9m39";
 			life  	 = 1;
 			fire  	 = { 0, 1};
 			username = "SA9M36";
