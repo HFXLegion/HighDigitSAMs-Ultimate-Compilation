@@ -32,8 +32,8 @@ GT.WS = {}
 GT.WS.maxTargetDetectionRange = 500;
 
 GT.Name = "SAMPT_MGE";
-GT.DisplayName = _("SAMP/T Electric Generator");
-GT.DisplayNameShort = _("SAMP/T MEP");
+GT.DisplayName = _("SAMP/T EPP");
+GT.DisplayNameShort = _("SAMP/T EPP");
 GT.Rate = 20;
 
 GT.EPLRS = true;

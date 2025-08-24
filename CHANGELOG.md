@@ -1,4 +1,9 @@
 ## Changelog
+### v1.3.0
+- Fixed SAMP/T Battery not working
+- Added liveries for SAMP/T (Desert + Dirt)
+- Added Aster-15 missile for SAMP/T
+- Improved SAMP/T missiles (Aster-30 Block 1/1NT/2)
 ### v1.2.1
 - Static objects are implemented as air defense units (for templates support)
 - SA-17 (Buk-M1-2) TELAR now player drivable (fire control included)

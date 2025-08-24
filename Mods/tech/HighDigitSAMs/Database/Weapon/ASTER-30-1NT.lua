@@ -7,7 +7,7 @@ SAMPT_ASTER_30_Blk_1NT = {
     user_name       = _(nameaster301),
     model           = 'aster_30_blk_1nt',
     mass            = 450.0,
-    wsTypeOfWeapon  =  {wsType_Weapon,wsType_Missile,wsType_SA_Missile,WSTYPE_PLACEHOLDER},
+    wsTypeOfWeapon  =  {wsType_Weapon,wsType_Missile,wsType_AA_Missile,WSTYPE_PLACEHOLDER},
 
     Escort 			= 0,
     Head_Type 		= 2,
@@ -20,14 +20,14 @@ SAMPT_ASTER_30_Blk_1NT = {
     D_max 			= 100000.0,
     D_min 			= 2000.0,
     Head_Form 		= 1,
-    Life_Time 		= 360.0,
+    Life_Time 		= 240.0,
     Nr_max 			= 60,
     v_min 			= 50.0,
     v_mid 			= 1800.0,
     Mach_max 		= 4.5,
     t_b 			= 0.0,
-    t_acc 			= 5.0,
-    t_marsh 		= 22.5,
+    t_acc 			= 4.0,
+    t_marsh 		= 14.5,
     Range_max 		= 150000.0,
     H_min_t 		= 3.0,
     Fi_start     	= 3.14152, -- angle of tracking at firing
@@ -35,7 +35,7 @@ SAMPT_ASTER_30_Blk_1NT = {
     Fi_excort    	= 2.0,
     Fi_search    	= 99.9, --search angle limit
     OmViz_max    	= 99.9, --search line speed limit
-	exhaust1 	 	= { 1, 0.8, 0.2, 1},
+	exhaust1 	 	= { 1, 0.9, 0.6, 1},
     X_back       	= -0.55,
     Y_back       	= 0.0,
     Z_back       	= 0.0,	
@@ -48,14 +48,69 @@ SAMPT_ASTER_30_Blk_1NT = {
 	tail_scale 	 	= 1.4,		
 	ccm_k0 			= 0.2,	
 	
-	active_radar_lock_dist	= 200000.0,
-	go_active_by_default	= 0,	
+	active_radar_lock_dist	= 25500.0,
+	go_active_by_default	= 1,
+	SeekerGen				= 4,
 
+	PN_gain = 6.5,
 	PN_coeffs = {3, 				-- Number of Entries
 				5000.0 ,1.0,		-- Less 5 km to target Pn = 1
 				100000.0, 0.5,		-- Between 10 and 5 km  to target, Pn smoothly changes from 0.5 to 1.0. 
 				200000.0, 0.25};		-- Between 20 and 10 km  to target, Pn smoothly changes from 0.2 to 0.5. Longer then 30 km Pn = 0.2.
+	ModelData = { 
+		58, -- model params count
+		0.7, -- characteristic square
+		
+		-- Cx dependent parameters
+		0.05, -- Cx_k0 bar Cx0 on subsonic (M << 1)
+		0.092,  -- Cx_k1 height of the peak of the wave crisis 
+		0.014,  -- Cx_k2 steepness of the front on the approach to the wave crisis
+		-0.015, -- Cx_k3 bar Cx0 at supersonic (M >> 1)
+		0.72,  -- Cx_k4 steepness of the decline after the wave crisis
+		1.13, -- coefficient of dumping of a polar
 
+		-- Cy dependent parameters
+		0.87, --Cy_k0 bar Сy0 at subsonic (M << 1)
+		0.01, -- Cy_k1 bar Cy0 at supersonic (M >> 1)
+		0.21, -- Cy_k2 steepness of the decline (front) behind the wave crisis
+
+		0.3, -- 7 Alfa_max maximum balancing angle, radians
+		6, -- angular velocity created by the moment of gas rudders
+		
+		--t_statr 	t_b 	t_accel 	t_march 	t_inertial 	t_break 	t_end
+		0,   		0,		4,   		14.5,		0, 			0, 			1000000000, -- time of stage, sec
+		0, 			0, 		47.143,		6.66,		0, 			0, 			0, 			-- fuel flow rate, kg/sec
+		0, 			0, 		100000, 	21500,		0, 			0, 			0, 			-- thrust, newtons
+		
+		1000000000, --self destruct by timer
+		240, --onboard power system operation time, sec
+		0, -- absolute self-destruction altitude. Altitude of the radio fuse triggering self destruct. 
+		0.6, -- control switch-on delay after launch, sec 
+
+		20000, -- Range to the target at the moment of launch, above which the missile will boost to climb.
+		20000, -- The range to the target at any given moment, below which the missile will end the boost phase and switch to pronav
+		0, -- sine of the elevation angle of the trajectory of the slide. 
+		150, -- longitude acceleration of the fuse cocking
+		0, -- speed module reported by the ejection device, expelling charge, etc.
+		4, -- characteristic of the ACS-RAKETA system, the coefficient of the second order filter K0
+		8,  -- characteristic of the SAU-RAKETA system, second-order filter coefficient K1
+		1, -- characteristic of the SAU-RAKETA system, bandwidth of the control loop
+		
+		-- DLZ. Data for calculating launch ranges (indication on the sight), also used by AI
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0, 
+		0 
+	},
 	warhead = enhanced_a2a_warhead(15.0); 
 
     shape_table_data = {

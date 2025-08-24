@@ -38,11 +38,12 @@ Simply copy the **Mods** folder into your C:\Username\Saved Games\DCS folder, or
 - Fixed SA-22 (Pantsir-SM) no lock warning on RWR
 - Fixed SA-22 (Pantsir-SM) doesn't show in **Player Drivable** subcategory
 - Fixed SA-17 (Buk-M2) TELAR not working
+- Fixed SAMP/T not working
 - Added liveries for some SAMs
-- Added launch sounds for all missiles
-- Added engine sound for all vehicles (exclude masts)
+- Added launch sounds for missiles
+- Added engine sound for vehicles (exclude masts)
 - Added extra liveries
-- Added radar sounds for all SR
+- Added radar rotation sounds
 - Added SA-20B (S-300PMU-2) mast TR
 - Added SA-10A (S-300PT) launcher with 5V55K missile (47 km range)
 - Added 40N6E missile for SA-21 (S-400) complex (experimental)
@@ -69,21 +70,25 @@ Simply copy the **Mods** folder into your C:\Username\Saved Games\DCS folder, or
 
 ## 📚 Content
 
-### SAMP/T Complex (WIP)
+### SAMP/T Complex
 This is the ground version of the Aster series of missiles. These also exist on ships like on the British Type 45 destroyer.
 For a battery you need the MGE, ME, one of the radars and of course at least one launcher. The MC is optional but does not add any functionality in DCS.
 IRL the MC adds a datalink functionality, akin to the ICC for the MIM-104 Patriot.
 One battery can have up to 6 launchers IRL.
 
 #### Radars
-There is the ARABEL radar which is most common but has lacking performance for ballistic intercepts
+There is the ARABEL radar which is most common but has lacking performance for ballistic intercepts   
 There is also the Ground Fire 300 radar which has greatly increased performance and just much better
+> ⚠️ Ground Fire 300 requires EPP to work ⚠️
 
 #### Missiles
-Modeled right now are the Aster 30 Block 1, Block 1NT and Block 2
-Block 1 is good up to 20km in altitude and 120km in range
-Block 1NT gives it a better seeker and possibly a better booster increasing the altitude coverage to 25km and the range to 150km
-Block 2 is completely different and more akin to the US' THAAD. It can intercept targets up to 200km away and up to 70km in altitude
+Modeled right now are the Aster 15, Aster 30 Block 1, Block 1NT and Block 2
+- Aster 15 is the first missile with range up to 30 km and 13 km in altitude 
+- Block 1 is good up to 20km in altitude and 120km in range
+- Block 1NT gives it a better seeker and possibly a better booster increasing the altitude coverage to 25km and the range to 150km
+- Block 2 is completely different and more akin to the US' THAAD. It can intercept targets up to 200km away and up to 70km in altitude
+  > Detailed information about this missile is classified. Missile might me too overpowered
+
 Keep in mind that this has to be modeled within DCS' restrictions so its not entirely accurate to what it could do IRL
 
 ### Polyana-D4M1 C2 Vehicle

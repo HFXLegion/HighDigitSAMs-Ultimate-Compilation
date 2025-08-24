@@ -58,7 +58,7 @@ GT.WS[ws].moveable = false;
 GT.WS[ws].reference_angle_Z = math.rad(90);
 
 __LN = add_launcher(GT.WS[ws], GT_t.LN_t.Aster30_1);
-__LN.depends_on_unit = {{{"SAMPT_MRI_ARABEL", "SAMPT_ME"},},{{"SAMPT_MRI_GF300", "SAMPT_ME"},},};
+__LN.depends_on_unit = {{{"SAMPT_MRI_ARABEL"},},{{"SAMPT_MRI_GF300"},},};
 
 __LN.BR = {
 	{pos = {5.3, 6.675, -0.975},	drawArgument = 11},
@@ -74,8 +74,8 @@ __LN.BR = {
 __LN = nil;
 
 GT.Name = "SAMPT_MLT_Blk1";
-GT.DisplayName = _('SAMP/T MLT Launcher Block 1');
-GT.DisplayNameShort = _("SAMP/T MLT Blk 1");
+GT.DisplayName = _('SAMP/T TEL Block 1');
+GT.DisplayNameShort = _("SAMP/T TEL Blk 1");
 GT.Rate = 10;
 
 GT.EPLRS = true

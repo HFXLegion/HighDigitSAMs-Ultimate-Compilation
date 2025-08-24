@@ -46,7 +46,7 @@ GT.visual.agony_explosion_size = 19;
 -- weapon systems
 
 GT.WS = {};
-GT.WS.maxTargetDetectionRange = 400000;
+GT.WS.maxTargetDetectionRange = 60000;
 
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};
@@ -57,31 +57,31 @@ GT.WS[ws].angles = {
 GT.WS[ws].moveable = false;
 GT.WS[ws].reference_angle_Z = math.rad(90);
 
-__LN = add_launcher(GT.WS[ws], GT_t.LN_t.Aster30_2);
+__LN = add_launcher(GT.WS[ws], GT_t.LN_t.Aster15);
 __LN.depends_on_unit = {{{"SAMPT_MRI_ARABEL"},},{{"SAMPT_MRI_GF300"},},};
 
 __LN.BR = {
-	{pos = {6.475, 6.675, -0.975}, 		drawArgument = 11},
-	{pos = {6.475, 6.675, -0.35}, 		drawArgument = 12},
-	{pos = {6.475, 6.675, 0.35}, 		drawArgument = 13},
-	{pos = {6.475, 6.675, 0.975}, 		drawArgument = 14},
-	{pos = {6.475, 7.26, -0.975}, 		drawArgument = 15},
-	{pos = {6.475, 7.26, -0.35}, 		drawArgument = 16},
-	{pos = {6.475, 7.26, 0.35}, 		drawArgument = 17},
-	{pos = {6.475, 7.26, 0.975}, 		drawArgument = 18},
+	{pos = {5.3, 6.675, -0.975},	drawArgument = 11},
+	{pos = {5.3, 6.675, -0.35},		drawArgument = 12},
+	{pos = {5.3, 6.675, 0.35}, 		drawArgument = 13},
+	{pos = {5.3, 6.675, 0.975}, 	drawArgument = 14},
+	{pos = {5.3, 7.26, -0.975}, 	drawArgument = 15},
+	{pos = {5.3, 7.26, -0.35}, 		drawArgument = 16},
+	{pos = {5.3, 7.26, 0.35}, 		drawArgument = 17},
+	{pos = {5.3, 7.26, 0.975}, 		drawArgument = 18},
 };
 
 __LN = nil;
 
-GT.Name = "SAMPT_MLT_Blk2";
-GT.DisplayName = _('SAMP/T TEL Block 2');
-GT.DisplayNameShort = _("SAMP/T TEL Blk 2");
+GT.Name = "SAMPT_MLT";
+GT.DisplayName = _('SAMP/T TEL (Aster-15)');
+GT.DisplayNameShort = _("SAMP/T TEL");
 GT.Rate = 10;
 
 GT.EPLRS = true
 
 GT.DetectionRange = 0;
-GT.ThreatRange = 200000;
+GT.ThreatRange = 120000;
 GT.mapclasskey = "P0091000079";
 GT.attribute = {wsType_Ground, wsType_SAM, wsType_Miss, WSTYPE_PLACEHOLDER, 
 	"AA_missile",

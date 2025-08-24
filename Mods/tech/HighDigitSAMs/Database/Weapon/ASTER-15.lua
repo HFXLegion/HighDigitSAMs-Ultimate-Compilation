@@ -1,10 +1,10 @@
--- aster 30 block 1 by zahnatom
+-- aster 15
 
-local nameaster301 = "Aster 30 Blk 1"
-SAMPT_ASTER_30_Blk_1 = {
+local nameaster15 = "Aster 15"
+SAMPT_ASTER_15 = {
     category        = CAT_MISSILES,
-    name            = nameaster301,
-    user_name       = _(nameaster301),
+    name            = nameaster15,
+    user_name       = _(nameaster15),
     model           = 'aster_30_blk_1',
     mass            = 450.0,
     wsTypeOfWeapon  =  {wsType_Weapon,wsType_Missile,wsType_AA_Missile,WSTYPE_PLACEHOLDER},
@@ -12,27 +12,27 @@ SAMPT_ASTER_30_Blk_1 = {
     Escort 			= 0,
     Head_Type 		= 2,
 	sigma 			= {20, 20, 20},
-    M 				= 450.0,
-    H_max 			= 20000.0,
+    M 				= 310.0,
+    H_max 			= 13000.0,
     H_min 			= 3.0,
     Diam 			= 180.0,
     Cx_pil 			= 1,
-    D_max 			= 80000.0,
+    D_max 			= 25000.0,
     D_min 			= 2000.0,
     Head_Form 		= 1,
-    Life_Time 		= 180.0,
+    Life_Time 		= 90.0,
     Nr_max 			= 60,
     v_min 			= 50.0,
     v_mid 			= 1800.0,
-    Mach_max 		= 4.5,
+    Mach_max 		= 3.0,
     t_b 			= 0.0,
-    t_acc 			= 4.5,
-    t_marsh 		= 15.0,
-    Range_max 		= 120000.0,
+    t_acc 			= 3,
+    t_marsh 		= 11.0,
+    Range_max 		= 30000.0,
     H_min_t 		= 3.0,
     Fi_start     	= 3.14152, -- angle of tracking at firing
     Fi_rak       	= 3.14152,
-    Fi_excort    	= 2,
+    Fi_excort    	= 2.0,
     Fi_search    	= 99.9, --search angle limit
     OmViz_max    	= 99.9, --search line speed limit
 	exhaust1 	 	= { 1, 0.9, 0.6, 1},
@@ -48,11 +48,11 @@ SAMPT_ASTER_30_Blk_1 = {
 	tail_scale 	 	= 1.4,		
 	ccm_k0 			= 0.2,	
 	
-	active_radar_lock_dist	= 22000.0,
+	active_radar_lock_dist	= 18000.0,
 	go_active_by_default	= 1,
-	SeekerGen				= 4,
+	SeekerGen				= 3,
 
-	PN_gain = 6.5,
+	PN_gain = 6,
 	PN_coeffs = {3, 				-- Number of Entries
 				5000.0 ,1.0,		-- Less 5 km to target Pn = 1
 				100000.0, 0.5,		-- Between 10 and 5 km  to target, Pn smoothly changes from 0.5 to 1.0. 
@@ -75,15 +75,15 @@ SAMPT_ASTER_30_Blk_1 = {
 		0.21, -- Cy_k2 steepness of the decline (front) behind the wave crisis
 
 		0.3, -- 7 Alfa_max maximum balancing angle, radians
-		6, -- angular velocity created by the moment of gas rudders
+		0, -- angular velocity created by the moment of gas rudders
 		
 		--t_statr 	t_b 	t_accel 	t_march 	t_inertial 	t_break 	t_end
-		0,   		0,		3.5, 		13.5,		0, 			0, 			1000000000, -- time of stage, sec
-		0, 			0, 		47.143,		6.66,		0, 			0, 			0, 			-- fuel flow rate, kg/sec
-		0, 			0, 		100000, 	21500,		0, 			0, 			0, 			-- thrust, newtons
+		0,   		0,		3,   		11, 		0, 			0, 			1000000000, -- time of stage, sec
+		0, 			0, 		33.33,		5.09,		0, 			0, 			0, 			-- fuel flow rate, kg/sec
+		0, 			0, 		50000,   	16500,		0, 			0, 			0, 			-- thrust, newtons
 		
 		1000000000, --self destruct by timer
-		180, --onboard power system operation time, sec
+		90, --onboard power system operation time, sec
 		0, -- absolute self-destruction altitude. Altitude of the radio fuse triggering self destruct. 
 		0.6, -- control switch-on delay after launch, sec 
 
@@ -116,40 +116,41 @@ SAMPT_ASTER_30_Blk_1 = {
 
     shape_table_data = {
         {
-            name     = nameaster301,
+            name     = nameaster15,
             file     = 'aster_30_blk_1',
             life     = 1,
             fire     = {0, 1},
-            username = "Aster 30 Blk 1",
+            username = "Aster 15",
             index    = WSTYPE_PLACEHOLDER,
         },
     },
+
 };
 
-declare_weapon(SAMPT_ASTER_30_Blk_1)
+declare_weapon(SAMPT_ASTER_15)
 
-GT_t.WS_t.Aster30_1 = {name = "Aster 30 Blk 1", display_name = _("Aster 30 Blk 1")};
+GT_t.WS_t.Aster15 = {name = "Aster 15", display_name = _("Aster 15")};
 
-GT_t.LN_t.Aster30_1 = {}; 
-GT_t.LN_t.Aster30_1.type = 4;
-GT_t.LN_t.Aster30_1.distanceMin = 1000;
-GT_t.LN_t.Aster30_1.distanceMax = 120000;
-GT_t.LN_t.Aster30_1.reactionTime = 1.0;
-GT_t.LN_t.Aster30_1.launch_delay = 0.1;
-GT_t.LN_t.Aster30_1.reflection_limit = 0.0001;
-GT_t.LN_t.Aster30_1.ECM_K = 0
-GT_t.LN_t.Aster30_1.max_number_of_missiles_channels = 1;
-GT_t.LN_t.Aster30_1.sensor = {};
+GT_t.LN_t.Aster15 = {}; 
+GT_t.LN_t.Aster15.type = 4;
+GT_t.LN_t.Aster15.distanceMin = 1000;
+GT_t.LN_t.Aster15.distanceMax = 120000;
+GT_t.LN_t.Aster15.reactionTime = 1.0;
+GT_t.LN_t.Aster15.launch_delay = 0.1;
+GT_t.LN_t.Aster15.reflection_limit = 0.0001;
+GT_t.LN_t.Aster15.ECM_K = 0
+GT_t.LN_t.Aster15.max_number_of_missiles_channels = 1;
+GT_t.LN_t.Aster15.sensor = {};
 
-set_recursive_metatable(GT_t.LN_t.Aster30_1.sensor, GT_t.WSN_t[0]);
+set_recursive_metatable(GT_t.LN_t.Aster15.sensor, GT_t.WSN_t[0]);
 
-GT_t.LN_t.Aster30_1.external_tracking_awacs = false;
-GT_t.LN_t.Aster30_1.show_external_missile = true
-GT_t.LN_t.Aster30_1.PL = {};
-GT_t.LN_t.Aster30_1.PL[1] = {};
-GT_t.LN_t.Aster30_1.PL[1].switch_on_delay = 0.1;
-GT_t.LN_t.Aster30_1.PL[1].shot_delay = 0.1;
-GT_t.LN_t.Aster30_1.PL[1].ammo_capacity = 8;
-GT_t.LN_t.Aster30_1.PL[1].type_ammunition = SAMPT_ASTER_30_Blk_1.wsTypeOfWeapon;
-GT_t.LN_t.Aster30_1.PL[1].reload_time = 3600;
-GT_t.LN_t.Aster30_1.BR = { { pos = {0, 0, 0} } };
+GT_t.LN_t.Aster15.external_tracking_awacs = false;
+GT_t.LN_t.Aster15.show_external_missile = true
+GT_t.LN_t.Aster15.PL = {};
+GT_t.LN_t.Aster15.PL[1] = {};
+GT_t.LN_t.Aster15.PL[1].switch_on_delay = 0.1;
+GT_t.LN_t.Aster15.PL[1].shot_delay = 0.1;
+GT_t.LN_t.Aster15.PL[1].ammo_capacity = 8;
+GT_t.LN_t.Aster15.PL[1].type_ammunition = SAMPT_ASTER_15.wsTypeOfWeapon;
+GT_t.LN_t.Aster15.PL[1].reload_time = 3600;
+GT_t.LN_t.Aster15.BR = { { pos = {0, 0, 0} } };

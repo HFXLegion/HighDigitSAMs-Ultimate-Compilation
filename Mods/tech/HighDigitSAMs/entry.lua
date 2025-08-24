@@ -100,22 +100,13 @@ vehicle_file("/Database/Vehicle/ERO_Toyota_ZU23_Armored.lua")
 vehicle_file("/Database/Vehicle/ERO_Toyota.lua")
 vehicle_file("/Database/Vehicle/ERO_ZU23_Insurgent.lua")
 
--- SAMP-T (WIP)
-dofile(current_mod_path..'/Database/Weapon/ASTER-30-1.lua')
-dofile(current_mod_path..'/Database/Weapon/ASTER-30-1NT.lua')
-dofile(current_mod_path..'/Database/Weapon/ASTER-30-2.lua')
-dofile(current_mod_path..'/Database/Vehicle/SAMPT_MLT_Blk1.lua')
-dofile(current_mod_path..'/Database/Vehicle/SAMPT_MLT_Blk1NT.lua')
-dofile(current_mod_path..'/Database/Vehicle/SAMPT_MLT_Blk2.lua')
-dofile(current_mod_path..'/Database/Vehicle/radar/SAMPT_MRI_ARABEL.lua')
-dofile(current_mod_path..'/Database/Vehicle/radar/SAMPT_MRI_GF300.lua')
-dofile(current_mod_path..'/Database/Vehicle/SAMPT_MC.lua')
-dofile(current_mod_path..'/Database/Vehicle/SAMPT_ME.lua')
-dofile(current_mod_path..'/Database/Vehicle/SAMPT_MGE.lua')
-
 
 -- Weapon files
 
+weapon_file("/Database/Weapon/ASTER-15.lua")
+weapon_file("/Database/Weapon/ASTER-30-1.lua")
+weapon_file("/Database/Weapon/ASTER-30-1NT.lua")
+weapon_file("/Database/Weapon/ASTER-30-2.lua")
 weapon_file("/Database/Weapon/40N6E.lua")
 weapon_file("/Database/Weapon/48N6.lua")
 weapon_file("/Database/Weapon/48N6E2.lua")
@@ -139,6 +130,18 @@ weapon_file("/Database/Weapon/9M83ME.lua")
 weapon_file("/Database/Weapon/9M82MDE.lua")
 weapon_file("/Database/Weapon/9M96E2.lua")
 weapon_file("/Database/Weapon/Pantsir-SM_weapons.lua")
+
+-- SAMP/T
+
+dofile(current_mod_path..'/Database/Vehicle/SAMPT_MLT.lua')
+dofile(current_mod_path..'/Database/Vehicle/SAMPT_MLT_Blk1.lua')
+dofile(current_mod_path..'/Database/Vehicle/SAMPT_MLT_Blk1NT.lua')
+dofile(current_mod_path..'/Database/Vehicle/SAMPT_MLT_Blk2.lua')
+dofile(current_mod_path..'/Database/Vehicle/radar/SAMPT_MRI_ARABEL.lua')
+dofile(current_mod_path..'/Database/Vehicle/radar/SAMPT_MRI_GF300.lua')
+dofile(current_mod_path..'/Database/Vehicle/SAMPT_MC.lua')
+dofile(current_mod_path..'/Database/Vehicle/SAMPT_ME.lua')
+dofile(current_mod_path..'/Database/Vehicle/SAMPT_MGE.lua')
 
 -- S-300PT/PS
 
