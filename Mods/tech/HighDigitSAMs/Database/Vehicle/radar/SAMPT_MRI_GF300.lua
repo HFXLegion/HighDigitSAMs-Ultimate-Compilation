@@ -33,14 +33,14 @@ GT.visual.agony_explosion_size = 5
 GT.sensor = {};
 GT.sensor.max_range_finding_target = 400000;
 GT.sensor.min_range_finding_target = 200;
-GT.sensor.max_alt_finding_target = 150000;
+GT.sensor.max_alt_finding_target = 45000;
 GT.sensor.height = 7;
 
 GT.WS = {}
 GT.WS.maxTargetDetectionRange = 400000;
 GT.WS.radar_type = 101;
-GT.WS.radar_rotation_type = 1;
-GT.WS.requiredUnits = {{"SAMPT_MGE", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
+GT.WS.radar_rotation_type = 0;
+GT.WS.requiredUnits = {{"SAMPT_MGE", 1000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 GT.WS.searchRadarMaxElevation = math.rad(75);
 GT.WS.searchRadarFrequencies = {{8e9, 12e9}};
 GT.WS.fire_on_march = false;

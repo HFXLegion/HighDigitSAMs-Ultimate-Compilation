@@ -9,23 +9,14 @@ GT.visual.shape_dstr = "sampt_standard_destroyed";
 
 GT.toggle_alarm_state_interval = 1.0;
 
+GT.IR_emission_coeff = 0.06
 GT.visual.IR = { coeffs = {GT_t.IR_COEFFS_ENGINE_APC, GT_t.IR_COEFFS_WHEELS_Car, GT_t.IR_COEFFS_Radar_LTR, GT_t.IR_COEFFS_BODY, {0.18, 0.18/800}}}
 
-GT.IR_emission_coeff = 0.06
-
-GT.turbine = false;
-
-GT.swing_on_run = false
 GT.animation_arguments.locator_rotation = 1;
 GT.radar_rotation_period = 1;
 GT.snd.radarRotation = "GndTech/RadarRotation";
 
-GT.sensor = {};
-GT.sensor.max_range_finding_target = 120000;
-GT.sensor.min_range_finding_target = 200;
-GT.sensor.max_alt_finding_target = 45000;
-GT.sensor.height = 6;
-
+GT.swing_on_run = false
 
 GT.visual.fire_size = 1.2; -- relative burning size
 GT.visual.fire_pos[1] = 0; -- center of burn at long axis shift(meters)
@@ -39,11 +30,16 @@ GT.visual.min_time_agony = 5
 GT.visual.max_time_agony = 120
 GT.visual.agony_explosion_size = 5
 
+GT.sensor = {};
+GT.sensor.max_range_finding_target = 120000;
+GT.sensor.min_range_finding_target = 200;
+GT.sensor.max_alt_finding_target = 45000;
+GT.sensor.height = 6;
 
 GT.WS = {}
 GT.WS.maxTargetDetectionRange = 120000;
 GT.WS.radar_type = 101;
-GT.WS.radar_rotation_type = 1;
+GT.WS.radar_rotation_type = 0;
 GT.WS.searchRadarMaxElevation = math.rad(75);
 GT.WS.searchRadarFrequencies = {{8e9, 12e9}};
 GT.WS.requiredUnits = {{"SAMPT_MC", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
@@ -66,7 +62,7 @@ GT.WS[ws].LN[1].type = 102;
 GT.WS[ws].LN[1].frequencyRange = {8e9, 12e9};
 GT.WS[ws].LN[1].reflection_limit = 0.01;
 GT.WS[ws].LN[1].distanceMin = 100;
-GT.WS[ws].LN[1].distanceMax = 150000;
+GT.WS[ws].LN[1].distanceMax = 120000;
 GT.WS[ws].LN[1].min_trg_alt = 1;
 GT.WS[ws].LN[1].max_trg_alt = 45000;
 GT.WS[ws].LN[1].beamWidth = 0;
@@ -101,7 +97,7 @@ GT.Sensors = {RADAR = "SAMP/T ARABEL str",};
 
 GT.EPLRS = true;
 
-GT.DetectionRange = 350000;
+GT.DetectionRange = 120000;
 GT.ThreatRange = 0;
 GT.mapclasskey = "P0091000083";
 GT.attribute = {

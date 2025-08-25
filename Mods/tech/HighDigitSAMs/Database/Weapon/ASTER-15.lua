@@ -52,14 +52,14 @@ SAMPT_ASTER_15 = {
 	go_active_by_default	= 1,
 	SeekerGen				= 3,
 
-	PN_gain = 6,
+	PN_gain = 4,
 	PN_coeffs = {3, 				-- Number of Entries
 				5000.0 ,1.0,		-- Less 5 km to target Pn = 1
 				100000.0, 0.5,		-- Between 10 and 5 km  to target, Pn smoothly changes from 0.5 to 1.0. 
 				200000.0, 0.25};		-- Between 20 and 10 km  to target, Pn smoothly changes from 0.2 to 0.5. Longer then 30 km Pn = 0.2.
 	ModelData = { 
 		58, -- model params count
-		0.7, -- characteristic square
+		0.5, -- characteristic square
 		
 		-- Cx dependent parameters
 		0.05, -- Cx_k0 bar Cx0 on subsonic (M << 1)
