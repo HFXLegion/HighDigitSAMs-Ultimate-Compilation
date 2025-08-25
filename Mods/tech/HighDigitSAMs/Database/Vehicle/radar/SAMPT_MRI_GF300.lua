@@ -38,12 +38,11 @@ GT.sensor.height = 7;
 
 GT.WS = {}
 GT.WS.maxTargetDetectionRange = 400000;
-GT.WS.radar_type = 101;
+GT.WS.radar_type = 102;
 GT.WS.radar_rotation_type = 0;
-GT.WS.requiredUnits = {{"SAMPT_MGE", 1000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 GT.WS.searchRadarMaxElevation = math.rad(75);
 GT.WS.searchRadarFrequencies = {{8e9, 12e9}};
-GT.WS.fire_on_march = false;
+GT.WS.requiredUnits = {{"SAMPT_MGE", 1000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};
@@ -57,6 +56,7 @@ GT.WS[ws].pidY = {p = 100, i = 0.02, d = 5, inn = 100}
 GT.WS[ws].pidZ = {p = 100, i = 0.02, d = 5, inn = 100}
 GT.WS[ws].LN = {};
 GT.WS[ws].LN[1] = {};
+GT.WS[ws].LN[1].reactionTime = 1.5;
 GT.WS[ws].LN[1].max_number_of_missiles_channels = 1;
 GT.WS[ws].LN[1].type = 102;
 GT.WS[ws].LN[1].frequencyRange = {8e9, 12e9};
@@ -65,7 +65,6 @@ GT.WS[ws].LN[1].distanceMin = 100;
 GT.WS[ws].LN[1].distanceMax = 400000;
 GT.WS[ws].LN[1].min_trg_alt = 1;
 GT.WS[ws].LN[1].max_trg_alt = 45000;
-GT.WS[ws].LN[1].reactionTime = 1.5;
 GT.WS[ws].LN[1].beamWidth = 0;
 GT.WS[ws].LN[1].ECM_K = 0.2;
 GT.WS[ws].LN[1].maxShootingSpeed = 0;

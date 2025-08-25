@@ -11,7 +11,7 @@ SAMPT_ASTER_30_Blk_1 = {
 
     Escort 			= 0,
     Head_Type 		= 2,
-	sigma 			= {20, 20, 20},
+	sigma 			= {5, 5, 5},
     M 				= 450.0,
     H_max 			= 20000.0,
     H_min 			= 3.0,
@@ -46,17 +46,21 @@ SAMPT_ASTER_30_Blk_1 = {
     Reflection 		= 0.1,
     KillDistance 	= 20.0,
 	tail_scale 	 	= 1.4,		
-	ccm_k0 			= 0.2,	
+	ccm_k0 			= 0.1,	
 	
 	active_radar_lock_dist	= 22000.0,
-	go_active_by_default	= 1,
 	SeekerGen				= 4,
+	hoj						= 1,
 
-	PN_gain = 6.5,
-	PN_coeffs = {3, 				-- Number of Entries
-				5000.0 ,1.0,		-- Less 5 km to target Pn = 1
-				100000.0, 0.5,		-- Between 10 and 5 km  to target, Pn smoothly changes from 0.5 to 1.0. 
-				200000.0, 0.25};		-- Between 20 and 10 km  to target, Pn smoothly changes from 0.2 to 0.5. Longer then 30 km Pn = 0.2.
+	PN_gain = 5,
+	PN_coeffs = {7,
+				1000.0 ,1.0,
+				5000.0, 0.80,
+				15000.0, 0.60,
+				20000.0, 0.40,
+				25000.0, 0.30,
+				30000.0, 0.10,
+				40000.0, 0};
 	ModelData = { 
 		58, -- model params count
 		0.7, -- characteristic square
@@ -111,6 +115,12 @@ SAMPT_ASTER_30_Blk_1 = {
 		0, 
 		0 
 	},
+
+	self_destruct = {
+        delay 					= 1,
+        trigger_dist            = 1000,
+        inactivation_dist       = 900,
+    },
 
 	warhead = enhanced_a2a_warhead(15.0); 
 

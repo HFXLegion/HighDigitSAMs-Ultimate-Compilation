@@ -6,18 +6,18 @@ SAMPT_ASTER_15 = {
     name            = nameaster15,
     user_name       = _(nameaster15),
     model           = 'aster_30_blk_1',
-    mass            = 450.0,
+    mass            = 310.0,
     wsTypeOfWeapon  =  {wsType_Weapon,wsType_Missile,wsType_AA_Missile,WSTYPE_PLACEHOLDER},
 
     Escort 			= 0,
     Head_Type 		= 2,
-	sigma 			= {20, 20, 20},
+	sigma 			= {10, 10, 10},
     M 				= 310.0,
     H_max 			= 13000.0,
     H_min 			= 3.0,
     Diam 			= 180.0,
     Cx_pil 			= 1,
-    D_max 			= 25000.0,
+    D_max 			= 20000.0,
     D_min 			= 2000.0,
     Head_Form 		= 1,
     Life_Time 		= 90.0,
@@ -46,17 +46,20 @@ SAMPT_ASTER_15 = {
     Reflection 		= 0.1,
     KillDistance 	= 20.0,
 	tail_scale 	 	= 1.4,		
-	ccm_k0 			= 0.2,	
+	ccm_k0 			= 0.1,	
 	
 	active_radar_lock_dist	= 18000.0,
-	go_active_by_default	= 1,
 	SeekerGen				= 3,
 
 	PN_gain = 4,
-	PN_coeffs = {3, 				-- Number of Entries
-				5000.0 ,1.0,		-- Less 5 km to target Pn = 1
-				100000.0, 0.5,		-- Between 10 and 5 km  to target, Pn smoothly changes from 0.5 to 1.0. 
-				200000.0, 0.25};		-- Between 20 and 10 km  to target, Pn smoothly changes from 0.2 to 0.5. Longer then 30 km Pn = 0.2.
+	PN_coeffs = {7,
+				1000.0 ,1.0,
+				5000.0, 0.80,
+				15000.0, 0.60,
+				20000.0, 0.40,
+				25000.0, 0.30,
+				30000.0, 0.10,
+				40000.0, 0};
 	ModelData = { 
 		58, -- model params count
 		0.5, -- characteristic square
@@ -75,7 +78,7 @@ SAMPT_ASTER_15 = {
 		0.21, -- Cy_k2 steepness of the decline (front) behind the wave crisis
 
 		0.3, -- 7 Alfa_max maximum balancing angle, radians
-		0, -- angular velocity created by the moment of gas rudders
+		300, -- angular velocity created by the moment of gas rudders
 		
 		--t_statr 	t_b 	t_accel 	t_march 	t_inertial 	t_break 	t_end
 		0,   		0,		3,   		11, 		0, 			0, 			1000000000, -- time of stage, sec

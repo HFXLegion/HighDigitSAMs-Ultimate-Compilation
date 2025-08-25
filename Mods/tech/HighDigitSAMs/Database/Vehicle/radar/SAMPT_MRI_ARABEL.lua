@@ -38,7 +38,7 @@ GT.sensor.height = 6;
 
 GT.WS = {}
 GT.WS.maxTargetDetectionRange = 120000;
-GT.WS.radar_type = 101;
+GT.WS.radar_type = 102;
 GT.WS.radar_rotation_type = 0;
 GT.WS.searchRadarMaxElevation = math.rad(75);
 GT.WS.searchRadarFrequencies = {{8e9, 12e9}};

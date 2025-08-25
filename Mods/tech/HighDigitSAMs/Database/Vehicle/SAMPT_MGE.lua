@@ -8,8 +8,6 @@ set_recursive_metatable(GT.chassis, GT_t.CH_t.STATIC);
 GT.visual.shape = "sampt_mge";
 GT.visual.shape_dstr = "sampt_standard_destroyed";
 
-GT.toggle_alarm_state_interval = 10;
-
 GT.visual.fire_size = 1.2; --relative burning size
 GT.visual.fire_pos[1] = 0; -- center of burn at long axis shift(meters)
 GT.visual.fire_pos[2] = 2; -- center of burn shift at vertical shift(meters)
@@ -30,6 +28,7 @@ GT.sensor.height = 5.895;
 
 GT.WS = {}
 GT.WS.maxTargetDetectionRange = 500;
+GT.WS.requiredUnits = {{"SAMPT_MC", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 
 GT.Name = "SAMPT_MGE";
 GT.DisplayName = _("SAMP/T EPP");
