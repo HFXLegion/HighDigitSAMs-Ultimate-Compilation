@@ -1,0 +1,4 @@
+wave = "Effects/Weapons/Tamir.wav"
+inner_radius = 200
+outer_radius = 1200
+pitch_random = 0.08

@@ -1,4 +1,10 @@
 ## Changelog
+### v1.4.0
+- Added IDF Assets Pack (Iron Dome, David's Sling + EL/M-2084 radar series)
+- Fixed Iron Dome/David's Sling working without CP
+- Fixed EL/M-2084 radar series extreme vulnerability to jamming
+- Fixed SAMP/T extreme vulnerability to jamming
+- Improved Stunner and Tamir missiles
 ### v1.3.0
 - Fixed SAMP/T Battery not working
 - Added liveries for SAMP/T (Desert + Dirt)

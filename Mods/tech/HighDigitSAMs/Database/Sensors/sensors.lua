@@ -987,3 +987,114 @@ PANTSIR_AESA =
 
 declare_sensor(PANTSIR_AESA)
 
+-- IDF Assets Pack
+
+ELM2084_MMR_AD_RT =
+        {
+			Name = "ELM2084_MMR_AD_RT",
+			category = SENSOR_RADAR,
+            type = RADAR_AS,
+            scan_volume =
+            {
+                azimuth = {-180.0, 180.0},
+                elevation = {-7.0, 70.0}
+            },
+            max_measuring_distance = 475000.0,
+            detection_distance =
+            {
+                [HEMISPHERE_UPPER] =
+                {
+                    [ASPECT_HEAD_ON] = 475000.0,
+                    [ASPECT_TAIL_ON] = 475000.0
+                },
+                [HEMISPHERE_LOWER] =
+                {
+                    [ASPECT_HEAD_ON] = 475000.0,
+                    [ASPECT_TAIL_ON] = 475000.0
+                }
+            },
+            lock_on_distance_coeff = 1.0,
+			multiple_targets_tracking = true,
+            velocity_limits =
+            {
+                radial_velocity_min = 0.0,
+                relative_radial_velocity_min = 0.0,
+            },
+            scan_period = 2.0,
+        }
+
+declare_sensor(ELM2084_MMR_AD_RT)
+
+
+ELM2084_MMR_AD_SC =
+        {
+			Name = "ELM2084_MMR_AD_SC",
+			category = SENSOR_RADAR,
+            type = RADAR_AS,
+            scan_volume =
+            {
+                azimuth = {-65.0, 65.0},
+                elevation = {-7.0, 90.0}
+            },
+            max_measuring_distance = 650000.0,
+            detection_distance =
+            {
+                [HEMISPHERE_UPPER] =
+                {
+                    [ASPECT_HEAD_ON] = 650000.0,
+                    [ASPECT_TAIL_ON] = 650000.0
+                },
+                [HEMISPHERE_LOWER] =
+                {
+                    [ASPECT_HEAD_ON] = 650000.0,
+                    [ASPECT_TAIL_ON] = 650000.0
+                }
+            },
+            lock_on_distance_coeff = 1.0,
+			multiple_targets_tracking = true,
+            velocity_limits =
+            {
+                radial_velocity_min = 0.0,
+                relative_radial_velocity_min = 0.0,
+            },
+            scan_period = 0.1,
+        }
+
+declare_sensor(ELM2084_MMR_AD_SC)
+
+
+ELM2084_MMR_WLR =
+        {
+			Name = "ELM2084_MMR_WLR",
+			category = SENSOR_RADAR,
+            type = RADAR_AS,
+            scan_volume =
+            {
+                azimuth = {-65.0, 65.0},
+                elevation = {0.0, 97.0},
+            },
+            max_measuring_distance = 160000.0,
+            detection_distance =
+            {
+                [HEMISPHERE_UPPER] =
+                {
+                    [ASPECT_HEAD_ON] = 160000.0,
+                    [ASPECT_TAIL_ON] = 160000.0,
+                },
+                [HEMISPHERE_LOWER] =
+                {
+                    [ASPECT_HEAD_ON] = 160000.0,
+                    [ASPECT_TAIL_ON] = 160000.0,
+                }
+            },
+            lock_on_distance_coeff = 1.0,
+			multiple_targets_tracking = true,
+            velocity_limits =
+            {
+                radial_velocity_min = 0.0,
+                relative_radial_velocity_min = 0.0,
+            },
+            scan_period = 0.1,
+        }
+
+declare_sensor(ELM2084_MMR_WLR)

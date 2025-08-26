@@ -15,7 +15,7 @@ A fork of [HighDigitSAMs](https://github.com/Auranis/HighDigitSAMs) mod for DCS 
 
 ## 📢 About
 
-**HighDigitSAMs Ultimate Compilation** is a project based on the two mods ([HighDigitSAMs](https://github.com/Auranis/HighDigitSAMs) and [SAM Pack](https://forum.dcs.world/topic/275571-sam-sites-asset-pack-a-3d-assets-mod-to-populate-you-sam-sites-farp-and-other-bases)) and incorporating the work of many people from the DCS forum. This mod has **backward compatibility** with any version of these two mods.   
+**HighDigitSAMs Ultimate Compilation** is a project based on the two mods ([HighDigitSAMs](https://github.com/Auranis/HighDigitSAMs), [SAM Pack](https://forum.dcs.world/topic/275571-sam-sites-asset-pack-a-3d-assets-mod-to-populate-you-sam-sites-farp-and-other-bases), [SAM Sites Asset Pack](https://forum.dcs.world/topic/275571-sam-sites-asset-pack-a-3d-assets-mod-to-populate-you-sam-sites-farp-and-other-bases) and [IDF Asset Pack](https://forum.dcs.world/topic/324788-dcs-iron-dome-by-idf-mods-project-release-video)) and incorporating the work of many people from the DCS forum. This mod has **backward compatibility** with any version of these two mods.   
 
 ## 🧑‍🤝‍🧑 Contributors and legal information
 This mod is a modified version of [HighDigitSAMs](https://github.com/Auranis/HighDigitSAMs) mod by [Auranis](https://github.com/Auranis), Copyright (c) 2020 Auranis.  
@@ -25,7 +25,7 @@ United with [SAM Sites Asset Pack](https://forum.dcs.world/topic/275571-sam-site
 This product is distributed under a **MIT license**. You can review the original license agreement [here](https://github.com/Auranis/HighDigitSAMs/blob/main/LICENSE).
 
 ## 💻 How to Install
-### ⚠️ Remove/disable other instances of HighDigitSAMs and SAM Pack mods before installation
+### ⚠️ Remove/disable other instances of **HighDigitSAMs**, **SAM Pack**, **SAM Sites Asset Pack** and **IDF Asset Pack** mods before installation
 Simply copy the **Mods** folder into your C:\Username\Saved Games\DCS folder, or use OVGME to install the files there.  
 
 ## 🚀 Improvements over origin
@@ -62,11 +62,8 @@ Simply copy the **Mods** folder into your C:\Username\Saved Games\DCS folder, or
 2. Use my fork of Skynet IADS with [CurrentHill](https://www.currenthill.com/currenthill-milsim) and HighDigitSAMs SAM sites support: [click](https://github.com/HFXLegion/Skynet-IADS)
 
 ## 🪲 Known issues
-- 9S32 "Grill Pan" ("Imbir") SA-12 (S-300V) TR has 90 deg rotated model
-    > Temporary fixed with replacement by 9S32M model
 - Missiles have no radio command guidance
     > Combined guidance does not exist in DCS
-
 
 ## 📚 Content
 
