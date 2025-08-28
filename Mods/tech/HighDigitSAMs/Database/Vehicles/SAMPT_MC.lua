@@ -36,15 +36,15 @@ GT.sensor.height = 5.895;
 
 GT.WS = {}
 GT.WS.maxTargetDetectionRange = 500000;
---GT.WS.requiredUnits = {{"SAMPT_ME", 30000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
+GT.WS.requiredUnits = {{"SAMPT_ME", 30000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 
 local ws = 0;
-for i = 1,128 do
+for i = 1,24 do
     ws = GT_t.inc_ws();
 	GT.WS[ws] = {};
     GT.WS[ws].pos = {0,3,0};
 	GT.WS[ws].angles = {
-					{math.rad(180), math.rad(-180), math.rad(-89), math.rad(89)},
+					{math.rad(180), math.rad(-180), math.rad(-90), math.rad(90)},
 					};
     GT.WS[ws].omegaY = 3;
     GT.WS[ws].omegaZ = 3;
@@ -52,13 +52,13 @@ for i = 1,128 do
     GT.WS[ws].LN = {};
     GT.WS[ws].LN[1] = {};
     GT.WS[ws].LN[1].type = 100;
-    GT.WS[ws].LN[1].reactionTime = 5.0;
-    GT.WS[ws].LN[1].distanceMin = 1200;
-    GT.WS[ws].LN[1].distanceMax = 500000;
+    GT.WS[ws].LN[1].reactionTime = 5.2;
+    GT.WS[ws].LN[1].distanceMin = 800;
+    GT.WS[ws].LN[1].distanceMax = 260000;
 	GT.WS[ws].LN[1].reflection_limit = 0.02;
     GT.WS[ws].LN[1].min_trg_alt = 5
-    GT.WS[ws].LN[1].max_trg_alt = 70000;
-    GT.WS[ws].LN[1].depends_on_unit = {{{"SAMPT_MRI_ARABEL"}},{{"SAMPT_MRI_GF300"}}};
+    GT.WS[ws].LN[1].max_trg_alt = 40000;
+    GT.WS[ws].LN[1].depends_on_unit = {{{"SAMPT_MRI_ARABEL"},},{{"SAMPT_MRI_GF300"},},};
 end
 
 GT.Name = "SAMPT_MC";
