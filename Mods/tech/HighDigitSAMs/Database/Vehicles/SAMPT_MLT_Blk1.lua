@@ -47,7 +47,7 @@ GT.visual.agony_explosion_size = 19;
 
 GT.WS = {};
 GT.WS.maxTargetDetectionRange = 250000;
-GT.WS.requiredUnits = {{"SAMPT_ME", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
+--GT.WS.requiredUnits = {{"SAMPT_ME", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};
@@ -59,7 +59,7 @@ GT.WS[ws].moveable = false;
 GT.WS[ws].reference_angle_Z = math.rad(90);
 
 __LN = add_launcher(GT.WS[ws], GT_t.LN_t.Aster30_1);
-__LN.depends_on_unit = {{{"SAMPT_MRI_ARABEL"},},{{"SAMPT_MRI_GF300"},},};
+__LN.depends_on_unit = {{{"SAMPT_MC"},},{{"SAMPT_ME"},},};
 __LN.external_tracking_awacs = false;
 __LN.show_external_missile = true;
 __LN.max_number_of_missiles_channels = 1;
