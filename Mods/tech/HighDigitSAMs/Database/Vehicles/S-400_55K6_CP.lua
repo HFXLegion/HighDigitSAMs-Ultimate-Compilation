@@ -26,6 +26,8 @@ GT.sensor.min_range_finding_target = 1000;
 GT.sensor.max_alt_finding_target = 90000;
 GT.sensor.height = 8.68;
 
+GT.EPLRS = true;
+
 GT.WS = {};
 GT.WS.maxTargetDetectionRange = 520000;
 
@@ -65,6 +67,7 @@ GT.mapclasskey = "P0091000046";
 GT.attribute = {wsType_Ground,wsType_SAM,wsType_NoWeapon,KP_54K6,
 				"SAM CC",
 				"CustomAimPoint",
+                "Datalink",
 				};
 GT.category = "Air Defence";
 GT.tags = { "Air Defence", "Command & Control" };

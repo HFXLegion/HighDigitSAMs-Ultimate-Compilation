@@ -12,6 +12,7 @@ GT.visual.fire_pos[2] = 1;
 GT.animation_arguments.locator_rotation = 0;
 GT.radar_rotation_period = 12.0;
 GT.snd.radarRotation = "GndTech/RadarRotation";
+GT.defaultStartAlarmState = GT_t.START_ALARM_STATES.RED;
 
 GT.sensor = {};
 GT.sensor.max_range_finding_target = 160000;

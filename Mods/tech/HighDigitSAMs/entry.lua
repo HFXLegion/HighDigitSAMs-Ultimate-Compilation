@@ -143,10 +143,10 @@ dofile(current_mod_path..'/Database/Vehicles/radar/ELM2084_MMR_WLR.lua')
 
 -- SAMP/T
 
-dofile(current_mod_path..'/Database/Vehicles/SAMPT_MLT.lua')
+--dofile(current_mod_path..'/Database/Vehicles/SAMPT_MLT.lua')
 dofile(current_mod_path..'/Database/Vehicles/SAMPT_MLT_Blk1.lua')
 dofile(current_mod_path..'/Database/Vehicles/SAMPT_MLT_Blk1NT.lua')
-dofile(current_mod_path..'/Database/Vehicles/SAMPT_MLT_Blk2.lua')
+--dofile(current_mod_path..'/Database/Vehicles/SAMPT_MLT_Blk2.lua')
 dofile(current_mod_path..'/Database/Vehicles/radar/SAMPT_MRI_ARABEL.lua')
 dofile(current_mod_path..'/Database/Vehicles/radar/SAMPT_MRI_GF300.lua')
 dofile(current_mod_path..'/Database/Vehicles/SAMPT_MC.lua')
@@ -250,5 +250,7 @@ vehicle_file("/Database/Vehicles/Strela-2M.lua")
 
 vehicle_file("/Database/Vehicles/Polyana-D4M1.lua")
 vehicle_file("/Database/Vehicles/radar/34Ya6E Gazetchik E decoy.lua")
+
+__LN = nil;
 
 plugin_done()

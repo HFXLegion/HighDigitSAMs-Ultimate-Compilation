@@ -19,6 +19,8 @@ GT.sensor.min_range_finding_target = 10000;
 GT.sensor.max_alt_finding_target = 27000;
 GT.sensor.height = 20.0;
 
+GT.defaultStartAlarmState = GT_t.START_ALARM_STATES.RED;
+
 GT.CustomAimPoint = {0,1.5,0}
 
 GT.WS = {};

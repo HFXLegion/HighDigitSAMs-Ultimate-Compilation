@@ -118,28 +118,21 @@ declare_weapon(AA30HE);
 
 -- GUN --
 
-GT_t.LN_t.automatic_gun_2A38M 										= {name = "2A38M", display_name = _("2A38M")};
-GT_t.LN_t.automatic_gun_2A38M										= {} 
+GT_t.LN_t.automatic_gun_2A38M										= {}; --name = "2A38M", display_name = _("2A38M")} 
 GT_t.LN_t.automatic_gun_2A38M.type		  	  						= 3
 GT_t.LN_t.automatic_gun_2A38M.useTargetAccelInSight 				= true
 GT_t.LN_t.automatic_gun_2A38M.distanceMin  	  						= 200
 GT_t.LN_t.automatic_gun_2A38M.distanceMax  	 	 					= 2500
 GT_t.LN_t.automatic_gun_2A38M.max_trg_alt  	  						= 3000
-GT_t.LN_t.automatic_gun_2A38M.reactionTime 	  						= 1.0;
 GT_t.LN_t.automatic_gun_2A38M.maxTrackingSpeed						= 0.0;
 GT_t.LN_t.automatic_gun_2A38M.maxShootingSpeed 						= 0.0;
 GT_t.LN_t.automatic_gun_2A38M.reflection_limit 						= 0.03;
-GT_t.LN_t.automatic_gun_2A38M.beamWidth 		 					= math.rad(90);
 GT_t.LN_t.automatic_gun_2A38M.sensor = {}
 set_recursive_metatable(GT_t.LN_t.automatic_gun_2A38M.sensor, GT_t.WSN_t[0])
 GT_t.LN_t.automatic_gun_2A38M.PL									= {}
 GT_t.LN_t.automatic_gun_2A38M.PL[1]									= {}
-GT_t.LN_t.automatic_gun_2A38M.PL[1].shot_delay						= 60/2400 -- per single gun
-GT_t.LN_t.automatic_gun_2A38M.PL[1].ammo_capacity					= 1400 -- for the two-gun system
-GT_t.LN_t.automatic_gun_2A38M.PL[1].reload_time						= 180;
 GT_t.LN_t.automatic_gun_2A38M.PL[1].shell_name						= {"2A38M 30mm AP", "2A38M 30mm HE", "2A38M 30mm HE", "2A38M 30mm HE", "2A38M 30mm HE"};
 GT_t.LN_t.automatic_gun_2A38M.PL[1].shell_display_name 				= "2A38M 30mm AP+HE";
-GT_t.LN_t.automatic_gun_2A38M.BR									= { {pos = {0, 0, 0} } }
 
 
 
@@ -185,7 +178,8 @@ local SA57E6ME			= {
 	X_back_acc			= -1.7,
 	Reflection			= 0.03,
 	KillDistance		= 7.0,
-	ccm_k0				= 0.5,
+	ccm_k0				= 0.1,
+	SeekerGen 			= 4,
 	category			= CAT_MISSILES,
 	wsTypeOfWeapon		= {wsType_Weapon,wsType_Missile,wsType_SA_Missile};
 	ModelData = { 
@@ -264,29 +258,19 @@ declare_weapon(SA57E6ME)
 -- MISSILE WS --
 
 GT_t.LN_t._96K6									= {}
-GT_t.LN_t._96K6.max_number_of_missiles_channels = 1;
 GT_t.LN_t._96K6.type 							= 4;
 GT_t.LN_t._96K6.xc 								= -1.072;
 GT_t.LN_t._96K6.distanceMin 					= 1500;
 GT_t.LN_t._96K6.distanceMax 					= 30000;
-GT_t.LN_t._96K6.reactionTime 					= 1.5;
 GT_t.LN_t._96K6.radialDisperse 					= 0.0;
 GT_t.LN_t._96K6.dispertionReductionFactor 		= 0.0;
 GT_t.LN_t._96K6.missileControlInterval 			= 0.01;
 GT_t.LN_t._96K6.reflection_limit 				= 0.05
-GT_t.LN_t._96K6.launch_delay 					= 1;
-GT_t.LN_t._96K6.maxTrackingSpeed = 0.0;
-GT_t.LN_t._96K6.maxShootingSpeed = 0.0;
-GT_t.LN_t._96K6.beamWidth = math.rad(90);
-GT_t.LN_t._96K6.show_external_missile 			= false;
+GT_t.LN_t._96K6.maxTrackingSpeed 				= 0.0;
+GT_t.LN_t._96K6.maxShootingSpeed 				= 0.0;
 GT_t.LN_t._96K6.sensor = {};
 set_recursive_metatable(GT_t.LN_t._96K6.sensor, GT_t.WSN_t[0]);
-GT_t.LN_t._96K6.ECM_K 							= -1
-GT_t.LN_t._96K6.barrels_reload_type 			= 3
-GT_t.LN_t._96K6.PL = {};
-GT_t.LN_t._96K6.PL[1] = {};
-GT_t.LN_t._96K6.PL[1].ammo_capacity 			= 12;
+GT_t.LN_t._96K6.ECM_K 							= -1;
+GT_t.LN_t._96K6.PL 								= {};
+GT_t.LN_t._96K6.PL[1] 							= {};
 GT_t.LN_t._96K6.PL[1].type_ammunition 			= SA57E6ME.wsTypeOfWeapon;
-GT_t.LN_t._96K6.PL[1].missile_name 				= {"SA57E6ME"};
-GT_t.LN_t._96K6.PL[1].shot_delay 				= 0.1;
-GT_t.LN_t._96K6.PL[1].reload_time 				= 600;

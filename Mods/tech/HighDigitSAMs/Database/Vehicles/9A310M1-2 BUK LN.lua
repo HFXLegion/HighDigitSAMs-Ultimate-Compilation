@@ -57,7 +57,7 @@ GT.WS[ws].LN[1].distanceMin = GT.sensor.min_range_finding_target;
 GT.WS[ws].LN[1].max_trg_alt = GT.sensor.max_alt_finding_target;
 GT.WS[ws].LN[1].min_trg_alt = GT.sensor.min_alt_finding_target;
 GT.WS[ws].LN[1].reflection_limit = 0.02;
-GT.WS[ws].LN[1].reactionTime = 4;
+GT.WS[ws].LN[1].reactionTime = 3;
 GT.WS[ws].LN[1].beamWidth = math.rad(90);
 GT.WS[ws].LN[1].maxShootingSpeed = 0;
 GT.WS[ws].LN[1].depends_on_unit = {{ { "self", 3 } }, {{ "SA-11 Buk CC 9S470M1" } }, { { "SA-11 Buk SR 9S18M1" } }};
@@ -83,15 +83,20 @@ GT.WS[ws].stabilizer	= true;
 GT.WS[ws].cockpit 		= {'_1A29/_1A29', {0.0, 0.0, 0.6} }
 
 __LN = add_launcher(GT.WS[ws], GT_t.LN_t._9A310M12);
-__LN.launch_delay = 5;
+__LN.launch_delay = 4;
 __LN.beamWidth = math.rad(90);
 __LN.depends_on_unit = {{ { "self", 1 } },};
+__LN.barrels_reload_type = 3 -- BarrelsReloadTypes.SEQUENTIALY;
+__LN.show_external_missile = true;
 __LN.BR = {
 			{connector_name = "POINT_ROCKET_01"},
 			{connector_name = "POINT_ROCKET_02"},
 			{connector_name = "POINT_ROCKET_03"},
 			{connector_name = "POINT_ROCKET_04"},
 };
+__LN.PL[1].ammo_capacity = 4;
+__LN.PL[1].reload_time = 13*60;
+__LN.PL[1].shot_delay = 0.1;
 __LN.sightMasterMode = 1;
 __LN.sightIndicationMode = 4;
 

@@ -35,30 +35,39 @@ GT.visual.dirt_pos    = {0,0, 0.0, 0.0}
 -- weapon systems
 
 GT.WS = {};
+GT.WS.requiredUnits = {{"Iron_Dome_David_Sling_CP", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 GT.WS.maxTargetDetectionRange = 420000.0;
 
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};
+set_recursive_metatable(GT.WS[ws], GT_t.WS_t.DAVID_SLING_LN);
 GT.WS[ws].pos = {0,0,0};
 GT.WS[ws].moveable = false;
-set_recursive_metatable(GT.WS[ws], GT_t.WS_t.DAVID_SLING_LN);
+GT.WS[ws].LN[1].barrels_reload_type = 3; -- BarrelsReloadTypes.SEQUENTIALY
 GT.WS[ws].LN[1].depends_on_unit = {{{"ELM2084_MMR_AD_RT"},},{{"ELM2084_MMR_WLR"},},{{"ELM2084_MMR_AD_SC"},},{{"SAM Patriot STR"},},
-
--- CurrentHill's SAM Sites integration
+-- CurrentHill's Patriot Sites integration
 {{"MIM104_ANMPQ65_HEMTT"},},{{"CH_THAAD_ANTPY2"},},{{"MIM104_ANMPQ65A_HEMTT"},},{{"MIM104_LTAMDS_HEMTT"},},{{"MIM104_ANMPQ65"},},{{"MIM104_ANMPQ65A"},},{{"MIM104_LTAMDS"},},{{"CH_MIM104_ANMPQ53_KAT1"},},};
 
- GT.WS[ws].LN[1].BR[12] = {connector_name = 'POINT_12',drawArgument = 191 };
- GT.WS[ws].LN[1].BR[11] = {connector_name = 'POINT_11',drawArgument = 190 };
- GT.WS[ws].LN[1].BR[10] = {connector_name = 'POINT_10',drawArgument = 189 };
- GT.WS[ws].LN[1].BR[9] = {connector_name = 'POINT_09',drawArgument = 188 };
- GT.WS[ws].LN[1].BR[8] = {connector_name = 'POINT_08',drawArgument = 187 };
- GT.WS[ws].LN[1].BR[7] = {connector_name = 'POINT_07',drawArgument = 186 };
- GT.WS[ws].LN[1].BR[6] = {connector_name = 'POINT_06',drawArgument = 185 };
- GT.WS[ws].LN[1].BR[5] = {connector_name = 'POINT_05',drawArgument = 184 };
- GT.WS[ws].LN[1].BR[4] = {connector_name = 'POINT_04',drawArgument = 183 };
- GT.WS[ws].LN[1].BR[3] = {connector_name = 'POINT_03',drawArgument = 182 };
- GT.WS[ws].LN[1].BR[2] = {connector_name = 'POINT_02',drawArgument = 181 };
- GT.WS[ws].LN[1].BR[1] = {connector_name = 'POINT_01',drawArgument = 180 };
+GT.WS[ws].LN[1].reactionTime = 0.1;
+GT.WS[ws].LN[1].show_external_missile = true;
+GT.WS[ws].LN[1].max_number_of_missiles_channels = 1;
+GT.WS[ws].LN[1].PL[1].ammo_capacity = 12;
+GT.WS[ws].LN[1].PL[1].shot_delay = 0.1;
+GT.WS[ws].LN[1].PL[1].reload_time = 50;
+
+GT.WS[ws].LN[1].BR = {};
+GT.WS[ws].LN[1].BR[12] = {connector_name = 'POINT_12',drawArgument = 191 };
+GT.WS[ws].LN[1].BR[11] = {connector_name = 'POINT_11',drawArgument = 190 };
+GT.WS[ws].LN[1].BR[10] = {connector_name = 'POINT_10',drawArgument = 189 };
+GT.WS[ws].LN[1].BR[9] = {connector_name = 'POINT_09',drawArgument = 188 };
+GT.WS[ws].LN[1].BR[8] = {connector_name = 'POINT_08',drawArgument = 187 };
+GT.WS[ws].LN[1].BR[7] = {connector_name = 'POINT_07',drawArgument = 186 };
+GT.WS[ws].LN[1].BR[6] = {connector_name = 'POINT_06',drawArgument = 185 };
+GT.WS[ws].LN[1].BR[5] = {connector_name = 'POINT_05',drawArgument = 184 };
+GT.WS[ws].LN[1].BR[4] = {connector_name = 'POINT_04',drawArgument = 183 };
+GT.WS[ws].LN[1].BR[3] = {connector_name = 'POINT_03',drawArgument = 182 };
+GT.WS[ws].LN[1].BR[2] = {connector_name = 'POINT_02',drawArgument = 181 };
+GT.WS[ws].LN[1].BR[1] = {connector_name = 'POINT_01',drawArgument = 180 };
 
 
 GT.Name = "DAVID_SLING_LN";

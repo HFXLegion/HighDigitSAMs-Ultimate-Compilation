@@ -15,6 +15,7 @@ GT.visual.IR = { coeffs = {GT_t.IR_COEFFS_ENGINE_APC, GT_t.IR_COEFFS_WHEELS_Car,
 GT.animation_arguments.locator_rotation = 1;
 GT.radar_rotation_period = 1.3;
 GT.snd.radarRotation = "GndTech/RadarRotation";
+GT.defaultStartAlarmState = GT_t.START_ALARM_STATES.RED;
 
 GT.swing_on_run = false
 

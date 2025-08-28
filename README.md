@@ -1,6 +1,6 @@
 # HighDigitSAMs Ultimate Compilation
 ![logo](/images/logo.jpg)
-A fork of [HighDigitSAMs](https://github.com/Auranis/HighDigitSAMs) mod for DCS with lots of improvements
+A fork of [HighDigitSAMs](https://github.com/Auranis/HighDigitSAMs) mod for DCS combined with [SAM Pack](https://forum.dcs.world/topic/275571-sam-sites-asset-pack-a-3d-assets-mod-to-populate-you-sam-sites-farp-and-other-bases), [SAM Sites Asset Pack](https://forum.dcs.world/topic/275571-sam-sites-asset-pack-a-3d-assets-mod-to-populate-you-sam-sites-farp-and-other-bases) and [IDF Asset Pack](https://forum.dcs.world/topic/324788-dcs-iron-dome-by-idf-mods-project-release-video) with lots of improvements
 
 ## Table of Contents
 - [About](#-about)

@@ -61,7 +61,8 @@ local SA5V55R2 = {
 	Reflection = 0.2,
 	KillDistance = 20.0,
 	category = CAT_MISSILES,
-	ccm_k0       = 0.5,
+	ccm_k0 = 0.5,
+	SeekerGen = 3,
 	PN_gain = 4,
 	PN_coeffs = {7,
 				1000.0 ,1.0,
@@ -141,7 +142,6 @@ local SA5V55R2 = {
 declare_weapon(SA5V55R2)
 
 GT_t.WS_t.S_300PS2 = {} -- S-300PS (SA-10B)
-GT_t.WS_t.S_300PS2.moveable = false
 GT_t.WS_t.S_300PS2.angles = {
 					{math.rad(180), math.rad(-180), math.rad(-90), math.rad(90)},
 					};
@@ -151,16 +151,11 @@ GT_t.WS_t.S_300PS2.LN[1] = {}
 GT_t.WS_t.S_300PS2.LN[1].type = 4
 GT_t.WS_t.S_300PS2.LN[1].distanceMin = 5000
 GT_t.WS_t.S_300PS2.LN[1].distanceMax = 75000
-GT_t.WS_t.S_300PS2.LN[1].ECM_K = 0.4;
-GT_t.WS_t.S_300PS2.LN[1].reactionTime = 10
-GT_t.WS_t.S_300PS2.LN[1].launch_delay = 3;
+GT_t.WS_t.S_300PS2.LN[1].ECM_K = -1;
 GT_t.WS_t.S_300PS2.LN[1].reflection_limit = 0.049;
 GT_t.WS_t.S_300PS2.LN[1].sensor = {}
 set_recursive_metatable(GT_t.WS_t.S_300PS2.LN[1].sensor, GT_t.WSN_t[0])
-GT_t.WS_t.S_300PS2.LN[1].beamWidth = math.rad(1);
+GT_t.WS_t.S_300PS2.LN[1].beamWidth = 0;
 GT_t.WS_t.S_300PS2.LN[1].PL = {}
 GT_t.WS_t.S_300PS2.LN[1].PL[1] = {}
-GT_t.WS_t.S_300PS2.LN[1].PL[1].ammo_capacity = 4
 GT_t.WS_t.S_300PS2.LN[1].PL[1].type_ammunition = SA5V55R2.wsTypeOfWeapon;
-GT_t.WS_t.S_300PS2.LN[1].PL[1].reload_time = 1000000; -- never during the mission
-GT_t.WS_t.S_300PS2.LN[1].BR = { {pos = {0, 0, 0} } }

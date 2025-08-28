@@ -1,4 +1,12 @@
 ## Changelog
+### v1.4.1
+- Fixed SA-22 (Pantsir-SM) camera
+- Fixed search and EW radars do not emit by default
+- Fixed SA-21 (S-400) not firing 9M96E2 missile when mast TR is used
+- Improved accuracy of Stunner (David's Sling) missile
+- Disabled Aster-15 and Aster-30 Block 2 launchers of SAMP/T complex
+- Reduced speed of 40N6 (SA-21 Growler missile)
+- A little code refactoring :D
 ### v1.4.0
 - Added IDF Assets Pack (Iron Dome, David's Sling + EL/M-2084 radar series)
 - Fixed Iron Dome/David's Sling working without CP

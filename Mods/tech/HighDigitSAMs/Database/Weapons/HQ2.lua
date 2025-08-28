@@ -55,6 +55,7 @@ local SAHQ2 = {
 	Fi_search = 99.9,
 	OmViz_max = 99.9,
 	ccm_k0 = 1.0,
+	SeekerGen = 1,
 	PN_coeffs = {3,
 					2000.0 ,1.0,
 					8000.0, 0.5,
@@ -106,24 +107,11 @@ GT_t.LN_t._HQ2.type = 4;
 GT_t.LN_t._HQ2.xc = -3.26;
 GT_t.LN_t._HQ2.distanceMin = 6000;
 GT_t.LN_t._HQ2.distanceMax = 50000;
-GT_t.LN_t._HQ2.reactionTime = 1;
-GT_t.LN_t._HQ2.launch_delay = 2;
 GT_t.LN_t._HQ2.maxShootingSpeed = 0;
-GT_t.LN_t._HQ2.show_external_missile = true;
 GT_t.LN_t._HQ2.sensor = {};
 set_recursive_metatable(GT_t.LN_t._HQ2.sensor, GT_t.WSN_t[0]);
 GT_t.LN_t._HQ2.reflection_limit = 0.02;
 GT_t.LN_t._HQ2.ECM_K = -1
-GT_t.LN_t._HQ2.barrels_reload_type = 3 -- BarrelsReloadTypes.SEQUENTIALY;
 GT_t.LN_t._HQ2.PL = {};
 GT_t.LN_t._HQ2.PL[1] = {};
-GT_t.LN_t._HQ2.PL[1].ammo_capacity = 1;
 GT_t.LN_t._HQ2.PL[1].type_ammunition = SAHQ2.wsTypeOfWeapon;
-GT_t.LN_t._HQ2.PL[1].reload_time = 13*60; -- 13 minutes
-GT_t.LN_t._HQ2.PL[1].shot_delay = 0.1;
-GT_t.LN_t._HQ2.BR = {
-                    {pos = {-1.477, 0.459,-1.08}, drawArgument = 4},
-                    {pos = {-1.477, 0.459,-0.38}, drawArgument = 5},
-                    {pos = {-1.477, 0.459, 0.43}, drawArgument = 6},
-                    {pos = {-1.477, 0.459, 1.15}, drawArgument = 7},
-                };

@@ -115,7 +115,8 @@ local SA48N6 = {
 	Y_back = 0,
 	Z_back = 0,
 	_unique_resource_name = "weapons.missiles.SA48H6E2",
-	ccm_k0 = 0.5, -- Countermeasures effectiveness
+	SeekerGen = 4,
+	ccm_k0 = 0.25, -- Countermeasures effectiveness
 	display_name = _('48N6 S-300PMU1 (SA-20 Gargoyle)'),
 	display_name_short = _('48N6 S-300PMU1 (SA-20 Gargoyle)'),
 	exhaust = { 1, 1, 1, 1 },
@@ -146,7 +147,6 @@ local SA48N6 = {
 declare_weapon(SA48N6)
 
 GT_t.WS_t.S_300PMU1 = {} -- S-300PMU1 (SA-20A Gargoyle)
-GT_t.WS_t.S_300PMU1.moveable = false
 GT_t.WS_t.S_300PMU1.angles = {
 					{math.rad(180), math.rad(-180), math.rad(-90), math.rad(90)},
 					};
@@ -156,16 +156,11 @@ GT_t.WS_t.S_300PMU1.LN[1] = {}
 GT_t.WS_t.S_300PMU1.LN[1].type = 4
 GT_t.WS_t.S_300PMU1.LN[1].distanceMin = 6000
 GT_t.WS_t.S_300PMU1.LN[1].distanceMax = 150000
-GT_t.WS_t.S_300PMU1.LN[1].ECM_K = 0.4;
-GT_t.WS_t.S_300PMU1.LN[1].reactionTime = 10
-GT_t.WS_t.S_300PMU1.LN[1].launch_delay = 3;
+GT_t.WS_t.S_300PMU1.LN[1].ECM_K = -1;
 GT_t.WS_t.S_300PMU1.LN[1].reflection_limit = 0.02;
 GT_t.WS_t.S_300PMU1.LN[1].sensor = {}
 set_recursive_metatable(GT_t.WS_t.S_300PMU1.LN[1].sensor, GT_t.WSN_t[0])
-GT_t.WS_t.S_300PMU1.LN[1].beamWidth = math.rad(1);
+GT_t.WS_t.S_300PMU1.LN[1].beamWidth = 0;
 GT_t.WS_t.S_300PMU1.LN[1].PL = {}
 GT_t.WS_t.S_300PMU1.LN[1].PL[1] = {}
-GT_t.WS_t.S_300PMU1.LN[1].PL[1].ammo_capacity = 4
 GT_t.WS_t.S_300PMU1.LN[1].PL[1].type_ammunition = SA48N6.wsTypeOfWeapon;
-GT_t.WS_t.S_300PMU1.LN[1].PL[1].reload_time = 1000000; -- never during the mission
-GT_t.WS_t.S_300PMU1.LN[1].BR = { {pos = {0, 0, 0} } }

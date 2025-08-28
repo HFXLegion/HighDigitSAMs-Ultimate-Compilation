@@ -16,7 +16,8 @@ GT.sensor.height = 39;
 
 GT.radar_rotation_period = 10.0;
 GT.animation_arguments.locator_rotation = 1;
-GT.snd.radarRotation = "RadarRotation";
+GT.snd.radarRotation = "GndTech/RadarRotation";
+GT.defaultStartAlarmState = GT_t.START_ALARM_STATES.RED;
 
 GT.CustomAimPoint = {0,1.5,0}
 

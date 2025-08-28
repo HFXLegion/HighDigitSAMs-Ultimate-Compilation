@@ -51,15 +51,24 @@ GT.sound.engine.max_formula_pitch = "0.9025 x * 0.4195 +";
 -- weapon systems
 
 GT.WS = {};
+GT.WS.requiredUnits = {{"Iron_Dome_David_Sling_CP", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 GT.WS.maxTargetDetectionRange = 90000;
 
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};
-GT.WS.requiredUnits = {{"Iron_Dome_David_Sling_CP", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
-GT.WS[ws].pos = {0,0,0};
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.IRONDOME);
+GT.WS[ws].pos = {0,0,0};
+GT.WS[ws].moveable = false;
+GT.WS[ws].LN[1].barrels_reload_type = 3;
 GT.WS[ws].LN[1].depends_on_unit = {{{"ELM2084_MMR_AD_RT"},},{{"ELM2084_MMR_WLR"},},{{"ELM2084_MMR_AD_SC"},},};
+GT.WS[ws].LN[1].reactionTime = 0.1;
+GT.WS[ws].LN[1].show_external_missile = true
+GT.WS[ws].LN[1].max_number_of_missiles_channels = 1;
+GT.WS[ws].LN[1].PL[1].ammo_capacity = 20;
+GT.WS[ws].LN[1].PL[1].shot_delay = 0.5;
+GT.WS[ws].LN[1].PL[1].reload_time = 50;
 
+GT.WS[ws].LN[1].BR = {};
  GT.WS[ws].LN[1].BR[20] = {connector_name = 'POINT_20',drawArgument = 199 };
  GT.WS[ws].LN[1].BR[19] = {connector_name = 'POINT_19',drawArgument = 198 };
  GT.WS[ws].LN[1].BR[18] = {connector_name = 'POINT_18',drawArgument = 197 };

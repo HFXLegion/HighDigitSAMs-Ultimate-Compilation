@@ -144,22 +144,10 @@ GT_t.LN_t.Aster30_1 = {};
 GT_t.LN_t.Aster30_1.type = 4;
 GT_t.LN_t.Aster30_1.distanceMin = 1000;
 GT_t.LN_t.Aster30_1.distanceMax = 120000;
-GT_t.LN_t.Aster30_1.reactionTime = 1.0;
-GT_t.LN_t.Aster30_1.launch_delay = 0.1;
 GT_t.LN_t.Aster30_1.reflection_limit = 0.0001;
-GT_t.LN_t.Aster30_1.ECM_K = 0.2;
-GT_t.LN_t.Aster30_1.max_number_of_missiles_channels = 1;
+GT_t.LN_t.Aster30_1.ECM_K = -1;
 GT_t.LN_t.Aster30_1.sensor = {};
-
 set_recursive_metatable(GT_t.LN_t.Aster30_1.sensor, GT_t.WSN_t[0]);
-
-GT_t.LN_t.Aster30_1.external_tracking_awacs = false;
-GT_t.LN_t.Aster30_1.show_external_missile = true
 GT_t.LN_t.Aster30_1.PL = {};
 GT_t.LN_t.Aster30_1.PL[1] = {};
-GT_t.LN_t.Aster30_1.PL[1].switch_on_delay = 0.1;
-GT_t.LN_t.Aster30_1.PL[1].shot_delay = 0.1;
-GT_t.LN_t.Aster30_1.PL[1].ammo_capacity = 8;
 GT_t.LN_t.Aster30_1.PL[1].type_ammunition = SAMPT_ASTER_30_Blk_1.wsTypeOfWeapon;
-GT_t.LN_t.Aster30_1.PL[1].reload_time = 3600;
-GT_t.LN_t.Aster30_1.BR = { { pos = {0, 0, 0} } };

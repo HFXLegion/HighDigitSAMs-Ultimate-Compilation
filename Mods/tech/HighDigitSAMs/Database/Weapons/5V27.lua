@@ -66,6 +66,7 @@ local SA2V601P = {
 	Reflection = 0.2,
 	KillDistance = 14.0,
 	ccm_k0 = 2.0,
+	SeekerGen = 1,
 	shape_table_data = 
 	{
 		{
@@ -85,23 +86,13 @@ GT_t.LN_t._S125HD.type = 4;
 GT_t.LN_t._S125HD.distanceMin = 3500;
 GT_t.LN_t._S125HD.distanceMax = 18000;
 GT_t.LN_t._S125HD.maxShootingSpeed = 0;
-GT_t.LN_t._S125HD.launch_delay = 10;
-GT_t.LN_t._S125HD.reactionTime = 2;
 GT_t.LN_t._S125HD.reflection_limit = 0.22;
-GT_t.LN_t._S125HD.ECM_K = -1
-GT_t.LN_t._S125HD.show_external_missile = true;
+GT_t.LN_t._S125HD.ECM_K = -1;
 GT_t.LN_t._S125HD.sensor = {};
 set_recursive_metatable(GT_t.LN_t._S125HD.sensor, GT_t.WSN_t[0]);
-GT_t.LN_t._S125HD.barrels_reload_type = GT_t.BarrelsReloadTypes.SEQUENTIALY;
 GT_t.LN_t._S125HD.PL = {};
 GT_t.LN_t._S125HD.PL[1] = {};
-GT_t.LN_t._S125HD.PL[1].ammo_capacity = 4;
-GT_t.LN_t._S125HD.PL[1].automaticLoader = false;
 GT_t.LN_t._S125HD.PL[1].type_ammunition = SA2V601P.wsTypeOfWeapon;
---GT_t.LN_t._S125HD.PL[1].name_ammunition="SA5B27";
-GT_t.LN_t._S125HD.PL[1].portionAmmoCapacity = 2;
-GT_t.LN_t._S125HD.PL[1].reload_time = 300*2; -- 5 min for each two barrels
-GT_t.LN_t._S125HD.PL[1].shot_delay = 0.1;
 GT_t.LN_t._S125HD.BR = {
                 {connector_name = 'POINT_ROCKET_01'},
                 {connector_name = 'POINT_ROCKET_02'},

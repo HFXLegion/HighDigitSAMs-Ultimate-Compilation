@@ -15,6 +15,7 @@ GT.toggle_alarm_state_interval = 1.0;
 GT.animation_arguments.locator_rotation = 11;
 GT.radar_rotation_period = 2.0;
 GT.snd.radarRotation = "GndTech/RadarRotation";
+GT.defaultStartAlarmState = GT_t.START_ALARM_STATES.RED;
 
 
 --Burning after hit
@@ -100,8 +101,8 @@ GT.attribute = {wsType_Ground,wsType_SAM,wsType_Radar,SA3_SR,
 				"RADAR_BAND1_FOR_ARM",
 				"Datalink"
 				};
-
 GT.category = "Air Defence";
+GT.tags = { "Air Defence", "EW Radar" };
 GT.Countries = {"Israel", "Canada"}
 
 add_surface_unit(GT)

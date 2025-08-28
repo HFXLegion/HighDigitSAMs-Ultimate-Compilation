@@ -27,15 +27,15 @@ local SA9M96E2 = {
 	Name = SA9M96E2, --SA9M96E2
 	display_name = _('9M96E2 (SA-21 Growler)'),
 	name = "SA9M96E2",
-	Escort = 3, -- Escort(Requires tracking?): 0 - no, 1 - launch aircraft, 2 - another aircraft, 3 - from the ground
-	Head_Type = 6, -- Seeker type code, in our case 8 is for TVM (Track via missile). 1 = Passive IR homing, 2 = Active Radar Homing
+	Escort = 0, -- Escort(Requires tracking?): 0 - no, 1 - launch aircraft, 2 - another aircraft, 3 - from the ground
+	Head_Type = 2, -- Seeker type code, in our case 8 is for TVM (Track via missile). 1 = Passive IR homing, 2 = Active Radar Homing
 	sigma = {20, 20, 20}, -- maximum aiming error in meters, in target coordinates. x - longitudinal axis of the target, y - vertical axis of the target, z - transverse axis of the target
 	M = 420.0, -- Mass of the missile at launch
 	H_max = 30000.0, -- Maximum target altitude
 	H_min = 5.0, -- minimum target altitude
 	Diam = 240.0, -- Missile diameter in mm
 	Cx_pil = 8, -- "Cx like pendants" - Moment of inertia??
-	D_max = 40000.0, -- Maximum range firing at low altitude, in meters
+	D_max = 70000.0, -- Maximum range firing at low altitude, in meters
 	D_min = 1000.0, -- minimum range in meters
 	Head_Form = 1, -- determines shape of the missile head for drag modeling; 0 for hemispherical, 1 for conical
 	Life_Time = 240.0, -- Battery life
@@ -61,7 +61,8 @@ local SA9M96E2 = {
 	Reflection = 0.2,
 	KillDistance = 25.0,
 	category = CAT_MISSILES,
-	ccm_k0       = 0.2, -- Countermeasures effectiveness
+	ccm_k0 = 0.1, -- Countermeasures effectiveness
+	SeekerGen = 4,
 	PN_gain = 4,
 	PN_coeffs = {7,
 				1000.0 ,1.0,
@@ -92,11 +93,11 @@ local SA9M96E2 = {
 		0, -- angular velocity created by the moment of gas rudders
 		
 		--t_statr 	t_b 	t_accel 	t_march 	t_inertial 	t_break 	t_end
-		0.9, 		0, 		16.0, 		0, 			0, 			0, 			1000000000, -- time of stage, sec
-		0, 			0, 		18.27, 		0, 			0, 			0, 			0, 			-- fuel flow rate, kg/sec
-		0, 			0, 		45000,	 	0, 			0, 			0, 			0, 			-- thrust, newtons
+		0.9, 		0, 		17.5, 		0, 			0, 			0, 			1000000000, -- time of stage, sec
+		0, 			0, 		9.57, 		0, 			0, 			0, 			0, 			-- fuel flow rate, kg/sec
+		0, 			0, 		40000,	 	0, 			0, 			0, 			0, 			-- thrust, newtons
 		
-		1000000000, --self destruct by timer
+		250, --self destruct by timer
 		240, --onboard power system operation time, sec
 		0, -- absolute self-destruction altitude. Altitude of the radio fuse triggering self destruct. 
 		1, -- control switch-on delay after launch, sec 
@@ -125,7 +126,7 @@ local SA9M96E2 = {
 		0, 
 		0 
 	},
-	wsTypeOfWeapon  = {wsType_Missile, wsType_Missile, wsType_SA_Missile};
+	wsTypeOfWeapon  = {wsType_Missile, wsType_Missile, wsType_AA_Missile};
 	shape_table_data = 
 	{
 		{
@@ -141,7 +142,6 @@ local SA9M96E2 = {
 declare_weapon(SA9M96E2)
 
 GT_t.WS_t.S_400_9M96E2 = {}
-GT_t.WS_t.S_400_9M96E2.moveable = false
 GT_t.WS_t.S_400_9M96E2.angles = {
 					{math.rad(180), math.rad(-180), math.rad(-90), math.rad(90)},
 					};
@@ -151,16 +151,11 @@ GT_t.WS_t.S_400_9M96E2.LN[1] = {}
 GT_t.WS_t.S_400_9M96E2.LN[1].type = 4
 GT_t.WS_t.S_400_9M96E2.LN[1].distanceMin = 1000
 GT_t.WS_t.S_400_9M96E2.LN[1].distanceMax = 120000
-GT_t.WS_t.S_400_9M96E2.LN[1].ECM_K = 0.4;
-GT_t.WS_t.S_400_9M96E2.LN[1].reactionTime = 3
-GT_t.WS_t.S_400_9M96E2.LN[1].launch_delay = 3;
+GT_t.WS_t.S_400_9M96E2.LN[1].ECM_K = -1;
 GT_t.WS_t.S_400_9M96E2.LN[1].reflection_limit = 0.02;
 GT_t.WS_t.S_400_9M96E2.LN[1].sensor = {}
 set_recursive_metatable(GT_t.WS_t.S_400_9M96E2.LN[1].sensor, GT_t.WSN_t[0])
-GT_t.WS_t.S_400_9M96E2.LN[1].beamWidth = math.rad(1);
+GT_t.WS_t.S_400_9M96E2.LN[1].beamWidth = 0;
 GT_t.WS_t.S_400_9M96E2.LN[1].PL = {}
 GT_t.WS_t.S_400_9M96E2.LN[1].PL[1] = {}
-GT_t.WS_t.S_400_9M96E2.LN[1].PL[1].ammo_capacity = 4
 GT_t.WS_t.S_400_9M96E2.LN[1].PL[1].type_ammunition = SA9M96E2.wsTypeOfWeapon;
-GT_t.WS_t.S_400_9M96E2.LN[1].PL[1].reload_time = 1000000; -- never during the mission
-GT_t.WS_t.S_400_9M96E2.LN[1].BR = { {pos = {0, 0, 0} } }

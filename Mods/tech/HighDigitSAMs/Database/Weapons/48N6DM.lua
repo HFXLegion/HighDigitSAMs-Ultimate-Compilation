@@ -30,7 +30,7 @@ local SA48N6DM = {
 	Escort = 3, -- Escort(Requires tracking?): 0 - no, 1 - launch aircraft, 2 - another aircraft, 3 - from the ground
 	Head_Type = 6, -- Seeker type code, in our case 8 is for TVM (Track via missile). 1 = Passive IR homing, 2 = Active Radar Homing
 	sigma = {40, 40, 40}, -- maximum aiming error in meters, in target coordinates. x - longitudinal axis of the target, y - vertical axis of the target, z - transverse axis of the target
-	M = 1900.0, -- Mass of the missile at launch
+	M = 1850.0, -- Mass of the missile at launch
 	H_max = 36000.0, -- Maximum target altitude
 	H_min = 5.0, -- minimum target altitude
 	Diam = 519.0, -- Missile diameter in mm
@@ -124,7 +124,8 @@ local SA48N6DM = {
 		0, 
 		0 
 	},
-	ccm_k0       = 0.2, -- Countermeasures effectiveness
+	ccm_k0 = 0.1, -- Countermeasures effectiveness
+	SeekerGen = 4,
 	wsTypeOfWeapon  = {wsType_Missile, wsType_Missile, wsType_SA_Missile};
 	shape_table_data = 
 	{
@@ -141,7 +142,6 @@ local SA48N6DM = {
 declare_weapon(SA48N6DM)
 
 GT_t.WS_t.S_400_48N6DM = {} -- S-300PMUB (SA-20B Gargoyle)
-GT_t.WS_t.S_400_48N6DM.moveable = false
 GT_t.WS_t.S_400_48N6DM.angles = {
 					{math.rad(180), math.rad(-180), math.rad(-90), math.rad(90)},
 					};
@@ -151,16 +151,11 @@ GT_t.WS_t.S_400_48N6DM.LN[1] = {}
 GT_t.WS_t.S_400_48N6DM.LN[1].type = 4
 GT_t.WS_t.S_400_48N6DM.LN[1].distanceMin = 2000
 GT_t.WS_t.S_400_48N6DM.LN[1].distanceMax = 250000
-GT_t.WS_t.S_400_48N6DM.LN[1].ECM_K = 0.4;
-GT_t.WS_t.S_400_48N6DM.LN[1].reactionTime = 10
-GT_t.WS_t.S_400_48N6DM.LN[1].launch_delay = 3;
+GT_t.WS_t.S_400_48N6DM.LN[1].ECM_K = -1;
 GT_t.WS_t.S_400_48N6DM.LN[1].reflection_limit = 0.02;
 GT_t.WS_t.S_400_48N6DM.LN[1].sensor = {}
 set_recursive_metatable(GT_t.WS_t.S_400_48N6DM.LN[1].sensor, GT_t.WSN_t[0])
-GT_t.WS_t.S_400_48N6DM.LN[1].beamWidth = math.rad(1);
+GT_t.WS_t.S_400_48N6DM.LN[1].beamWidth = 0;
 GT_t.WS_t.S_400_48N6DM.LN[1].PL = {}
 GT_t.WS_t.S_400_48N6DM.LN[1].PL[1] = {}
-GT_t.WS_t.S_400_48N6DM.LN[1].PL[1].ammo_capacity = 4
 GT_t.WS_t.S_400_48N6DM.LN[1].PL[1].type_ammunition = SA48N6DM.wsTypeOfWeapon;
-GT_t.WS_t.S_400_48N6DM.LN[1].PL[1].reload_time = 1000000; -- never during the mission
-GT_t.WS_t.S_400_48N6DM.LN[1].BR = { {pos = {0, 0, 0} } }

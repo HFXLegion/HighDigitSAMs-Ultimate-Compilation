@@ -12,12 +12,15 @@ GT.visual.fire_pos[2] = 1;
 GT.animation_arguments.locator_rotation = 0;
 GT.radar_rotation_period = 12.0;
 GT.snd.radarRotation = "GndTech/RadarRotation";
+GT.defaultStartAlarmState = GT_t.START_ALARM_STATES.RED;
 
 GT.sensor = {};
 GT.sensor.max_range_finding_target = 330000;
 GT.sensor.min_range_finding_target = 2000;
 GT.sensor.max_alt_finding_target = 90000;
 GT.sensor.height = 8.68;
+
+GT.EPLRS = true;
 
 GT.CustomAimPoint = {0,1.5,0}
 
@@ -73,6 +76,7 @@ GT.attribute = {wsType_Ground,wsType_SAM,wsType_Radar,RLO_64H6E,
 				"SAM SR",
 				"RADAR_BAND1_FOR_ARM",
 				"CustomAimPoint",
+                "Datalink",
 				};
 GT.category = "Air Defence";
 GT.tags = { "Air Defence", "Search Radar" };

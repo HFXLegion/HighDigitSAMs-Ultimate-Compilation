@@ -59,7 +59,13 @@ GT.WS[ws].reference_angle_Z = math.rad(90);
 
 __LN = add_launcher(GT.WS[ws], GT_t.LN_t.Aster15);
 __LN.depends_on_unit = {{{"SAMPT_MRI_ARABEL"},},{{"SAMPT_MRI_GF300"},},};
-
+__LN.external_tracking_awacs = false;
+__LN.show_external_missile = true;
+__LN.max_number_of_missiles_channels = 1;
+__LN.PL[1].shot_delay = 0.1;
+__LN.PL[1].switch_on_delay = 0.1;
+__LN.PL[1].ammo_capacity = 8;
+__LN.PL[1].reload_time = 3600;
 __LN.BR = {
 	{pos = {5.3, 6.675, -0.975},	drawArgument = 11},
 	{pos = {5.3, 6.675, -0.35},		drawArgument = 12},
@@ -70,8 +76,6 @@ __LN.BR = {
 	{pos = {5.3, 7.26, 0.35}, 		drawArgument = 17},
 	{pos = {5.3, 7.26, 0.975}, 		drawArgument = 18},
 };
-
-__LN = nil;
 
 GT.Name = "SAMPT_MLT";
 GT.DisplayName = _('SAMP/T TEL (Aster-15)');

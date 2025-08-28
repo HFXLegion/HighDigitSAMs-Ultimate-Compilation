@@ -64,7 +64,7 @@ local TAMIR				= {
 	X_back_acc			= -1.45,
 	Reflection			= 0.05,
 	KillDistance		= 20.0,
-	ccm_k0 				= 0.1,	
+	ccm_k0 				= 0.2,	
 	SeekerGen 			= 4,
 	hoj					= 1,
 	active_radar_lock_dist	= 16000.0,
@@ -152,7 +152,6 @@ declare_weapon(TAMIR)
 
 
 GT_t.WS_t.IRONDOME 								= {}
-GT_t.WS_t.IRONDOME.moveable 					= false
 GT_t.WS_t.IRONDOME.angles 						= {
 												{math.rad(180), math.rad(-180), math.rad(0), math.rad(180)},
 												};
@@ -162,21 +161,11 @@ GT_t.WS_t.IRONDOME.LN[1] 						= {}
 GT_t.WS_t.IRONDOME.LN[1].type 					= 4;
 GT_t.WS_t.IRONDOME.LN[1].distanceMin 			= 600;
 GT_t.WS_t.IRONDOME.LN[1].distanceMax 			= 70000;
-GT_t.WS_t.IRONDOME.LN[1].ECM_K 					= 0.4;
+GT_t.WS_t.IRONDOME.LN[1].ECM_K 					= -1;
 GT_t.WS_t.IRONDOME.LN[1].reflection_limit 		= 0.004;
 GT_t.WS_t.IRONDOME.LN[1].sensor 				= {};
-GT_t.WS_t.IRONDOME.LN[1].barrels_reload_type 	= 3; -- BarrelsReloadTypes.SEQUENTIALY
-GT_t.WS_t.IRONDOME.LN[1].show_external_missile 	= true
-GT_t.WS_t.IRONDOME.LN[1].reactionTime 			= 1.0;
-GT_t.WS_t.IRONDOME.LN[1].launch_delay 			= 0.1;
-GT_t.WS_t.IRONDOME.LN[1].max_number_of_missiles_channels = 1;
-
 set_recursive_metatable(GT_t.WS_t.IRONDOME.LN[1].sensor, GT_t.WSN_t[0])
-
+GT_t.WS_t.IRONDOME.LN[1].beamWidth 				= 0;
 GT_t.WS_t.IRONDOME.LN[1].PL 					= {}
 GT_t.WS_t.IRONDOME.LN[1].PL[1] 					= {}
-GT_t.WS_t.IRONDOME.LN[1].PL[1].ammo_capacity 	= 20;
 GT_t.WS_t.IRONDOME.LN[1].PL[1].type_ammunition 	= TAMIR.wsTypeOfWeapon;
-GT_t.WS_t.IRONDOME.LN[1].PL[1].shot_delay 		= 0.5;
-GT_t.WS_t.IRONDOME.LN[1].PL[1].reload_time 		= 50;
-GT_t.WS_t.IRONDOME.LN[1].BR 					= { {pos = {0, 0, 0} } }

@@ -146,17 +146,21 @@ GT.WS[ws].drawArgument1	= 0;
 GT.WS[ws].omegaY		= math.rad(80);
 GT.WS[ws].drawArgument2 = 1;
 GT.WS[ws].omegaZ		= math.rad(80);
-GT.WS[ws].pidY = {p=100, i = 2, d = 10.0, inn = 10};
-GT.WS[ws].pidZ = {p=100, i = 2, d = 10.0, inn = 10};
+GT.WS[ws].pidY 			= {p=100, i = 2, d = 10.0, inn = 10};
+GT.WS[ws].pidZ 			= {p=100, i = 2, d = 10.0, inn = 10};
 GT.WS[ws].stabilizer	= true;
-GT.WS[ws].cockpit 		= {'_1A29/_1A29', {0.0, 0.0, 0.6} }
+GT.WS[ws].cockpit 		= {'_1A29/_1A29', {0.0, 0.4, 0.5} }
 GT.WS[ws].PPI_view 		= "GenericPPI/GenericPPI";
 
 __LN 													= add_launcher(GT.WS[ws], GT_t.LN_t.automatic_gun_2A38M);
 __LN.beamWidth											= math.rad(0.5);
 __LN.ECM_K												= 0.9;
-__LN.BR 												= {{pos = {0, 1, -1}},{pos = {0, 1, 0.8}}};
+__LN.BR 												= {{pos = {0, 0.5, -0.9}}, {pos = {0, 0.5, 0.7}}};
 __LN.fireAnimationArgument								= 23;
+__LN.reactionTime 										= 0.1;
+__LN.PL[1].shot_delay									= 60/2400 -- per single gun
+__LN.PL[1].ammo_capacity								= 1400 -- for the two-gun system
+__LN.PL[1].reload_time									= 180;
 __LN.sightMasterMode									= 1;
 __LN.sightIndicationMode								= 1;
 
@@ -179,7 +183,15 @@ __LN.BR													= {
 __LN.beamWidth											= math.rad(0.5);
 __LN.inclination_correction_upper_limit					= math.rad(20);
 __LN.inclination_correction_bias						= math.rad(3);
+__LN.max_number_of_missiles_channels 					= 1;
 __LN.depends_on_unit									= RADAR_TRACKERS
+__LN.reactionTime 										= 0.1;
+__LN.launch_delay 										= 0.5;
+__LN.show_external_missile 								= false;
+__LN.barrels_reload_type 								= 3
+__LN.PL[1].shot_delay									= 0.1;
+__LN.PL[1].ammo_capacity								= 12;
+__LN.PL[1].reload_time									= 600;
 __LN.sightMasterMode									= 1;
 __LN.sightIndicationMode								= 4;
 

@@ -39,9 +39,16 @@ GT.WS[ws].pidY = { p = 5, i = 0, d = 2, inn = 1};
 GT.WS[ws].pidZ = { p = 5, i = 0, d = 2, inn = 1};
 
 __LN = add_launcher(GT.WS[ws], GT_t.LN_t._S125HD);
+__LN.barrels_reload_type = GT_t.BarrelsReloadTypes.SEQUENTIALY;
 __LN.depends_on_unit = {{{"snr s-125 tr", 1},},};
+__LN.reactionTime = 0.1;
+__LN.show_external_missile = true;
+__LN.PL[1].ammo_capacity = 4;
+__LN.PL[1].automaticLoader = false;
+__LN.PL[1].portionAmmoCapacity = 2;
+__LN.PL[1].reload_time = 300*2; -- 5 min for each two barrels
+__LN.PL[1].shot_delay = 0.1;
 __LN.min_launch_angle = math.rad(9);
-__LN = nil;
 
 GT.Name = "5p73 V-601P ln";
 GT.DisplayName = _('SAM SA-3 S-125 (V-601P) "Goa" LN');

@@ -56,6 +56,7 @@ local SA2V759 = {
 	Fi_search = 99.9,
 	OmViz_max = 99.9,
 	ccm_k0 = 3.0,
+	SeekerGen = 1,
 	
 	-- Revision 2021-01-19
 	-- Below I am attempting to roughly simulate the half-lead command guidance mode
@@ -120,24 +121,11 @@ GT_t.LN_t._S75.type = 4;
 GT_t.LN_t._S75.xc = -3.26;
 GT_t.LN_t._S75.distanceMin = 3000;
 GT_t.LN_t._S75.distanceMax = 50000;
-GT_t.LN_t._S75.reactionTime = 1;
-GT_t.LN_t._S75.launch_delay = 2;
 GT_t.LN_t._S75.maxShootingSpeed = 0;
-GT_t.LN_t._S75.show_external_missile = true;
 GT_t.LN_t._S75.sensor = {};
 set_recursive_metatable(GT_t.LN_t._S75.sensor, GT_t.WSN_t[0]);
 GT_t.LN_t._S75.reflection_limit = 0.02;
 GT_t.LN_t._S75.ECM_K = -1
-GT_t.LN_t._S75.barrels_reload_type = 3 -- BarrelsReloadTypes.SEQUENTIALY;
 GT_t.LN_t._S75.PL = {};
 GT_t.LN_t._S75.PL[1] = {};
-GT_t.LN_t._S75.PL[1].ammo_capacity = 1;
 GT_t.LN_t._S75.PL[1].type_ammunition = SA2V759.wsTypeOfWeapon;
-GT_t.LN_t._S75.PL[1].reload_time = 13*60; -- 13 minutes
-GT_t.LN_t._S75.PL[1].shot_delay = 0.1;
-GT_t.LN_t._S75.BR = {
-                    {pos = {-1.477, 0.459,-1.08}, drawArgument = 4},
-                    {pos = {-1.477, 0.459,-0.38}, drawArgument = 5},
-                    {pos = {-1.477, 0.459, 0.43}, drawArgument = 6},
-                    {pos = {-1.477, 0.459, 1.15}, drawArgument = 7},
-                };

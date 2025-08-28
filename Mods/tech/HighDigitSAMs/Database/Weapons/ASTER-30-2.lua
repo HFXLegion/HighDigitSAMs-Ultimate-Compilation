@@ -145,24 +145,10 @@ GT_t.LN_t.Aster30_2 = {};
 GT_t.LN_t.Aster30_2.type = 4;
 GT_t.LN_t.Aster30_2.distanceMin = 10000;
 GT_t.LN_t.Aster30_2.distanceMax = 200000;
-GT_t.LN_t.Aster30_2.min_trg_alt = 20000;
-GT_t.LN_t.Aster30_2.max_trg_alt = 100000;
-GT_t.LN_t.Aster30_2.reactionTime = 1.0;
-GT_t.LN_t.Aster30_2.launch_delay = 1.0;
 GT_t.LN_t.Aster30_2.reflection_limit = 0.0001;
-GT_t.LN_t.Aster30_2.ECM_K = 0.2;
-GT_t.LN_t.Aster30_2.max_number_of_missiles_channels = 1;
+GT_t.LN_t.Aster30_2.ECM_K = -1;
 GT_t.LN_t.Aster30_2.sensor = {};
-
 set_recursive_metatable(GT_t.LN_t.Aster30_2.sensor, GT_t.WSN_t[0]);
-
-GT_t.LN_t.Aster30_2.external_tracking_awacs = false;
-GT_t.LN_t.Aster30_2.show_external_missile = false;
 GT_t.LN_t.Aster30_2.PL = {};
 GT_t.LN_t.Aster30_2.PL[1] = {};
-GT_t.LN_t.Aster30_2.PL[1].switch_on_delay = 1.0;
-GT_t.LN_t.Aster30_2.PL[1].shot_delay = 1.0;
-GT_t.LN_t.Aster30_2.PL[1].ammo_capacity = 8;
 GT_t.LN_t.Aster30_2.PL[1].type_ammunition = SAMPT_ASTER_30_Blk_2.wsTypeOfWeapon;
-GT_t.LN_t.Aster30_2.PL[1].reload_time = 3600;
-GT_t.LN_t.Aster30_2.BR = { {pos = {0,0,0}}};

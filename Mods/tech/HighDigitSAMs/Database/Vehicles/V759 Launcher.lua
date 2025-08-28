@@ -48,10 +48,12 @@ local __LN = add_launcher(GT.WS[ws], GT_t.LN_t._S75);
 __LN.min_launch_angle = math.rad(9);
 __LN.launch_delay = 5;
 __LN.depends_on_unit = {{{"SNR_75V", 1},},{{"SNR_75V_Improved", 1},}};
-__LN.BR = {
-	{connector_name = 'POINT_ROCKET'},
-		};
-__LN = nil;
+__LN.barrels_reload_type = 3 -- BarrelsReloadTypes.SEQUENTIALY;
+__LN.show_external_missile = true;
+__LN.BR = { {connector_name = 'POINT_ROCKET'}, };
+__LN.PL[1].ammo_capacity = 1;
+__LN.PL[1].reload_time = 13*60; -- 13 minutes
+__LN.PL[1].shot_delay = 0.1;
 	
 GT.Name = "S_75M_Volhov_V759";
 GT.DisplayName = _('SAM SA-2 S-75 (V759) "Guideline" LN');

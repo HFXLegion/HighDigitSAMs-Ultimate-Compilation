@@ -46,7 +46,7 @@ SAMPT_ASTER_15 = {
     Reflection 		= 0.1,
     KillDistance 	= 20.0,
 	tail_scale 	 	= 1.4,		
-	ccm_k0 			= 0.1,	
+	ccm_k0 			= 0.15,	
 	
 	active_radar_lock_dist	= 18000.0,
 	SeekerGen				= 3,
@@ -138,22 +138,10 @@ GT_t.LN_t.Aster15 = {};
 GT_t.LN_t.Aster15.type = 4;
 GT_t.LN_t.Aster15.distanceMin = 1000;
 GT_t.LN_t.Aster15.distanceMax = 120000;
-GT_t.LN_t.Aster15.reactionTime = 1.0;
-GT_t.LN_t.Aster15.launch_delay = 0.1;
 GT_t.LN_t.Aster15.reflection_limit = 0.0001;
-GT_t.LN_t.Aster15.ECM_K = 0.2;
-GT_t.LN_t.Aster15.max_number_of_missiles_channels = 1;
+GT_t.LN_t.Aster15.ECM_K = -1;
 GT_t.LN_t.Aster15.sensor = {};
-
 set_recursive_metatable(GT_t.LN_t.Aster15.sensor, GT_t.WSN_t[0]);
-
-GT_t.LN_t.Aster15.external_tracking_awacs = false;
-GT_t.LN_t.Aster15.show_external_missile = true
 GT_t.LN_t.Aster15.PL = {};
 GT_t.LN_t.Aster15.PL[1] = {};
-GT_t.LN_t.Aster15.PL[1].switch_on_delay = 0.1;
-GT_t.LN_t.Aster15.PL[1].shot_delay = 0.1;
-GT_t.LN_t.Aster15.PL[1].ammo_capacity = 8;
 GT_t.LN_t.Aster15.PL[1].type_ammunition = SAMPT_ASTER_15.wsTypeOfWeapon;
-GT_t.LN_t.Aster15.PL[1].reload_time = 3600;
-GT_t.LN_t.Aster15.BR = { { pos = {0, 0, 0} } };

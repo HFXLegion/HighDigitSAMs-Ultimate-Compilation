@@ -78,7 +78,8 @@ local SA9M82 = {
 	Reflection = 0.3967,
 	KillDistance = 15.0,
 	category = CAT_MISSILES,
-	ccm_k0       = 0.2,
+	ccm_k0 = 0.5,
+	SeekerGen = 3,
 	PN_gain = 4,
 	PN_coeffs = {7,
 				1000.0 ,1.0,
@@ -158,7 +159,6 @@ local SA9M82 = {
 declare_weapon(SA9M82)
 
 GT_t.WS_t.S300V_9M82 = {} -- S-300V (9M82)
-GT_t.WS_t.S300V_9M82.moveable = false
 GT_t.WS_t.S300V_9M82.angles = {
 					{math.rad(180), math.rad(-180), math.rad(-90), math.rad(90)},
 					};
@@ -168,16 +168,11 @@ GT_t.WS_t.S300V_9M82.LN[1] = {}
 GT_t.WS_t.S300V_9M82.LN[1].type = 4
 GT_t.WS_t.S300V_9M82.LN[1].distanceMin = 13000
 GT_t.WS_t.S300V_9M82.LN[1].distanceMax = 100000
-GT_t.WS_t.S300V_9M82.LN[1].ECM_K = 0.3;
-GT_t.WS_t.S300V_9M82.LN[1].reactionTime = 2
-GT_t.WS_t.S300V_9M82.LN[1].launch_delay = 1;
+GT_t.WS_t.S300V_9M82.LN[1].ECM_K = -1;
 GT_t.WS_t.S300V_9M82.LN[1].reflection_limit = 0.019;
 GT_t.WS_t.S300V_9M82.LN[1].sensor = {}
 set_recursive_metatable(GT_t.WS_t.S300V_9M82.LN[1].sensor, GT_t.WSN_t[0])
-GT_t.WS_t.S300V_9M82.LN[1].beamWidth = math.rad(1);
+GT_t.WS_t.S300V_9M82.LN[1].beamWidth = 0;
 GT_t.WS_t.S300V_9M82.LN[1].PL = {}
 GT_t.WS_t.S300V_9M82.LN[1].PL[1] = {}
-GT_t.WS_t.S300V_9M82.LN[1].PL[1].ammo_capacity = 4
 GT_t.WS_t.S300V_9M82.LN[1].PL[1].type_ammunition = SA9M82.wsTypeOfWeapon;
-GT_t.WS_t.S300V_9M82.LN[1].PL[1].reload_time = 1000000; -- never during the mission
-GT_t.WS_t.S300V_9M82.LN[1].BR = { {pos = {0, 0, 0} } }

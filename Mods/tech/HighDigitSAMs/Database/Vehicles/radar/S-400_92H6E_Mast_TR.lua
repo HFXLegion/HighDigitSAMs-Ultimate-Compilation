@@ -16,6 +16,8 @@ GT.sensor.min_range_finding_target = 200;
 GT.sensor.max_alt_finding_target = 90000;
 GT.sensor.height = 38.8;
 
+GT.EPLRS = true;
+
 --Burning after hit
 GT.visual.fire_size = 0.5; --relative burning size
 GT.visual.fire_pos[1] = 0; -- center of burn at long axis shift(meters)
@@ -100,6 +102,7 @@ GT.attribute = {wsType_Ground,wsType_SAM,wsType_Radar,V_40B6M,
 				"SAM TR",
 				"RADAR_BAND1_FOR_ARM",
 				"CustomAimPoint",
+				"Datalink"
 				};
 GT.category = "Air Defence";
 GT.tags = { "Air Defence", "Tracking Radar" };

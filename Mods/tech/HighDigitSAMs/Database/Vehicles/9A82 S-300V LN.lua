@@ -31,14 +31,14 @@ local ws = GT_t.inc_ws();
 GT.WS[ws] = {};
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.S300V_9M82);
 GT.WS[ws].pos = {-4.915, 2.036,0};
-GT.WS[ws].LN[1].ECM_K = -1
-GT.WS[ws].LN[1].beamWidth = 0.0;
+GT.WS[ws].moveable = false;
 GT.WS[ws].LN[1].barrels_reload_type = 3
 GT.WS[ws].LN[1].depends_on_unit = {{{"S-300V 9S32 tr"},},};
-GT.WS[ws].LN[1].reactionTime = 1.0;
+GT.WS[ws].LN[1].reactionTime = 0.1;
 GT.WS[ws].LN[1].PL[1].ammo_capacity = 2;
 GT.WS[ws].LN[1].PL[1].shot_delay = 0.1;
 GT.WS[ws].LN[1].PL[1].reload_time = 7200;
+GT.WS[ws].LN[1].BR = {};
 GT.WS[ws].LN[1].BR[1] = {pos = {10.05, 0.216,-1.045}, drawArgument = 188 }; -- Changed by ERO
 GT.WS[ws].LN[1].BR[2] = {pos = {10.05, 1.204,-0.614}, drawArgument = 189 }; -- Changed by ERO
 GT.WS[ws].LN[1].BR[3] = {pos = {10.05, 1.204, 0.614}, drawArgument = 190 }; -- Changed by ERO
