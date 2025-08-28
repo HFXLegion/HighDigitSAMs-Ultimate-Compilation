@@ -71,7 +71,7 @@ GT.WS[ws].LN[1].ECM_K = 0.2;
 GT.WS[ws].LN[1].maxShootingSpeed = 0;
 GT.WS[ws].LN[1].maxTrackingSpeed = 0;
 
-for i = 1, 16 do
+for i = 1, 128 do
     ws = GT_t.inc_ws();
     GT.WS[ws] = {};
     GT.WS[ws].base = 1;

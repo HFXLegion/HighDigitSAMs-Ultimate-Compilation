@@ -28,7 +28,7 @@ GT.sensor.height = 5.895;
 
 GT.WS = {}
 GT.WS.maxTargetDetectionRange = 500;
-GT.WS.requiredUnits = {{"SAMPT_MC", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
+GT.WS.requiredUnits = {{"SAMPT_ME", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 
 GT.Name = "SAMPT_MGE";
 GT.DisplayName = _("SAMP/T EPP");

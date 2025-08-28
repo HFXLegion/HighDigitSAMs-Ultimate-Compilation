@@ -43,7 +43,7 @@ GT.WS.radar_type = 102;
 GT.WS.radar_rotation_type = 0;
 GT.WS.searchRadarMaxElevation = math.rad(75);
 GT.WS.searchRadarFrequencies = {{8e9, 12e9}};
-GT.WS.requiredUnits = {{"SAMPT_MC", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
+GT.WS.requiredUnits = {{"SAMPT_ME", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};
@@ -71,7 +71,7 @@ GT.WS[ws].LN[1].ECM_K = 0.2;
 GT.WS[ws].LN[1].maxShootingSpeed = 0;
 GT.WS[ws].LN[1].maxTrackingSpeed = 0;
 
-for i = 1, 16 do
+for i = 1, 10 do
     ws = GT_t.inc_ws();
     GT.WS[ws] = {};
     GT.WS[ws].base = 1;

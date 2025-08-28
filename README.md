@@ -79,12 +79,9 @@ There is also the Ground Fire 300 radar which has greatly increased performance 
 > ⚠️ Ground Fire 300 requires EPP to work ⚠️
 
 #### Missiles
-Modeled right now are the Aster 15, Aster 30 Block 1, Block 1NT and Block 2
-- Aster 15 is the first missile with range up to 30 km and 13 km in altitude 
+Modeled right now are the Aster 30 Block 1 and Block 1NT
 - Block 1 is good up to 20km in altitude and 120km in range
 - Block 1NT gives it a better seeker and possibly a better booster increasing the altitude coverage to 25km and the range to 150km
-- Block 2 is completely different and more akin to the US' THAAD. It can intercept targets up to 200km away and up to 70km in altitude
-  > Detailed information about this missile is classified. Missile might me too overpowered
 
 Keep in mind that this has to be modeled within DCS' restrictions so its not entirely accurate to what it could do IRL
 
@@ -160,9 +157,6 @@ See **[CHANGELOG.md](/CHANGELOG.md)**
 ## 💬 FAQ
 #### Do you plan to continue supporting this fork?
 I can't give you an exact answer, but I'll definitely be updating it in a couple of months.
-
-#### Can you fix 9S32 "Grill Pan" ("Imbir") S-300 TR?
-No, unless i get origin models by Auranis or ERO
 
 #### Why didn't you make TVM as a way to guide missiles?
 Using only TVM is not realistic (final section is always in SARH mode). There is no combined guidance (TVM + SARH) in the game
