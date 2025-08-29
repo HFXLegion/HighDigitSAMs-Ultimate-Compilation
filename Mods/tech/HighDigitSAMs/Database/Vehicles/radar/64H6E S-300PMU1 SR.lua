@@ -56,7 +56,7 @@ for i = 1,24 do
 		ECM_K = 0.4,
         min_trg_alt = 100,
         max_trg_alt = GT.sensor.max_alt_finding_target,
-        reactionTime = 1;
+        reactionTime = GT.radar_rotation_period/4 + 1;
         },
     }
 end --for
@@ -79,4 +79,4 @@ GT.attribute = {wsType_Ground,wsType_SAM,wsType_Radar,RLO_64H6E,
 				};
 GT.category = "Air Defence";
 GT.tags = { "Air Defence", "Search Radar" };
-GT.Countries = {"Algeria", "China", "India", "Iran", "Kazakhstan", "North Korea", "Russia", "Syria","Ukraine","Vietnam"}
+GT.Countries = {"China", "Greece", "North Korea", "Russia", "Ukraine", "Vietnam", "Cyprus"}

@@ -30,29 +30,6 @@ GT.sensor.height = 8.68;
 GT.WS = {};
 GT.WS.maxTargetDetectionRange = 160000;
 
-local ws = 0;
-for i = 1,24 do
-    ws = GT_t.inc_ws();
-	GT.WS[ws] = {};
-    GT.WS[ws].pos = {0,3,0};
-	GT.WS[ws].angles = {
-					{math.rad(180), math.rad(-180), math.rad(-90), math.rad(90)},
-					};
-    GT.WS[ws].omegaY = 3;
-    GT.WS[ws].omegaZ = 3;
-
-    GT.WS[ws].LN = {};
-    GT.WS[ws].LN[1] = {};
-    GT.WS[ws].LN[1].type = 100;
-    GT.WS[ws].LN[1].reactionTime = 5.8;
-    GT.WS[ws].LN[1].distanceMin = GT.sensor.min_range_finding_target;
-    GT.WS[ws].LN[1].distanceMax = GT.sensor.max_range_finding_target;
-	GT.WS[ws].LN[1].reflection_limit = 0.02;
-    GT.WS[ws].LN[1].min_trg_alt = 5
-    GT.WS[ws].LN[1].max_trg_alt = GT.sensor.max_alt_finding_target;
-    GT.WS[ws].LN[1].depends_on_unit = {{{"S-300PMU1 40B6MD sr",},},{{"S-300PMU1 64N6E sr",},},{{"S-300PS 40B6MD sr",},},{{"S-300PS 64H6E sr",},},{{'S-300PS 40B6MD sr_19J6',}},{{'RLS_19J6',}}};
-end
-
 GT.Name = "S-300PMU1 54K6 cp"
 GT.DisplayName = _('SAM SA-20A S-300PMU-1 "Gargoyle" C2')
 GT.DisplayNameShort = _('SA-20A CP')
@@ -69,4 +46,4 @@ GT.attribute = {wsType_Ground,wsType_SAM,wsType_NoWeapon,KP_54K6,
 				};
 GT.category = "Air Defence";
 GT.tags = { "Air Defence", "Command & Control" };
-GT.Countries = {"Algeria", "China", "Greece", "Iran", "Kazakhstan", "North Korea", "Russia", "Syria","Ukraine","Vietnam"}
+GT.Countries = {"China", "Greece", "North Korea", "Russia", "Ukraine", "Vietnam", "Cyprus"}

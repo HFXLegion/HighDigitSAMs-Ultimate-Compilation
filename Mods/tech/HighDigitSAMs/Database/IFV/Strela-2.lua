@@ -33,7 +33,7 @@ __LN.sightIndicationMode = 1;
 
 GT.Name = "SA-7 Strela-2 manpad";
 GT.DisplayName = _('MANPADS SA-7 Strela-2 "Grail"');
-GT.DisplayNameShort = _('SA-7');
+GT.DisplayNameShort = _('SA-7 Strela-2');
 GT.Rate = 5;
 
 GT.DetectionRange  = GT.sensor.max_range_finding_target;

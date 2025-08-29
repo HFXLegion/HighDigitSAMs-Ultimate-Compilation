@@ -57,6 +57,7 @@ local SA9M317 = {
 	warhead = simple_aa_warhead(59.0),
 	exhaust1 = { 1, 1, 1, 0.5 },
 	exhaust2 = { 0.5, 0.5, 0.5, 0.5 },
+	exhaust_effect_type = 1,
 	X_back = -2.85,
 	Y_back = 0.0,
 	Z_back = 0.0,

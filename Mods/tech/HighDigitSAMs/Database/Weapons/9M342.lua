@@ -92,6 +92,7 @@ local SA9M342 = {
 	Z_back = 0.0,
 	Reflection = 0.01,
 	KillDistance = 1.0,
+	exhaust_effect_type = 1,
 	--seeker sensivity params
 	SeekerSensivityDistance = 14000, -- The range of target with IR value = 1. In meters.
 	ccm_k0 = 0.1,  -- Counter Countermeasures Probability Factor. Value = 0 - missile has absolutely resistance to countermeasures. Default = 1 (medium probability)

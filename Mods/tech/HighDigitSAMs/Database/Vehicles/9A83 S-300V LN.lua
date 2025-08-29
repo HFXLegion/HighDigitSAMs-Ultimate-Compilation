@@ -6,8 +6,8 @@ set_recursive_metatable(GT, GT_t.generic_stationary);
 set_recursive_metatable(GT.chassis, GT_t.CH_t.MAZ543M);
 GT.chassis.life = 2;
 
-GT.visual.shape = "9a83me";
-GT.visual.shape_dstr = "9a83me_d";
+GT.visual.shape = "ERO_9A83ME";
+GT.visual.shape_dstr = "ERO_9A83ME_D";
 
 --chassis
 
@@ -26,6 +26,7 @@ GT.visual.fire_time = 1100; --burning time (seconds)
 
 GT.WS = {};
 GT.WS.maxTargetDetectionRange = 150000;
+GT.WS.requiredUnits = {{"S-300V 9S457 cp", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};
@@ -62,4 +63,4 @@ GT.tags  =
     "Air Defence",
 	"Launcher",
 };
-GT.Countries = {"Ukraine", "Russia"}
+GT.Countries = {"Ukraine", "Russia", "Belarus"}

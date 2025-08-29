@@ -55,6 +55,7 @@ local SA5V55K = {
 	OmViz_max = 99.9, -- line-of-sight speed limit
 	warhead = simple_aa_warhead(133.0),
 	exhaust1 = {1, 1, 1, 1},
+	exhaust_effect_type = 1,
 	X_back = -3.681,
 	Y_back = 0.0,
 	Z_back = 0.0,

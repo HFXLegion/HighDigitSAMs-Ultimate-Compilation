@@ -55,7 +55,8 @@ local SA48N6DM = {
 	OmViz_max = 99.9, -- line-of-sight speed limit
 	warhead = simple_aa_warhead(143.0),
 	exhaust1 = {1, 1, 1, 1},
-	X_back = -3.681,
+	exhaust_effect_type = 1,
+	X_back = -3,
 	Y_back = 0.0,
 	Z_back = 0.0,
 	Reflection = 0.2,
@@ -88,7 +89,7 @@ local SA48N6DM = {
 		0.21, -- Cy_k2 steepness of the decline (front) behind the wave crisis
 
 		0.35, -- 7 Alfa_max maximum balancing angle, radians
-		4, -- angular velocity created by the moment of gas rudders
+		1, -- angular velocity created by the moment of gas rudders
 		
 		--t_statr 	t_b 	t_accel 	t_march 	t_inertial 	t_break 	t_end
 		0.96, 		0, 		12, 		0, 			0, 			0, 			1000000000, -- time of stage, sec

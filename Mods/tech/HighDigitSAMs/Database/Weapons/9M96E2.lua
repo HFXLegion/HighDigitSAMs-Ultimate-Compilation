@@ -55,6 +55,7 @@ local SA9M96E2 = {
 	OmViz_max = 99.9, -- line-of-sight speed limit
 	warhead = directional_a2a_warhead(24.0),
 	exhaust1 = {1, 1, 1, 1},
+	exhaust_effect_type = 1,
 	X_back = -3.681,
 	Y_back = 0.0,
 	Z_back = 0.0,
@@ -90,7 +91,7 @@ local SA9M96E2 = {
 		0.21, -- Cy_k2 steepness of the decline (front) behind the wave crisis
 
 		0.6, -- 7 Alfa_max maximum balancing angle, radians
-		0, -- angular velocity created by the moment of gas rudders
+		1, -- angular velocity created by the moment of gas rudders
 		
 		--t_statr 	t_b 	t_accel 	t_march 	t_inertial 	t_break 	t_end
 		0.9, 		0, 		17.5, 		0, 			0, 			0, 			1000000000, -- time of stage, sec

@@ -88,6 +88,7 @@ local SA2V759 = {
 		caliber					= 500,
 	},
 	exhaust1 = { 1, 1, 1, 1 },
+	exhaust_effect_type = 1,
 	X_back = -3.463,
 	Y_back = 0.0,
 	Z_back = 0.0,

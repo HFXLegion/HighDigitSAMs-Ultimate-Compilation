@@ -36,6 +36,7 @@ local Stunner				= {
     Z_back_acc 	 		= 0.0,
 	exhaust2 			= { 1.0, 1.0, 1.0, 0.1 },
 	exhaust3 			= { 1.0, 1.0, 1.0, 0.1 },
+	exhaust_effect_type = 1,
 	X_back 	 			= -0.8,
     Y_back 	 			= 0.0,
     Z_back 	 			= 0.0,
@@ -47,7 +48,7 @@ local Stunner				= {
 	SeekerGen 			= 4,
 	active_radar_lock_dist	= 24500.0,
 	hoj					= 1,
-	ccm_k0				= 0.1,
+	ccm_k0				= 0.03,
 
 	PN_gain = 10,
 	PN_coeffs = {7,

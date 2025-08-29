@@ -57,6 +57,7 @@ local TAMIR				= {
 	warhead				= enhanced_a2a_warhead(11.0);
 	exhaust1 			= { 1.0, 1.0, 1.0, 1.0 };
 	exhaust2 			= { 1.0, 1.0, 1.0, 0.1 };
+	exhaust_effect_type = 1,
 	tail_scale			= 1.0, 
 	X_back				= -1.45,
 	Y_back				= 0.0,

@@ -59,6 +59,7 @@ local SA2V601P = {
 	warhead = simple_aa_warhead(72.0),
 	exhaust1 = { 1, 1, 1, 1 },
 	exhaust2 = {0.9, 0.9, 0.9, 0.2 },
+	exhaust_effect_type = 1,
 	X_back = -0.6,
 	Y_back = 0.0,
 	Z_back = 0.0,

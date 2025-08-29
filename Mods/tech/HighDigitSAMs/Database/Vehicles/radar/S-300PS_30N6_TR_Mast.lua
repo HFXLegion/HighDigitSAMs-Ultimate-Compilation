@@ -7,6 +7,8 @@ GT.chassis.life = 4;
 GT.visual.shape = "ERO_30N6_TR_Mast";
 GT.visual.shape_dstr = "ERO_30N6_TR_Mast_D";
 GT.visual.fire_pos[2] = 1;
+GT.toggle_alarm_state_interval = 14;
+GT.defaultStartAlarmState = GT_t.START_ALARM_STATES.GREEN;
 
 GT.snd.radarRotation = "GndTech/RadarRotation";
 
@@ -30,6 +32,7 @@ GT.CustomAimPoint = {0,1.5,0}
 GT.WS = {};
 GT.WS.maxTargetDetectionRange = 160000;
 GT.WS.radar_type = 102;
+GT.WS.requiredUnits = {{"S-300PS SA-10B 54K6 cp", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 
 -- 6 trackers, first tracker is main, other 5 are limited within 120 degree
 
@@ -46,8 +49,8 @@ GT.WS[ws].pidY = { p = 10, i = 0.1, d = 4};
 GT.WS[ws].pidZ = { p = 10, i = 0.1, d = 4};
 GT.WS[ws].LN = {};
 GT.WS[ws].LN[1] = {};
-GT.WS[ws].LN[1].depends_on_unit = {{{"S-300PS SA-10B 54K6 cp"}}};
-GT.WS[ws].LN[1].reactionTime = 3;
+GT.WS[ws].LN[1].depends_on_unit = {{{"S-300PS SA-10B 76N6E sr",},},{{"S-300PS 64H6E MOD sr",},},};
+GT.WS[ws].LN[1].reactionTime = 5;
 GT.WS[ws].LN[1].max_number_of_missiles_channels = 2;
 GT.WS[ws].LN[1].type = 102;
 GT.WS[ws].LN[1].distanceMin = 2000;
@@ -91,3 +94,4 @@ GT.attribute = {wsType_Ground,wsType_SAM,wsType_Radar,V_40B6M,
 				};
 GT.category = "Air Defence";
 GT.tags = { "Air Defence", "Tracking Radar" };
+GT.Countries = {"Russia", "Belarus", "Kazakhstan", "Ukraine", "Croatia"}

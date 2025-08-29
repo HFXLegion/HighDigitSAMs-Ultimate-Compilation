@@ -9,6 +9,8 @@ GT.chassis.life = 4;
 GT.visual.shape = "40b6m_mast";
 GT.visual.shape_dstr = "40b6m_mast_d";
 GT.visual.fire_pos[2] = 1;
+GT.toggle_alarm_state_interval = 8.5;
+GT.defaultStartAlarmState = GT_t.START_ALARM_STATES.GREEN;
 
 GT.snd.radarRotation = "GndTech/RadarRotation";
 
@@ -32,6 +34,7 @@ GT.CustomAimPoint = {0,1.5,0}
 GT.WS = {};
 GT.WS.maxTargetDetectionRange = 160000;
 GT.WS.radar_type = 102;
+GT.WS.requiredUnits = {{"S-300PMU1 54K6 cp", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 
 -- We would like to engage targets using the radar without locking them up
 -- But how can we do this?
@@ -57,7 +60,7 @@ GT.WS[ws].pidY = { p = 10, i = 0.1, d = 4};
 GT.WS[ws].pidZ = { p = 10, i = 0.1, d = 4};
 GT.WS[ws].LN = {};
 GT.WS[ws].LN[1] = {};
-GT.WS[ws].LN[1].depends_on_unit = {{{"S-300PMU1 54K6 cp"},},{{"S-300PS 54K6 cp"},},};
+GT.WS[ws].LN[1].depends_on_unit = {{{"S-300PMU1 40B6MD sr",},},{{"S-300PMU1 64N6E sr",},},{{"S-300PS 40B6MD sr",},},{{"S-300PS 64H6E sr",},},{{'S-300PS 40B6MD sr_19J6',}},{{'RLS_19J6',}}};
 GT.WS[ws].LN[1].reactionTime = 2.7;
 GT.WS[ws].LN[1].max_number_of_missiles_channels = 2;
 GT.WS[ws].LN[1].type = 102;
@@ -104,4 +107,4 @@ GT.attribute = {wsType_Ground,wsType_SAM,wsType_Radar,V_40B6M,
 				};
 GT.category = "Air Defence";
 GT.tags = { "Air Defence", "Tracking Radar" };
-GT.Countries = {"Algeria", "China", "India", "Iran", "Kazakhstan", "North Korea", "Russia", "Syria","Ukraine","Vietnam"}
+GT.Countries = {"China", "Greece", "North Korea", "Russia", "Ukraine", "Vietnam", "Cyprus"}

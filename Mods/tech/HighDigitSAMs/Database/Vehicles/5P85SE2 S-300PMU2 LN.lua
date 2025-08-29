@@ -26,6 +26,7 @@ GT.visual.fire_time = 1100; --burning time (seconds)
 
 GT.WS = {};
 GT.WS.maxTargetDetectionRange = 250000;
+GT.WS.requiredUnits = {{"S-300PMU2 54K6E2 cp", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};
@@ -62,4 +63,4 @@ GT.tags  =
     "Air Defence",
 	"Launcher",
 };
-GT.Countries = {"Algeria", "China", "India", "Iran", "Kazakhstan", "North Korea", "Russia", "Syria","Ukraine","Vietnam"}
+GT.Countries = {"Algeria", "China", "Iran", "Russia", "Syria"}

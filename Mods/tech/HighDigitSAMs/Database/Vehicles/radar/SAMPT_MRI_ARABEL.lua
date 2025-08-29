@@ -43,7 +43,6 @@ GT.WS.radar_type = 102;
 GT.WS.radar_rotation_type = 0;
 GT.WS.searchRadarMaxElevation = math.rad(75);
 GT.WS.searchRadarFrequencies = {{8e9, 12e9}};
-GT.WS.requiredUnits = {{"SAMPT_ME", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};

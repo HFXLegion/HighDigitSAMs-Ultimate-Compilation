@@ -1,10 +1,17 @@
 ## Changelog
+### v1.4.2
+- Mod config optimizations
+- Updated some missiles specs
+- Updated missiles exhaust
+- ⚠️ Disabled Igla-S manpad. Use built-in one instead
+- ⚠️ SAMP/T's control center switched from **C2** to **ECS (ME)**
+- ⚠️ Updated S-400 + S-300 SAM sites series operator countries
 ### v1.4.1
 - Fixed SA-22 (Pantsir-SM) camera
 - Fixed search and EW radars do not emit by default
 - Fixed SA-21 (S-400) not firing 9M96E2 missile when mast TR is used
 - Improved accuracy of Stunner (David's Sling) missile
-- Disabled Aster-15 and Aster-30 Block 2 launchers of SAMP/T complex
+- ⚠️ Disabled Aster-15 and Aster-30 Block 2 launchers of SAMP/T complex
 - Reduced speed of 40N6 (SA-21 Growler missile)
 - A little code refactoring :D
 ### v1.4.0

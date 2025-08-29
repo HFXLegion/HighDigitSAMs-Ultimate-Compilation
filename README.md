@@ -152,7 +152,8 @@ Both versions are rear-aspect only, with the SA-7B featuring an improved seeker,
 For mission makers: use Average skill level and face the units away from the expected threat axis, so that they will have the best shot parameters.  
 
 ## 📃 Changelog
-See **[CHANGELOG.md](/CHANGELOG.md)**
+See **[CHANGELOG.md](/CHANGELOG.md)**   
+### ⚠️ Warning sign indicates changes that may have been broken on some of your SAM sites after the upgrade.
 
 ## 💬 FAQ
 #### Do you plan to continue supporting this fork?

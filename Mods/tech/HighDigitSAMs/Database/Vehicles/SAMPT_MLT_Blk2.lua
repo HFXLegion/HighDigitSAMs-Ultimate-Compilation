@@ -47,6 +47,7 @@ GT.visual.agony_explosion_size = 19;
 
 GT.WS = {};
 GT.WS.maxTargetDetectionRange = 400000;
+GT.WS.requiredUnits = {{"SAMPT_ME", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};

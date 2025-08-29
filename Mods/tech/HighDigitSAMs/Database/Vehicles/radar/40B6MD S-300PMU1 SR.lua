@@ -59,7 +59,7 @@ for i = 1,24 do -- 24 target trackers
 		ECM_K = 0.65,
         min_trg_alt = 5,
         max_trg_alt = 3000,
-        reactionTime = 1;
+        reactionTime = GT.radar_rotation_period/4 + 1;
         },
     }
 end --for
@@ -77,4 +77,4 @@ GT.attribute = {wsType_Ground,wsType_SAM,wsType_Radar,V_40B6MD,
 				};
 GT.category = "Air Defence";
 GT.tags = { "Air Defence", "Search Radar" };
-GT.Countries = {"Algeria", "China", "India", "Iran", "Kazakhstan", "North Korea", "Russia", "Syria","Ukraine","Vietnam"}
+GT.Countries = {"China", "Greece", "North Korea", "Russia", "Ukraine", "Vietnam", "Cyprus"}

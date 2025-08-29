@@ -155,7 +155,7 @@ dofile(current_mod_path..'/Database/Vehicles/SAMPT_MGE.lua')
 
 -- S-300PT/PS
 
-vehicle_file("/Database/Vehicles/S-300PS_5P85_1_LN.lua")
+vehicle_file("/Database/Vehicles/S-300PT_5P85_1_LN.lua")
 vehicle_file("/Database/Vehicles/S-300PS_5P85DE_LN.lua")
 vehicle_file("/Database/Vehicles/S-300PS_5P85SE_LN.lua")
 vehicle_file("/Database/Vehicles/S-300PS_5P85SU_LN.lua")
@@ -241,10 +241,10 @@ vehicle_file("/Database/Vehicles/5P73 V-601P LN.lua")
 
 --Manpads
 
-vehicle_file("/Database/Vehicles/iglaS.lua")
-vehicle_file("/Database/Vehicles/Strela-3.lua")
-vehicle_file("/Database/Vehicles/Strela-2.lua")
-vehicle_file("/Database/Vehicles/Strela-2M.lua")
+vehicle_file("/Database/IFV/Strela-2.lua")
+vehicle_file("/Database/IFV/Strela-2M.lua")
+vehicle_file("/Database/IFV/Strela-3.lua")
+--vehicle_file("/Database/IFV/iglaS.lua")
 
 -- Misc units
 

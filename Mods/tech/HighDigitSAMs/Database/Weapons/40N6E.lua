@@ -38,7 +38,7 @@ local SA40N6 = {
 	D_max = 340000.0, -- Maximum range firing at low altitude, in meters
 	D_min = 4000.0, -- minimum range in meters
 	Head_Form = 1, -- determines shape of the missile head for drag modeling; 0 for hemispherical, 1 for conical
-	Life_Time = 720.0, -- Battery life
+	Life_Time = 480.0, -- Battery life
 	Nr_max = 25, -- Maximum g when turning
 	v_min = 180.0, -- Minimum speed in m/s
 	v_mid = 1000.0, -- average speed in m/s
@@ -56,6 +56,7 @@ local SA40N6 = {
 	warhead = simple_aa_warhead(143.0),
 	exhaust1 = {1, 1, 1, 1},
 	exhaust2 = {1, 1, 1, 1},
+	exhaust_effect_type = 1,
 	X_back = -3,
 	Y_back = 0.0,
 	Z_back = 0.0,
@@ -94,15 +95,15 @@ local SA40N6 = {
 		0.21, -- Cy_k2 steepness of the decline (front) behind the wave crisis
 
 		0.35, -- 7 Alfa_max maximum balancing angle, radians
-		0, -- angular velocity created by the moment of gas rudders
+		1, -- angular velocity created by the moment of gas rudders
 		
 		--t_statr 	t_b 	t_accel 	t_march 	t_inertial 	t_break 	t_end
 		0.9, 		0,	 	1,	 		12,			0, 			0, 			1000000000, -- time of stage, sec
 		0, 			0, 		550,		63.146,		0, 			0, 			0, 			-- fuel flow rate, kg/sec
 		0, 			0, 		550000, 	280000,		0, 			0, 			0, 			-- thrust, newtons
 		
-		1000000000, --self destruct by timer
-		720, --onboard power system operation time, sec
+		500, --self destruct by timer
+		480, --onboard power system operation time, sec
 		0, -- absolute self-destruction altitude. Altitude of the radio fuse triggering self destruct. 
 		0.3, -- control switch-on delay after launch, sec 
 

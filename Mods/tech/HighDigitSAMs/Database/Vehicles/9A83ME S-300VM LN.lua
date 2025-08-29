@@ -6,9 +6,8 @@ set_recursive_metatable(GT, GT_t.generic_stationary);
 set_recursive_metatable(GT.chassis, GT_t.CH_t.MAZ543M);
 GT.chassis.life = 2;
 
-GT.visual.shape = "9a83me";
-GT.visual.shape_dstr = "Auto_crush";
-
+GT.visual.shape = "ERO_9A83ME";
+GT.visual.shape_dstr = "ERO_9A83ME_D";
 --chassis
 
 GT.sensor = {};
@@ -26,6 +25,7 @@ GT.visual.fire_time = 1100; --burning time (seconds)
 
 GT.WS = {};
 GT.WS.maxTargetDetectionRange = 250000;
+GT.WS.requiredUnits = {{"S-300VM 9S457ME cp", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 
 local ws = GT_t.inc_ws();
 GT.WS[ws] = {};
@@ -39,10 +39,10 @@ GT.WS[ws].LN[1].PL[1].ammo_capacity = 4;
 GT.WS[ws].LN[1].PL[1].shot_delay = 0.1;
 GT.WS[ws].LN[1].PL[1].reload_time = 7200;
 GT.WS[ws].LN[1].BR = {};
-GT.WS[ws].LN[1].BR[1] = {pos = {10.05, 0.216,-1.045}, drawArgument = 0 };
-GT.WS[ws].LN[1].BR[2] = {pos = {10.05, 1.204,-0.614}, drawArgument = 1 };
-GT.WS[ws].LN[1].BR[3] = {pos = {10.05, 1.204, 0.614}, drawArgument = 2 };
-GT.WS[ws].LN[1].BR[4] = {pos = {10.05, 0.216, 1.045}, drawArgument = 3 };
+GT.WS[ws].LN[1].BR[1] = {pos = {10.05, 0.216,-1.045}, drawArgument = 188 };
+GT.WS[ws].LN[1].BR[2] = {pos = {10.05, 1.204,-0.614}, drawArgument = 189 };
+GT.WS[ws].LN[1].BR[3] = {pos = {10.05, 1.204, 0.614}, drawArgument = 190 };
+GT.WS[ws].LN[1].BR[4] = {pos = {10.05, 0.216, 1.045}, drawArgument = 191 };
 
 GT.Name = "S-300VM 9A83ME ln";
 GT.DisplayName = _('SAM SA-23 S-300VM "Gladiator" TEL B');
@@ -62,4 +62,4 @@ GT.tags  =
     "Air Defence",
 	"Launcher",
 };
-GT.Countries = {"Egypt", "India", "Russia", "Venezuela"}
+GT.Countries = {"Russia", "Venezuela"}

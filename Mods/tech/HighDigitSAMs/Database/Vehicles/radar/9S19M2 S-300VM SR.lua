@@ -40,7 +40,7 @@ for i = 1,15 do
 	GT.WS[ws] = {}
     GT.WS[ws].pos = {0,9,0}
 	GT.WS[ws].angles = {
-					{math.rad(180), math.rad(-180), math.rad(-10), math.rad(75)},
+					{math.rad(180), math.rad(-180), math.rad(0), math.rad(75)},
 					};
     GT.WS[ws].omegaY = 3
     GT.WS[ws].omegaZ = 3
@@ -54,7 +54,7 @@ for i = 1,15 do
 		ECM_K = 0.4,
         min_trg_alt = 25,
         max_trg_alt = GT.sensor.max_alt_finding_target,
-        reactionTime = 1;
+        reactionTime = GT.radar_rotation_period/4 + 1;
         },
     }
 end --for
@@ -77,4 +77,4 @@ GT.attribute = {wsType_Ground,wsType_SAM,wsType_Radar,RLO_9C19M2,
 				};
 GT.category = "Air Defence";
 GT.tags = {"Air Defence", "Search Radar"};
-GT.Countries = {"Egypt", "India", "Russia", "Venezuela"}
+GT.Countries = {"Russia", "Venezuela"}

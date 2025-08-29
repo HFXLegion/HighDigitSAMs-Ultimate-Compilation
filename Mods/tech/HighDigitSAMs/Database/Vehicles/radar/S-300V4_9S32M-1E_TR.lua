@@ -9,6 +9,8 @@ GT.chassis.life = 4;
 GT.visual.shape = "ERO_9S32ME";
 GT.visual.shape_dstr = "ERO_9S32ME_D";
 GT.visual.fire_pos[2] = 1;
+GT.toggle_alarm_state_interval = 8;
+GT.defaultStartAlarmState = GT_t.START_ALARM_STATES.GREEN;
 
 GT.snd.radarRotation = "GndTech/RadarRotation";
 
@@ -33,6 +35,7 @@ GT.CustomAimPoint = {0,1.5,0}
 GT.WS = {};
 GT.WS.maxTargetDetectionRange = 400000;
 GT.WS.radar_type = 102;
+GT.WS.requiredUnits = {{"S-300V4 9S457-2E cp", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 
 -- 24 trackers, first tracker is main, other 23 are limited within 120 degree
 -- This in in line with documentation from rosoboronexport, which specifies that up to 24 targets can be engaged at a time with up to 48 missiles.
@@ -51,7 +54,7 @@ GT.WS[ws].pidY = { p = 10, i = 0.1, d = 4};
 GT.WS[ws].pidZ = { p = 10, i = 0.1, d = 4};
 GT.WS[ws].LN = {};
 GT.WS[ws].LN[1] = {};
-GT.WS[ws].LN[1].depends_on_unit = {{{"S-300V4 9S457-2E cp"}}};
+GT.WS[ws].LN[1].depends_on_unit = {{{"S-300V4 9S15MDE sr",},},{{"S-300V4 9S19M-1E sr",},},};
 GT.WS[ws].LN[1].reactionTime = 3;
 GT.WS[ws].LN[1].max_number_of_missiles_channels = 2;
 GT.WS[ws].LN[1].type = 102;
@@ -97,4 +100,4 @@ GT.attribute = {wsType_Ground,wsType_SAM,wsType_Radar,RLS_9C32_1,
 				};
 GT.category = "Air Defence";
 GT.tags = {"Air Defence", "Tracking Radar"};
-GT.Countries = {"Egypt", "India", "Russia", "Venezuela"}
+GT.Countries = {"Egypt", "Russia"}

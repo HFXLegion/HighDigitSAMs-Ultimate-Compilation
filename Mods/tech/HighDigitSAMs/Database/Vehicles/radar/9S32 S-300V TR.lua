@@ -9,6 +9,8 @@ GT.chassis.life = 4;
 GT.visual.shape = "ERO_9S32"; --9s32 model has broken
 GT.visual.shape_dstr = "9s32_d";
 GT.visual.fire_pos[2] = 1;
+GT.toggle_alarm_state_interval = 12;
+GT.defaultStartAlarmState = GT_t.START_ALARM_STATES.GREEN;
 
 GT.snd.radarRotation = "GndTech/RadarRotation";
 
@@ -33,6 +35,7 @@ GT.CustomAimPoint = {0,1.5,0}
 GT.WS = {};
 GT.WS.maxTargetDetectionRange = 150000;
 GT.WS.radar_type = 102;
+GT.WS.requiredUnits = {{"S-300V 9S457 cp", 10000, GT_t.REQUIRED_UNIT.NEED_AI_ON}};
 
 -- 6 trackers, first tracker is main, other 5 are limited within 120 degree
 
@@ -50,8 +53,8 @@ GT.WS[ws].pidY = { p = 10, i = 0.1, d = 4};
 GT.WS[ws].pidZ = { p = 10, i = 0.1, d = 4};
 GT.WS[ws].LN = {};
 GT.WS[ws].LN[1] = {};
-GT.WS[ws].LN[1].depends_on_unit = {{{"S-300V 9S457 cp"}}};
-GT.WS[ws].LN[1].reactionTime = 3;
+GT.WS[ws].LN[1].depends_on_unit = {{{"S-300V 9S15 sr",},},{{"S-300V 9S19 sr",},},};
+GT.WS[ws].LN[1].reactionTime = 4.2;
 GT.WS[ws].LN[1].max_number_of_missiles_channels = 2;
 GT.WS[ws].LN[1].type = 102;
 GT.WS[ws].LN[1].distanceMin = 2000;
@@ -96,4 +99,4 @@ GT.attribute = {wsType_Ground,wsType_SAM,wsType_Radar,RLS_9C32_1,
 				};
 GT.category = "Air Defence";
 GT.tags = {"Air Defence", "Tracking Radar"};
-GT.Countries = {"Ukraine", "Russia"}
+GT.Countries = {"Ukraine", "Russia", "Belarus"}

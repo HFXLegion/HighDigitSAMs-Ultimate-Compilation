@@ -78,6 +78,7 @@ local SAHQ2 = {
 	Y_back = 0.0,
 	Z_back = 0.0,
 	exhaust2 = {0.9, 0.9, 0.9, 0.05 },
+	exhaust_effect_type = 1,
 	X_back_acc = -6.0,
 	Y_back_acc = 0.0,
 	Z_back_acc = 0.0,
