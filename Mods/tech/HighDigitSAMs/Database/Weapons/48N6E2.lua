@@ -43,7 +43,7 @@ local SA48N6E2 = {
 	Life_Time = 200, -- Battery life
 	M = 1840, -- Mass of the missile at launch
 	Mach_max = 8.6, -- maximum Mach of the missile. 
-	PN_gain = 7.1,
+	PN_gain = 6.3,
 	PN_coeffs = {7,
 				1000.0 ,1.0,
 				5000.0, 0.80,

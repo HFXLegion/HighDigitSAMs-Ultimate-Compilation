@@ -95,6 +95,6 @@ GT.attribute = {wsType_Ground, wsType_SAM, wsType_Miss, WSTYPE_PLACEHOLDER,
 				};
 GT.category = "Air Defence";
 GT.tags = {"Air Defence", "Launcher"};
-GT.Countries = {"France", "Italy", "Ukraine"}
+GT.Countries = {"France", "Italy", "Ukraine", "Singapore"}
 
 add_surface_unit(GT)

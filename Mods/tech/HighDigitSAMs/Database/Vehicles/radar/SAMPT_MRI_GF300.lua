@@ -110,6 +110,6 @@ GT.attribute = {
 GT.category = "Air Defence";
 GT.tags = {"Air Defence", "Search & Track Radar"}
 
-GT.Countries = {"France", "Italy", "Ukraine"}
+GT.Countries = {"France", "Italy", "Ukraine", "Singapore"}
 
 add_surface_unit(GT)

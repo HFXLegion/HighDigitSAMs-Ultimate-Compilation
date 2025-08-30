@@ -95,9 +95,9 @@ SAMPT_ASTER_15 = {
 		0, -- sine of the elevation angle of the trajectory of the slide. 
 		150, -- longitude acceleration of the fuse cocking
 		0, -- speed module reported by the ejection device, expelling charge, etc.
-		4, -- characteristic of the ACS-RAKETA system, the coefficient of the second order filter K0
-		8,  -- characteristic of the SAU-RAKETA system, second-order filter coefficient K1
-		1, -- characteristic of the SAU-RAKETA system, bandwidth of the control loop
+		12, -- characteristic of the ACS-RAKETA system, the coefficient of the second order filter K0
+		30,  -- characteristic of the SAU-RAKETA system, second-order filter coefficient K1
+		2, -- characteristic of the SAU-RAKETA system, bandwidth of the control loop
 		
 		-- DLZ. Data for calculating launch ranges (indication on the sight), also used by AI
 		0, 
@@ -123,7 +123,7 @@ SAMPT_ASTER_15 = {
             file     = 'aster_30_blk_1',
             life     = 1,
             fire     = {0, 1},
-            username = "Aster 15",
+            username = nameaster15,
             index    = WSTYPE_PLACEHOLDER,
         },
     },
@@ -131,8 +131,6 @@ SAMPT_ASTER_15 = {
 };
 
 declare_weapon(SAMPT_ASTER_15)
-
-GT_t.WS_t.Aster15 = {name = "Aster 15", display_name = _("Aster 15")};
 
 GT_t.LN_t.Aster15 = {}; 
 GT_t.LN_t.Aster15.type = 4;

@@ -50,6 +50,6 @@ GT.tags = {
     "Generator",
 }
 
-GT.Countries = {"France", "Italy", "Ukraine"}
+GT.Countries = {"France", "Italy", "Ukraine", "Singapore"}
 
 add_surface_unit(GT)

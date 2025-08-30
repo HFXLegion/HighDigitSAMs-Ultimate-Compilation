@@ -1,10 +1,10 @@
 -- aster 30 block 2 by zahnatom
 
-local nameaster301 = "Aster 30 Blk 2"
+local nameaster302 = "Aster 30 Block 2"
 SAMPT_ASTER_30_Blk_2 = {
     category        = CAT_MISSILES,
-    name            = nameaster301,
-    user_name       = _(nameaster301),
+    name            = nameaster302,
+    user_name       = _(nameaster302),
     model           = 'aster_30_blk_2',
     mass            = 750.0,
     wsTypeOfWeapon  =  {wsType_Weapon,wsType_Missile,wsType_AA_Missile,WSTYPE_PLACEHOLDER},
@@ -96,9 +96,9 @@ SAMPT_ASTER_30_Blk_2 = {
 		0, -- sine of the elevation angle of the trajectory of the slide. 
 		150, -- longitude acceleration of the fuse cocking
 		0, -- speed module reported by the ejection device, expelling charge, etc.
-		4, -- characteristic of the ACS-RAKETA system, the coefficient of the second order filter K0
-		8,  -- characteristic of the SAU-RAKETA system, second-order filter coefficient K1
-		1, -- characteristic of the SAU-RAKETA system, bandwidth of the control loop
+		12, -- characteristic of the ACS-RAKETA system, the coefficient of the second order filter K0
+		30,  -- characteristic of the SAU-RAKETA system, second-order filter coefficient K1
+		2, -- characteristic of the SAU-RAKETA system, bandwidth of the control loop
 		
 		-- DLZ. Data for calculating launch ranges (indication on the sight), also used by AI
 		0, 
@@ -126,11 +126,11 @@ SAMPT_ASTER_30_Blk_2 = {
 
     shape_table_data = {
         {
-            name     = nameaster301,
+            name     = nameaster302,
             file     = 'aster_30_blk_2',
             life     = 1,
             fire     = {0, 1},
-            username = "Aster 30 Blk 2",
+            username = nameaster302,
             index    = WSTYPE_PLACEHOLDER,
         },
     },
@@ -138,8 +138,6 @@ SAMPT_ASTER_30_Blk_2 = {
 };
 
 declare_weapon(SAMPT_ASTER_30_Blk_2)
-
-GT_t.WS_t.Aster30_2 = {name = "Aster 30 Blk 2", display_name = _("Aster 30 Blk 2")};
 
 GT_t.LN_t.Aster30_2 = {}; 
 GT_t.LN_t.Aster30_2.type = 4;
