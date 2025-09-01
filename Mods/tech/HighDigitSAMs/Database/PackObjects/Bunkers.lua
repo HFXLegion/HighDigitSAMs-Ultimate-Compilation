@@ -13,7 +13,7 @@ GT.time_agony = 0;
 GT.canExplode = true;
 
 GT.Name = "ERO HQ Bunker"
-GT.DisplayName = _("!Static ERO HQ Bunker")
+GT.DisplayName = _("ERO HQ Bunker")
 GT.Rate = 200
 
 GT.DetectionRange  = 0;
@@ -23,7 +23,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
        
 add_surface_unit(GT)
 
@@ -42,7 +42,7 @@ GT.time_agony = 0;
 GT.canExplode = true;
 
 GT.Name = "ERO Ammunition Bunker A"
-GT.DisplayName = _("!Static ERO Ammunition Bunker A")
+GT.DisplayName = _("ERO Ammunition Bunker A")
 GT.Rate = 100
 
 GT.DetectionRange  = 0;
@@ -52,7 +52,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";         
+GT.category = "Fortification";         
                 
 add_surface_unit(GT)
 
@@ -71,7 +71,7 @@ GT.time_agony = 0;
 GT.canExplode = true;
 
 GT.Name = "ERO Ammunition Bunker B"
-GT.DisplayName = _("!Static ERO Ammunition Bunker B")
+GT.DisplayName = _("ERO Ammunition Bunker B")
 GT.Rate = 200
 
 GT.DetectionRange  = 0;
@@ -81,7 +81,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
 				};
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -100,7 +100,7 @@ GT.time_agony = 0;
 GT.canExplode = true;
 
 GT.Name = "ERO HQ Bunker2"
-GT.DisplayName = _("!Static ERO HQ Bunker2")
+GT.DisplayName = _("ERO HQ Bunker2")
 GT.Rate = 200
 
 GT.DetectionRange  = 0;
@@ -110,6 +110,6 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
        
 add_surface_unit(GT)

@@ -1,4 +1,6 @@
 ## Changelog
+### v1.4.3
+- All ERO assets moved to "Fortifications" units category
 ### v1.4.2
 - Mod config optimizations
 - Updated some missiles specs

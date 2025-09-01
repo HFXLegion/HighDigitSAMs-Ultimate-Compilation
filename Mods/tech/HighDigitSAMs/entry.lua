@@ -5,7 +5,7 @@ displayName   = _("High Digit SAMs - Ultimate HFX's compilation"),
 shortName	  =   "HighDigitSAMs - Ultimate Compilation",
 state		 	  = "installed",
 developerName	  = "E. 'Wiki' Crouch, ERO, LetMePickThat, Fox, BlackFalco, HFX and others",
-version		 	  = "1.1.1",
+version		 	  = "1.4.3",
 Skins	=
 	{
 		{

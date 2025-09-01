@@ -15,7 +15,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Camo_Netting"
-GT.DisplayName = _("!Static ERO Camo Netting A")
+GT.DisplayName = _("ERO Camo Netting A")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -25,7 +25,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -44,7 +44,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Camo_Netting_L"
-GT.DisplayName = _("!Static ERO Camo Netting Large A")
+GT.DisplayName = _("ERO Camo Netting Large A")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -54,7 +54,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -74,7 +74,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Camo_Netting2"
-GT.DisplayName = _("!Static ERO Camo Netting B")
+GT.DisplayName = _("ERO Camo Netting B")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -84,7 +84,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -103,7 +103,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Camo_Netting2_L"
-GT.DisplayName = _("!Static ERO Camo Netting Large B")
+GT.DisplayName = _("ERO Camo Netting Large B")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -113,7 +113,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -132,7 +132,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Camo_Netting3_L"
-GT.DisplayName = _("!Static ERO Camo Netting Large C")
+GT.DisplayName = _("ERO Camo Netting Large C")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -142,7 +142,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -164,7 +164,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_SAM11"
-GT.DisplayName = _("!Static ERO Revetment O5")
+GT.DisplayName = _("ERO Revetment O5")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -174,7 +174,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -193,7 +193,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_SAM11"
-GT.DisplayName = _("!Static ERO Revetment O5")
+GT.DisplayName = _("ERO Revetment O5")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -203,7 +203,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -222,7 +222,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_D"
-GT.DisplayName = _("!Static ERO_Revetment_D")
+GT.DisplayName = _("ERO_Revetment_D")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -232,7 +232,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -251,7 +251,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_Platform1"
-GT.DisplayName = _("!Static ERO Revetment Platform A")
+GT.DisplayName = _("ERO Revetment Platform A")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -261,7 +261,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -280,7 +280,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_Platform2"
-GT.DisplayName = _("!Static ERO Revetment Platform B")
+GT.DisplayName = _("ERO Revetment Platform B")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -290,7 +290,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -309,7 +309,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_SAM_D_elevated"
-GT.DisplayName = _("!Static ERO Revetment D Elevated")
+GT.DisplayName = _("ERO Revetment D Elevated")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -319,7 +319,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -338,7 +338,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_SAM_O"
-GT.DisplayName = _("!Static ERO Revetment O")
+GT.DisplayName = _("ERO Revetment O")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -348,7 +348,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -367,7 +367,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_SAM_O2"
-GT.DisplayName = _("!Static ERO Revetment O2")
+GT.DisplayName = _("ERO Revetment O2")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -377,7 +377,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -396,7 +396,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_SAM_O2"
-GT.DisplayName = _("!Static ERO Revetment O2")
+GT.DisplayName = _("ERO Revetment O2")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -406,7 +406,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -425,7 +425,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_SAM_O3"
-GT.DisplayName = _("!Static ERO Revetment O3")
+GT.DisplayName = _("ERO Revetment O3")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -435,7 +435,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -454,7 +454,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_SAM_O4"
-GT.DisplayName = _("!Static ERO Revetment O4")
+GT.DisplayName = _("ERO Revetment O4")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -464,7 +464,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -483,7 +483,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_SAM_OC_elevated"
-GT.DisplayName = _("!Static ERO Revetment O Elevated")
+GT.DisplayName = _("ERO Revetment O Elevated")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -493,7 +493,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -512,7 +512,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_SAM_OC2elevated"
-GT.DisplayName = _("!Static ERO Revetment SA-2 Elevated")
+GT.DisplayName = _("ERO Revetment SA-2 Elevated")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -522,7 +522,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -541,7 +541,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_SAM_U"
-GT.DisplayName = _("!Static ERO Revetment U2")
+GT.DisplayName = _("ERO Revetment U2")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -551,7 +551,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -570,7 +570,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_SAM_UC"
-GT.DisplayName = _("!Static ERO Revetment U3")
+GT.DisplayName = _("ERO Revetment U3")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -580,7 +580,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -599,7 +599,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_Tank_U"
-GT.DisplayName = _("!Static ERO Revetment Tank U2")
+GT.DisplayName = _("ERO Revetment Tank U2")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -609,7 +609,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -628,7 +628,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_Tank_U1"
-GT.DisplayName = _("!Static ERO Revetment Tank U1")
+GT.DisplayName = _("ERO Revetment Tank U1")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -638,7 +638,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)--]]
 
@@ -657,7 +657,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_Trapeze_blue"
-GT.DisplayName = _("!Static ERO Revetment Trapeze Blue")
+GT.DisplayName = _("ERO Revetment Trapeze Blue")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -667,7 +667,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -686,7 +686,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_Trapeze_brown"
-GT.DisplayName = _("!Static ERO Revetment Trapeze Brown")
+GT.DisplayName = _("ERO Revetment Trapeze Brown")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -696,7 +696,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -715,7 +715,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Revetment_Trapeze_green"
-GT.DisplayName = _("!Static ERO Revetment Trapeze Green")
+GT.DisplayName = _("ERO Revetment Trapeze Green")
 GT.Rate = 10
 
 GT.DetectionRange  = 0;
@@ -725,7 +725,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -747,7 +747,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_ZU23_pos"
-GT.DisplayName = _("!Static ERO ZU-23 Position")
+GT.DisplayName = _("ERO ZU-23 Position")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -757,7 +757,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -776,7 +776,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Sand_Round"
-GT.DisplayName = _("!Static ERO Sandbags U")
+GT.DisplayName = _("ERO Sandbags U")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -786,7 +786,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -805,7 +805,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Sand_Round2"
-GT.DisplayName = _("!Static ERO Sandbags U2")
+GT.DisplayName = _("ERO Sandbags U2")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -815,7 +815,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -834,7 +834,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Sandbags"
-GT.DisplayName = _("!Static ERO Sandbags Wall")
+GT.DisplayName = _("ERO Sandbags Wall")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -844,7 +844,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -863,7 +863,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Sand_End"
-GT.DisplayName = _("!Static ERO Sandbags Wall Ending Segment")
+GT.DisplayName = _("ERO Sandbags Wall Ending Segment")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -873,7 +873,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -892,7 +892,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Sand_Middle"
-GT.DisplayName = _("!Static ERO Sandbags Wall Middle Segment")
+GT.DisplayName = _("ERO Sandbags Wall Middle Segment")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -902,7 +902,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -921,7 +921,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Sand_Middle_Large"
-GT.DisplayName = _("!Static ERO Sandbags Wall Large")
+GT.DisplayName = _("ERO Sandbags Wall Large")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -931,7 +931,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -953,7 +953,7 @@ GT.time_agony = 0;
 GT.canExplode = true;
 
 GT.Name = "ERO_S300_Reload"
-GT.DisplayName = _("!Static ERO S-300 Spare Reloads")
+GT.DisplayName = _("ERO S-300 Spare Reloads")
 GT.Rate = 25
 
 GT.DetectionRange  = 0;
@@ -963,7 +963,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -982,7 +982,7 @@ GT.time_agony = 0;
 GT.canExplode = true;
 
 GT.Name = "ERO_S75_Reload"
-GT.DisplayName = _("!Static ERO S-75 Spare Missile")
+GT.DisplayName = _("ERO S-75 Spare Missile")
 GT.Rate = 25
 
 GT.DetectionRange  = 0;
@@ -992,7 +992,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1011,7 +1011,7 @@ GT.time_agony = 0;
 GT.canExplode = true;
 
 GT.Name = "ERO_Mk83"
-GT.DisplayName = _("!Static ERO Mk-83 Bombs Rack")
+GT.DisplayName = _("ERO Mk-83 Bombs Rack")
 GT.Rate = 25
 
 GT.DetectionRange  = 0;
@@ -1021,7 +1021,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1040,7 +1040,7 @@ GT.time_agony = 0;
 GT.canExplode = true;
 
 GT.Name = "ERO_MHU-141"
-GT.DisplayName = _("!Static ERO MHU-141")
+GT.DisplayName = _("ERO MHU-141")
 GT.Rate = 25
 
 GT.DetectionRange  = 0;
@@ -1050,7 +1050,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1069,7 +1069,7 @@ GT.time_agony = 0;
 GT.canExplode = true;
 
 GT.Name = "ERO_MHU-141-AIM-120"
-GT.DisplayName = _("!Static ERO MHU-141 w. AIM-120")
+GT.DisplayName = _("ERO MHU-141 w. AIM-120")
 GT.Rate = 25
 
 GT.DetectionRange  = 0;
@@ -1079,7 +1079,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1098,7 +1098,7 @@ GT.time_agony = 0;
 GT.canExplode = true;
 
 GT.Name = "ERO_Rus_cart_R73"
-GT.DisplayName = _("!Static ERO Russian Cart w. R-73")
+GT.DisplayName = _("ERO Russian Cart w. R-73")
 GT.Rate = 25
 
 GT.DetectionRange  = 0;
@@ -1108,7 +1108,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1127,7 +1127,7 @@ GT.time_agony = 0;
 GT.canExplode = true;
 
 GT.Name = "ERO_Rus_cart_R77"
-GT.DisplayName = _("!Static ERO Russian Cart w. R-77")
+GT.DisplayName = _("ERO Russian Cart w. R-77")
 GT.Rate = 25
 
 GT.DetectionRange  = 0;
@@ -1137,7 +1137,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1156,7 +1156,7 @@ GT.time_agony = 0;
 GT.canExplode = true;
 
 GT.Name = "ERO_MHU-141-Mk83"
-GT.DisplayName = _("!Static ERO MHU-141 w. Mk83")
+GT.DisplayName = _("ERO MHU-141 w. Mk83")
 GT.Rate = 25
 
 GT = {};
@@ -1174,7 +1174,7 @@ GT.time_agony = 0;
 GT.canExplode = true;
 
 GT.Name = "ERO_MHU-141-AIM-9"
-GT.DisplayName = _("!Static ERO MHU-141 w. AIM-9")
+GT.DisplayName = _("ERO MHU-141 w. AIM-9")
 GT.Rate = 25
 
 GT.DetectionRange  = 0;
@@ -1184,7 +1184,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1203,7 +1203,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_M32A-60A"
-GT.DisplayName = _("!Static ERO M32A-60A")
+GT.DisplayName = _("ERO M32A-60A")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1213,7 +1213,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1232,7 +1232,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_MD1_TowBar"
-GT.DisplayName = _("!Static ERO MD-1 Tow Bar")
+GT.DisplayName = _("ERO MD-1 Tow Bar")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1242,7 +1242,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1261,7 +1261,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_forklift"
-GT.DisplayName = _("!Static ERO Small Forklift")
+GT.DisplayName = _("ERO Small Forklift")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1271,7 +1271,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1290,7 +1290,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_ladder"
-GT.DisplayName = _("!Static ERO Cockpit Ladder")
+GT.DisplayName = _("ERO Cockpit Ladder")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1300,7 +1300,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1319,7 +1319,7 @@ GT.time_agony = 0;
 GT.canExplode = true;
 
 GT.Name = "ERO_Camo_Netting_Oil_Depot"
-GT.DisplayName = _("!Static ERO Oil Depot with Camo Netting")
+GT.DisplayName = _("ERO Oil Depot with Camo Netting")
 GT.Rate = 20
 
 GT.DetectionRange  = 0;
@@ -1329,7 +1329,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1348,7 +1348,7 @@ GT.time_agony = 0;
 GT.canExplode = true;
 
 GT.Name = "ERO_Type_C_WW2_Bomb_trolley"
-GT.DisplayName = _("!Static ERO Type-C WW2 Bomb Trolley")
+GT.DisplayName = _("ERO Type-C WW2 Bomb Trolley")
 GT.Rate = 20
 
 GT.DetectionRange  = 0;
@@ -1358,7 +1358,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1380,7 +1380,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Hedgehog"
-GT.DisplayName = _("!Static ERO Hedgehog")
+GT.DisplayName = _("ERO Hedgehog")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1390,7 +1390,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1409,7 +1409,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Hesco_Barrier_1x1x1"
-GT.DisplayName = _("!Static ERO Hesco Barrier 1x1x1")
+GT.DisplayName = _("ERO Hesco Barrier 1x1x1")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1419,7 +1419,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1438,7 +1438,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Hesco_Barrier_1x1x1_s"
-GT.DisplayName = _("!Static ERO Hesco Barrier 1x1x1 w. Sandbags")
+GT.DisplayName = _("ERO Hesco Barrier 1x1x1 w. Sandbags")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1448,7 +1448,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1467,7 +1467,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Hesco_Barrier_3x1x1"
-GT.DisplayName = _("!Static ERO Hesco Barrier 3x1x1")
+GT.DisplayName = _("ERO Hesco Barrier 3x1x1")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1477,7 +1477,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1496,7 +1496,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Hesco_Barrier_3x1x1_s"
-GT.DisplayName = _("!Static ERO Hesco Barrier 3x1x1 w. Sandbags")
+GT.DisplayName = _("ERO Hesco Barrier 3x1x1 w. Sandbags")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1506,7 +1506,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1525,7 +1525,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Hesco_Barrier_3x1x2"
-GT.DisplayName = _("!Static ERO Hesco Barrier 3x1x2")
+GT.DisplayName = _("ERO Hesco Barrier 3x1x2")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1535,7 +1535,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1554,7 +1554,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Hesco_Barrier_3x2x2"
-GT.DisplayName = _("!Static ERO Hesco Barrier 3x2x2")
+GT.DisplayName = _("ERO Hesco Barrier 3x2x2")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1564,7 +1564,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1583,7 +1583,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Hesco_Barrier_6x1x2"
-GT.DisplayName = _("!Static ERO Hesco Barrier 6x1x2")
+GT.DisplayName = _("ERO Hesco Barrier 6x1x2")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1593,7 +1593,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1612,7 +1612,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Hesco_Barrier_7x1x1"
-GT.DisplayName = _("!Static ERO Hesco Barrier 7x1x1")
+GT.DisplayName = _("ERO Hesco Barrier 7x1x1")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1622,7 +1622,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1641,7 +1641,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Hesco_Barrier_7x1x2"
-GT.DisplayName = _("!Static ERO Hesco Barrier 7x1x2")
+GT.DisplayName = _("ERO Hesco Barrier 7x1x2")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1651,7 +1651,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1670,7 +1670,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Hesco_Barrier_9x1x1"
-GT.DisplayName = _("!Static ERO Hesco Barrier 9x1x1")
+GT.DisplayName = _("ERO Hesco Barrier 9x1x1")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1680,7 +1680,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1699,7 +1699,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Hesco_Barrier_9x2x2"
-GT.DisplayName = _("!Static ERO Hesco Barrier 9x2x2")
+GT.DisplayName = _("ERO Hesco Barrier 9x2x2")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1709,7 +1709,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1729,7 +1729,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Hesco_Barrier_Tower"
-GT.DisplayName = _("!Static ERO Hesco Barrier Tower")
+GT.DisplayName = _("ERO Hesco Barrier Tower")
 GT.Rate = 50
 
 GT.DetectionRange  = 0;
@@ -1739,7 +1739,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1762,7 +1762,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Barbed_Wire"
-GT.DisplayName = _("!Static ERO Barbed Wire A")
+GT.DisplayName = _("ERO Barbed Wire A")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -1772,7 +1772,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1791,7 +1791,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Barbed_Wire_Fence"
-GT.DisplayName = _("!Static ERO Barbed Wire Fence")
+GT.DisplayName = _("ERO Barbed Wire Fence")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1801,7 +1801,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1820,7 +1820,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Barbed_Wire2"
-GT.DisplayName = _("!Static ERO Barbed Wire B")
+GT.DisplayName = _("ERO Barbed Wire B")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -1830,7 +1830,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1849,7 +1849,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Barbed_Wire3"
-GT.DisplayName = _("!Static ERO Barbed Wire C")
+GT.DisplayName = _("ERO Barbed Wire C")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -1859,7 +1859,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1878,7 +1878,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Container"
-GT.DisplayName = _("!Static ERO ISO Container")
+GT.DisplayName = _("ERO ISO Container")
 GT.Rate = 5
 
 GT.DetectionRange  = 0;
@@ -1888,7 +1888,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1907,7 +1907,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Gate1"
-GT.DisplayName = _("!Static ERO Gate A")
+GT.DisplayName = _("ERO Gate A")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -1917,7 +1917,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1936,7 +1936,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Gate2"
-GT.DisplayName = _("!Static ERO Gate B")
+GT.DisplayName = _("ERO Gate B")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -1946,7 +1946,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1968,7 +1968,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Radio_Tower"
-GT.DisplayName = _("!Static ERO Radio Tower")
+GT.DisplayName = _("ERO Radio Tower")
 GT.Rate = 150
 
 GT.DetectionRange  = 0;
@@ -1978,7 +1978,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -1997,7 +1997,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Guard_Booth"
-GT.DisplayName = _("!Static ERO Guard Booth")
+GT.DisplayName = _("ERO Guard Booth")
 GT.Rate = 25
 
 GT.DetectionRange  = 0;
@@ -2007,7 +2007,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -2026,7 +2026,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Toilet"
-GT.DisplayName = _("!Static ERO Mobile Toilet")
+GT.DisplayName = _("ERO Mobile Toilet")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -2036,7 +2036,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -2055,7 +2055,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Tent_A"
-GT.DisplayName = _("!Static ERO Tent A")
+GT.DisplayName = _("ERO Tent A")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -2065,7 +2065,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -2084,7 +2084,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Tent_B"
-GT.DisplayName = _("!Static ERO Tent B")
+GT.DisplayName = _("ERO Tent B")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -2094,7 +2094,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -2113,7 +2113,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Tent_C"
-GT.DisplayName = _("!Static ERO Tent C")
+GT.DisplayName = _("ERO Tent C")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -2123,7 +2123,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -2142,7 +2142,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Tent_C2"
-GT.DisplayName = _("!Static ERO Tent C2")
+GT.DisplayName = _("ERO Tent C2")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -2152,7 +2152,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -2171,7 +2171,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Tent_D"
-GT.DisplayName = _("!Static ERO Tent D")
+GT.DisplayName = _("ERO Tent D")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -2181,7 +2181,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -2200,7 +2200,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Tent_D_UN"
-GT.DisplayName = _("!Static ERO Tent D UN")
+GT.DisplayName = _("ERO Tent D UN")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -2210,7 +2210,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -2229,7 +2229,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Tent_RedCross_A"
-GT.DisplayName = _("!Static ERO Tent Red Cross A")
+GT.DisplayName = _("ERO Tent Red Cross A")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -2239,7 +2239,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -2258,7 +2258,7 @@ GT.time_agony = 0;
 GT.canExplode = false;
 
 GT.Name = "ERO_Tent_RedCross_B"
-GT.DisplayName = _("!Static ERO Tent Red Cross B")
+GT.DisplayName = _("ERO Tent Red Cross B")
 GT.Rate = 1
 
 GT.DetectionRange  = 0;
@@ -2268,7 +2268,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -2296,7 +2296,7 @@ GT.visual.fire_time = 500 --burning time (seconds)
 --GT.animation_arguments.markerlights = 32; -- Turns on BANO Lights if animated 
 
 GT.Name = "ERO_MJ-1B_DRIVEABLE" --Will be also the name of your livery folder and the name used for Unit Damage Reports
-GT.DisplayName = _("!Static ERO MJ-1B Driveable") --Name in ME
+GT.DisplayName = _("ERO MJ-1B Driveable") --Name in ME
 GT.Rate = 3
 
 GT.driverViewConnectorName = "DRIVER_POINT" --Driver Camera position for Combined Arms
@@ -2308,7 +2308,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsTypeUAZ469,
 				"Cars",
 				"human_vehicle",
 				};
-GT.category = "Unarmed";
+GT.category = "Fortification";
 
 GT.InternalCargo = {
 			nominalCapacity = 600,
@@ -2341,7 +2341,7 @@ GT.visual.fire_time = 500 --burning time (seconds)
 --GT.animation_arguments.markerlights = 32; -- Turns on BANO Lights if animated 
 
 GT.Name = "ERO_SM-340_ROOFED_GREY_DRIVEABLE" --Will be also the name of your livery folder and the name used for Unit Damage Reports
-GT.DisplayName = _("!Static ERO SM-340 DRIVEABLE") --Name in ME
+GT.DisplayName = _("ERO SM-340 DRIVEABLE") --Name in ME
 GT.Rate = 3
 
 GT.driverViewConnectorName = "DRIVER_POINT" --Driver Camera position for Combined Arms
@@ -2353,7 +2353,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsTypeUAZ469,
 				"Cars",
 				"human_vehicle",
 				};
-GT.category = "Unarmed";
+GT.category = "Fortification";
 
 GT.InternalCargo = {
 			nominalCapacity = 600,
@@ -2378,7 +2378,7 @@ GT.time_agony = 0;
 GT.canExplode = true;
 
 GT.Name = "ERO_MHU-141-Hellfire"
-GT.DisplayName = _("!Static ERO_MHU-141-Hellfire")
+GT.DisplayName = _("ERO_MHU-141-Hellfire")
 GT.Rate = 25
 
 GT.DetectionRange  = 0;
@@ -2388,7 +2388,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -2408,7 +2408,7 @@ GT.time_agony = 0;
 GT.canExplode = true;
 
 GT.Name = "ERO_SM-340"
-GT.DisplayName = _("!Static ERO_SM-340")
+GT.DisplayName = _("ERO_SM-340")
 GT.Rate = 25
 
 GT.DetectionRange  = 0;
@@ -2418,7 +2418,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort,
                 "Trucks",
 				"SAM CC",
                 };
-GT.category = "Air Defence";
+GT.category = "Fortification";
                 
 add_surface_unit(GT)
 
@@ -2447,7 +2447,7 @@ GT.visual.fire_time = 500 --burning time (seconds)
 --GT.animation_arguments.markerlights = 32; -- Turns on BANO Lights if animated 
 
 GT.Name = "ERO_1985_Groove_MB-2" --Will be also the name of your livery folder and the name used for Unit Damage Reports
-GT.DisplayName = _("!Static ERO_1985_Groove_MB-2") --Name in ME
+GT.DisplayName = _("ERO_1985_Groove_MB-2") --Name in ME
 GT.Rate = 3
 
 GT.driverViewConnectorName = "DRIVER_POINT" --Driver Camera position for Combined Arms
@@ -2459,7 +2459,7 @@ GT.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsTypeUAZ469,
 				"Cars",
 				"human_vehicle",
 				};
-GT.category = "Unarmed";
+GT.category = "Fortification";
 
 GT.InternalCargo = {
 			nominalCapacity = 600,

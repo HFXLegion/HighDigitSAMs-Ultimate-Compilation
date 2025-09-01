@@ -51,7 +51,6 @@ SAMPT_ASTER_30_Blk_1 = {
 	active_radar_lock_dist	= 22000.0,
 	SeekerGen				= 4,
 	hoj						= 1,
-	loft					= 1,
 
 	PN_gain = 7.5,
 	PN_coeffs = {7,
