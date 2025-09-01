@@ -24,8 +24,7 @@ local function add_structure(f)
 		
 		
 		f.mapclasskey = MapClassKey or "P0091000076";
-		f.category = "Fortification";
-		f.attribute = {wsType_Ground,wsType_Tank,wsType_NoWeapon,wsType_GenericFort, "Trucks", "SAM CC",};
+		f.attribute = {wsType_Static, wsType_Standing}
 		
 		add_surface_unit(f)
 		GT = nil;
