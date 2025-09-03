@@ -130,7 +130,7 @@ local SA9M317 = {
     	25000.0, 0.3
     }; -- Between 25 and 10 km  to target, Pn smoothly changes from 0.3 to 0.5. Longer then 25 km Pn = 0.3.
 	category = CAT_MISSILES,
-	wsTypeOfWeapon  = {wsType_Missile, wsType_Missile, wsType_SA_Missile};
+	wsTypeOfWeapon  = {wsType_Missile, wsType_Missile, wsType_SA_Missile,WSTYPE_PLACEHOLDER};
 	shape_table_data = 
 	{
 		{

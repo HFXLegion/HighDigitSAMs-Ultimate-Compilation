@@ -127,7 +127,7 @@ local SA48N6DM = {
 	},
 	ccm_k0 = 0.1, -- Countermeasures effectiveness
 	SeekerGen = 4,
-	wsTypeOfWeapon  = {wsType_Missile, wsType_Missile, wsType_SA_Missile};
+	wsTypeOfWeapon  = {wsType_Missile, wsType_Missile, wsType_SA_Missile,WSTYPE_PLACEHOLDER};
 	shape_table_data = 
 	{
 		{

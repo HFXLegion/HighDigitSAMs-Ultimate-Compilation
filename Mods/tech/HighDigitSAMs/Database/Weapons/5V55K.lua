@@ -127,7 +127,7 @@ local SA5V55K = {
 		0, 
 		0 
 	},
- 	wsTypeOfWeapon  = {wsType_Missile, wsType_Missile, wsType_SA_Missile};
+ 	wsTypeOfWeapon  = {wsType_Missile, wsType_Missile, wsType_SA_Missile,WSTYPE_PLACEHOLDER};
 	shape_table_data = 
 	{
 		{

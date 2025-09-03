@@ -181,7 +181,7 @@ local SA57E6ME			= {
 	ccm_k0				= 0.1,
 	SeekerGen 			= 4,
 	category			= CAT_MISSILES,
-	wsTypeOfWeapon		= {wsType_Weapon,wsType_Missile,wsType_SA_Missile};
+	wsTypeOfWeapon		= {wsType_Weapon,wsType_Missile,wsType_SA_Missile,WSTYPE_PLACEHOLDER};
 	ModelData = { 
 		58, -- model params count
 		0.75, -- characteristic square

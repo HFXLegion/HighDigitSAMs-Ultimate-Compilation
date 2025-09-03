@@ -2,35 +2,50 @@ mount_vfs_model_path	(current_mod_path.."/Shapes")
 mount_vfs_texture_path  (current_mod_path.."/Textures")
 
 local function add_structure(f)
-	if(f) then
-		f.shape_table_data = 
+	GT = {};
+	set_recursive_metatable(GT, GT_t.generic_stationary)
+	set_recursive_metatable(GT.chassis, GT_t.CH_t.MAZ543M);
+	GT.chassis.life = f.Life
+
+	GT.visual.shape = f.ShapeName
+	GT.visual.shape_dstr = f.ShapeNameDestr
+	GT.CustomAimPoint = {0,0,0}
+	GT.visual.fire_size = 1.0
+	GT.visual.fire_pos = {0,0,0};
+	GT.visual.fire_time = 0
+	GT.time_agony = 0;
+	GT.canExplode = false;
+
+	GT.shape_table_data = 
+	{
 		{
-			{
-				file  	    = f.ShapeName,
-				life		= f.Life,
-				username    = f.Name,
-				desrt       = f.ShapeNameDestr or "self",
-			    classname 	= f.classname   or "lLandVehicle",
-				positioning = f.positioning or "BYNORMAL" -- {"BYNORMAL", "ONLYHEIGTH", "BY_XZ", "ADD_HEIGTH"}
-			}
+			file  	    = f.ShapeName,
+			life		= f.Life,
+			username    = f.Name,
+			desrt       = f.ShapeNameDestr or "self",
+			classname 	= f.classname   or "lLandVehicle",
+			positioning = f.positioning or "BYNORMAL" -- {"BYNORMAL", "ONLYHEIGTH", "BY_XZ", "ADD_HEIGTH"}
 		}
-		if f.ShapeNameDestr then
-			f.shape_table_data[#f.shape_table_data + 1] = 
-			{
-				name  = f.ShapeNameDestr,
-				file  = f.ShapeNameDestr,	
-			}
-		end
-		
-		
-		f.mapclasskey = MapClassKey or "P0091000076";
-		f.attribute = {wsType_Static, wsType_Standing}
-		
-		add_surface_unit(f)
-		GT = nil;
-	else
-		error("Can't add structure")
-	end;
+	}
+	if f.ShapeNameDestr then
+		GT.shape_table_data[#GT.shape_table_data + 1] = 
+		{
+			name  = f.ShapeNameDestr,
+			file  = f.ShapeNameDestr,	
+		}
+	end
+
+	GT.Name = f.Name
+	GT.DisplayName = f.DisplayName
+	GT.Rate = f.Rate
+
+	GT.DetectionRange  = 0;
+	GT.ThreatRange = 0;
+	GT.mapclasskey = "P0091000076";
+	GT.attribute = {wsType_Ground,wsType_Standing,wsType_NoWeapon,wsType_GenericFort,};
+	GT.category = f.category;
+					
+	add_surface_unit(GT)
 end
 
 
@@ -288,7 +303,7 @@ ShapeName	 =   "ERO_H",
 ShapeNameDestr = "ERO_H",
 Life		 =  2500,
 Rate		 =  100,
-category     =  'Heliport',
+category     =  'Fortification',
 SeaObject    = 	false,
 isPutToWater =  false,
 positioning  = 	"BYNORMAL",
@@ -303,7 +318,7 @@ ShapeName	 =   "ERO_H_Simple",
 ShapeNameDestr = "ERO_H_Simple",
 Life		 =  2500,
 Rate		 =  100,
-category     =  'Heliport',
+category     =  'Fortification',
 SeaObject    = 	false,
 isPutToWater =  false,
 positioning  = 	"BYNORMAL",
@@ -318,7 +333,7 @@ ShapeName	 =   "ERO_H_Hospital",
 ShapeNameDestr = "ERO_H_Hospital",
 Life		 =  2500,
 Rate		 =  100,
-category     =  'Heliport',
+category     =  'Fortification',
 SeaObject    = 	false,
 isPutToWater =  false,
 positioning  = 	"BYNORMAL",
@@ -333,7 +348,7 @@ ShapeName	 =   "ERO_H_Triangle",
 ShapeNameDestr = "ERO_H_Triangle",
 Life		 =  2500,
 Rate		 =  100,
-category     =  'Heliport',
+category     =  'Fortification',
 SeaObject    = 	false,
 isPutToWater =  false,
 positioning  = 	"BYNORMAL",
@@ -349,7 +364,7 @@ ShapeName	 =   "ERO_Heli_Shelter",
 ShapeNameDestr = "ERO_Heli_Shelter",
 Life		 =  2500,
 Rate		 =  100,
-category     =  'Heliport',
+category     =  'Fortification',
 SeaObject    = 	false,
 isPutToWater =  false,
 positioning  = 	"BYNORMAL",

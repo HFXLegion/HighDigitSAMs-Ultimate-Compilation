@@ -133,7 +133,7 @@ local SA40N6 = {
 	},
 	active_radar_lock_dist = 25000,
 	ccm_k0 = 0.2, -- Countermeasures effectiveness
-	wsTypeOfWeapon  = {wsType_Missile, wsType_Missile, wsType_AA_Missile};
+	wsTypeOfWeapon  = {wsType_Missile, wsType_Missile, wsType_AA_Missile,WSTYPE_PLACEHOLDER};
 	shape_table_data = 
 	{
 		{

@@ -131,7 +131,7 @@ local SA48N6E2 = {
 	v_mid = 1000,
 	v_min = 170,
 	warhead = simple_aa_warhead(180.0),
-	wsTypeOfWeapon  = {wsType_Missile, wsType_Missile, wsType_SA_Missile};
+	wsTypeOfWeapon  = {wsType_Missile, wsType_Missile, wsType_SA_Missile,WSTYPE_PLACEHOLDER};
 	shape_table_data = 
 	{
 		{

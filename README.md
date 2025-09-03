@@ -30,6 +30,7 @@ Simply copy the **Mods** folder into your C:\Username\Saved Games\DCS folder, or
 
 ## 🚀 Improvements over origin
 - Static objects are implemented as air defense units (for templates support)
+- > ❗If another unit is expected to appear on the ERO asset, a static object must be used, otherwise the unit will appear “inside it”❗
 - Playable SA-17 (Buk-M2) TELAR
 - Fixed bug with maximum shooting range of SAM Sites
 - Fixed bug with disappearance of SA-10B (S-300PS) 30N6 TR when destroyed
